@@ -7,10 +7,20 @@
     "start": "node src/index.js",
     "test": "node src/test.js",
     "validate": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); new c().validateSetup()\"",
-    "collect": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); const t = require('./src/templates/github-updates-optimized'); console.log('Collecting...')\""
+    "collect": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); const t = require('./src/templates/github-updates-optimized'); console.log('Collecting...')\"",
+    "health-check": "node src/scripts/health-check.js",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "https": "^1.0.0"
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "https": "^1.0.0",
+    "joi": "^17.11.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0"
   },
   "keywords": [
     "ai",
