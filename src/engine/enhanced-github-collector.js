@@ -9,7 +9,7 @@ class EnhancedGitHubCollector {
   constructor() {
     this.baseUrl = 'https://api.github.com';
     this.headers = {
-      'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+      'Authorization': `token ${process.env.GITHUB_TOKEN || process.env.DEV_TOKEN_GIT}`,
       'User-Agent': 'UserOwned-AI-Intelligence/2.0',
       'Accept': 'application/vnd.github.v3+json'
     };

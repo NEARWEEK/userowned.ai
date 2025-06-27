@@ -17,7 +17,7 @@ class EnhancedGitHubCollector {
     const appConfig = config.getConfig();
     this.baseUrl = 'https://api.github.com';
     this.headers = {
-      'Authorization': `token ${process.env.GITHUB_TOKEN || appConfig.apis?.github?.token}`,
+      'Authorization': `token ${process.env.GITHUB_TOKEN || process.env.DEV_TOKEN_GIT || appConfig.apis?.github?.token}`,
       'User-Agent': 'UserOwned-AI-Intelligence/2.0',
       'Accept': 'application/vnd.github.v3+json'
     };
