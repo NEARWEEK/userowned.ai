@@ -4,12 +4,8 @@ name: UserOwned.ai Intelligence Posting
 
 on:
   schedule:
-    # Daily ecosystem analysis - 14:40 CET (13:40 UTC)
-    - cron: '40 13 * * *'
-    # Weekly market update - Mondays 14:00 CET (13:00 UTC)  
-    - cron: '0 13 * * 1'
-    # VC intelligence report - Mondays 09:00 CET (08:00 UTC)
-    - cron: '0 8 * * 1'
+    # Test posting - 15:25 CET (14:25 UTC)
+    - cron: '25 14 * * *'
   workflow_dispatch:
     inputs:
       template_type:
@@ -43,20 +39,8 @@ jobs:
       id: template
       run: |
         if [ "${{ github.event_name }}" = "schedule" ]; then
-          # Determine template based on schedule
-          HOUR=$(date -u +%H)
-          MINUTE=$(date -u +%M)
-          DAY_OF_WEEK=$(date -u +%u)
-          
-          if [ "$HOUR" = "13" ] && [ "$MINUTE" = "40" ]; then
-            TEMPLATE_TYPE="daily-ecosystem"
-          elif [ "$HOUR" = "13" ] && [ "$MINUTE" = "0" ] && [ "$DAY_OF_WEEK" = "1" ]; then
-            TEMPLATE_TYPE="weekly-market"
-          elif [ "$HOUR" = "8" ] && [ "$MINUTE" = "0" ] && [ "$DAY_OF_WEEK" = "1" ]; then
-            TEMPLATE_TYPE="vc-intelligence-report"
-          else
-            TEMPLATE_TYPE="daily-ecosystem"
-          fi
+          # Test run - always use daily-ecosystem template
+          TEMPLATE_TYPE="daily-ecosystem"
         else
           TEMPLATE_TYPE="${{ github.event.inputs.template_type }}"
         fi
