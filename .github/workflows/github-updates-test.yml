@@ -1,9 +1,9 @@
-# Test GitHub Updates at 10:30 CET
+# Test GitHub Updates at 10:50 CET
 name: GitHub Updates Test
 
 on:
   schedule:
-    - cron: '30 9 * * *'  # 10:30 CET
+    - cron: '50 9 * * *'  # 10:50 CET
   workflow_dispatch:
 
 jobs:
@@ -105,7 +105,7 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       run: |
-        echo "📱 Posting real GitHub updates to Telegram..."
+        echo "📱 Posting real GitHub updates to Telegram at 10:50 CET..."
         
         TELEGRAM_CONTENT=$(cat /tmp/telegram_content.txt)
         
@@ -124,7 +124,7 @@ jobs:
       env:
         ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
       run: |
-        echo "🐦 Posting real GitHub updates to X..."
+        echo "🐦 Posting real GitHub updates to X at 10:50 CET..."
         
         X_CONTENT=$(cat /tmp/x_content.txt)
         
