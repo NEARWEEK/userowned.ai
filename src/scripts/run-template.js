@@ -12,6 +12,7 @@
 
 const { logger, errorHandler, config } = require('../utils');
 const { runTemplate } = require('../index');
+const FormatTracker = require('../utils/format-tracker');
 const axios = require('axios');
 
 // Post content to Telegram
@@ -104,6 +105,13 @@ async function main() {
     
     // Run the template
     const content = await runTemplate(templateType, { dryRun });
+    
+    // Track format execution
+    const tracker = new FormatTracker();
+    await tracker.logExecution(templateType, {
+      posted: shouldPost && !dryRun,
+      dryRun: dryRun
+    });
     
     // Display the content
     console.log('\n===== Generated Content =====');

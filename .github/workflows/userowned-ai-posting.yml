@@ -11,13 +11,17 @@ on:
       template_type:
         description: 'Template to execute'
         required: true
-        default: 'daily-ecosystem'
+        default: 'daily-minimal'
         type: choice
         options:
+          - daily-minimal
+          - daily-detailed
+          - daily-visual
+          - daily-narrative
+          - daily-technical
+          - daily-competitive
+          - daily-investor
           - daily-ecosystem
-          - weekly-market
-          - project-spotlight
-          - vc-intelligence-report
 
 jobs:
   post-intelligence:
@@ -39,14 +43,24 @@ jobs:
       id: template
       run: |
         if [ "${{ github.event_name }}" = "schedule" ]; then
-          # Test run - always use daily-ecosystem template
-          TEMPLATE_TYPE="daily-ecosystem"
+          # A/B Testing: Cycle through different formats daily
+          DAY_OF_WEEK=$(date +%u)  # 1=Monday, 7=Sunday
+          case $DAY_OF_WEEK in
+            1) TEMPLATE_TYPE="daily-minimal" ;;      # Monday - Format A
+            2) TEMPLATE_TYPE="daily-detailed" ;;     # Tuesday - Format B
+            3) TEMPLATE_TYPE="daily-visual" ;;       # Wednesday - Format C
+            4) TEMPLATE_TYPE="daily-narrative" ;;    # Thursday - Format D
+            5) TEMPLATE_TYPE="daily-technical" ;;    # Friday - Format E
+            6) TEMPLATE_TYPE="daily-competitive" ;;  # Saturday - Format F
+            7) TEMPLATE_TYPE="daily-investor" ;;     # Sunday - Format G
+            *) TEMPLATE_TYPE="daily-minimal" ;;      # Fallback
+          esac
         else
           TEMPLATE_TYPE="${{ github.event.inputs.template_type }}"
         fi
         
         echo "template_type=$TEMPLATE_TYPE" >> $GITHUB_OUTPUT
-        echo "🎯 Selected template: $TEMPLATE_TYPE"
+        echo "🎯 Selected template: $TEMPLATE_TYPE (A/B Testing Format)"
         
     - name: Run template and post to channels
       env:
