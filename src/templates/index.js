@@ -4,18 +4,12 @@
  */
 
 const dailyEcosystemAnalysis = require('./daily-ecosystem-analysis');
-const weeklyMarketUpdate = require('./weekly-market-update');
-const projectSpotlight = require('./project-spotlight');
-const vcIntelligenceReport = require('./vc-intelligence-report');
 
 /**
  * Available content templates
  */
 const templates = {
-  'daily-ecosystem': dailyEcosystemAnalysis,
-  'weekly-market': weeklyMarketUpdate,
-  'project-spotlight': projectSpotlight,
-  'vc-intelligence': vcIntelligenceReport
+  'daily-ecosystem': dailyEcosystemAnalysis
 };
 
 /**

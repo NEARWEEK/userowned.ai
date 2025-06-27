@@ -1,0 +1,96 @@
+# UserOwned.ai Automated Posting Workflow
+# Uses the working run-template.js script for reliable posting
+name: UserOwned.ai Intelligence Posting
+
+on:
+  schedule:
+    # Daily ecosystem analysis - 14:40 CET (13:40 UTC)
+    - cron: '40 13 * * *'
+    # Weekly market update - Mondays 14:00 CET (13:00 UTC)  
+    - cron: '0 13 * * 1'
+    # VC intelligence report - Mondays 09:00 CET (08:00 UTC)
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      template_type:
+        description: 'Template to execute'
+        required: true
+        default: 'daily-ecosystem'
+        type: choice
+        options:
+          - daily-ecosystem
+          - weekly-market
+          - project-spotlight
+          - vc-intelligence-report
+
+jobs:
+  post-intelligence:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository  
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm install
+        
+    - name: Determine template type
+      id: template
+      run: |
+        if [ "${{ github.event_name }}" = "schedule" ]; then
+          # Determine template based on schedule
+          HOUR=$(date -u +%H)
+          MINUTE=$(date -u +%M)
+          DAY_OF_WEEK=$(date -u +%u)
+          
+          if [ "$HOUR" = "13" ] && [ "$MINUTE" = "40" ]; then
+            TEMPLATE_TYPE="daily-ecosystem"
+          elif [ "$HOUR" = "13" ] && [ "$MINUTE" = "0" ] && [ "$DAY_OF_WEEK" = "1" ]; then
+            TEMPLATE_TYPE="weekly-market"
+          elif [ "$HOUR" = "8" ] && [ "$MINUTE" = "0" ] && [ "$DAY_OF_WEEK" = "1" ]; then
+            TEMPLATE_TYPE="vc-intelligence-report"
+          else
+            TEMPLATE_TYPE="daily-ecosystem"
+          fi
+        else
+          TEMPLATE_TYPE="${{ github.event.inputs.template_type }}"
+        fi
+        
+        echo "template_type=$TEMPLATE_TYPE" >> $GITHUB_OUTPUT
+        echo "🎯 Selected template: $TEMPLATE_TYPE"
+        
+    - name: Run template and post to channels
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      run: |
+        echo "🚀 UserOwned.ai Intelligence System"
+        echo "📋 Template: ${{ steps.template.outputs.template_type }}"
+        echo "⏰ Timestamp: $(date -u)"
+        echo ""
+        
+        # Execute the working template script with posting enabled
+        node src/scripts/run-template.js ${{ steps.template.outputs.template_type }} --post
+        
+    - name: Create execution summary
+      run: |
+        echo "## 🎯 UserOwned.ai Intelligence Report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Template**: ${{ steps.template.outputs.template_type }}" >> $GITHUB_STEP_SUMMARY
+        echo "**Execution Time**: $(date -u)" >> $GITHUB_STEP_SUMMARY
+        echo "**Status**: ✅ Completed" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📊 Distribution Channels" >> $GITHUB_STEP_SUMMARY
+        echo "- 📱 Telegram: Posted to POOOL group" >> $GITHUB_STEP_SUMMARY
+        echo "- 🐦 X/Twitter: Posted via Zapier webhook" >> $GITHUB_STEP_SUMMARY
+        echo "- 📄 GitHub: Issue created with detailed report" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "---" >> $GITHUB_STEP_SUMMARY
+        echo "*UserOwned.ai Intelligence System*" >> $GITHUB_STEP_SUMMARY

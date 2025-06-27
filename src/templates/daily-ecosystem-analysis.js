@@ -15,8 +15,11 @@ const template = {
   async generate(data) {
     const { ecosystems, defiData, timestamp } = data;
     
+    // Handle missing ecosystems data gracefully
+    const validEcosystems = ecosystems || [];
+    
     // Sort ecosystems by score
-    const sortedEcosystems = ecosystems.sort((a, b) => b.score - a.score);
+    const sortedEcosystems = validEcosystems.sort((a, b) => b.score - a.score);
     const topThree = sortedEcosystems.slice(0, 3);
     
     return {
