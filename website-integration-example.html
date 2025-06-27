@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UserOwned.ai - Live GitHub Updates</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #1a1a1a; color: #fff; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .update { background: #2a2a2a; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .repo { color: #4CAF50; font-weight: bold; }
+        .type { color: #2196F3; font-size: 12px; text-transform: uppercase; }
+        .title { margin: 5px 0; }
+        .date { color: #888; font-size: 12px; }
+        .status { text-align: center; padding: 10px; }
+        .loading { color: #FFC107; }
+        .error { color: #f44336; }
+        .success { color: #4CAF50; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 UserOwned.AI</h1>
+            <h2>Live AI x Crypto GitHub Updates</h2>
+            <div id="status" class="status loading">Loading real data...</div>
+        </div>
+        
+        <div id="updates"></div>
+    </div>
+
+    <script>
+        async function loadGitHubData() {
+            try {
+                const response = await fetch('/api/github-data');
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to load data');
+                }
+                
+                // Update status
+                const statusEl = document.getElementById('status');
+                statusEl.className = 'status success';
+                statusEl.innerHTML = `
+                    ✅ Real data loaded | 
+                    Last updated: ${new Date(data.lastUpdated).toLocaleString()} |
+                    ${data.formatted.website.updates.length} updates
+                `;
+                
+                // Display updates
+                const updatesEl = document.getElementById('updates');
+                const websiteData = data.formatted.website;
+                
+                if (websiteData.updates.length === 0) {
+                    updatesEl.innerHTML = '<div class="update">No significant updates today - teams are in deep development mode.</div>';
+                    return;
+                }
+                
+                updatesEl.innerHTML = websiteData.updates.map(update => `
+                    <div class="update">
+                        <div class="type">${update.type}</div>
+                        <div class="repo">${update.repository.name} (${update.repository.symbol})</div>
+                        <div class="title">${update.title}</div>
+                        <div class="date">${new Date(update.date).toLocaleString()}</div>
+                    </div>
+                `).join('');
+                
+            } catch (error) {
+                const statusEl = document.getElementById('status');
+                statusEl.className = 'status error';
+                statusEl.textContent = `❌ Error loading data: ${error.message}`;
+                
+                const updatesEl = document.getElementById('updates');
+                updatesEl.innerHTML = '<div class="update">Unable to load updates. Please try again later.</div>';
+            }
+        }
+        
+        // Load data on page load
+        loadGitHubData();
+        
+        // Refresh every 10 minutes
+        setInterval(loadGitHubData, 10 * 60 * 1000);
+    </script>
+</body>
+</html>
