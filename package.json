@@ -1,34 +1,30 @@
 {
-  "name": "userowned-ai",
+  "name": "userowned-ai-intelligence",
   "version": "2.0.0",
-  "description": "Enhanced AI x Crypto Ecosystem Intelligence Platform",
-  "main": "scripts/enhanced-intelligence.js",
+  "description": "Real-time AI x Crypto GitHub intelligence system",
+  "main": "index.js",
   "scripts": {
-    "start": "node scripts/enhanced-intelligence.js",
-    "test": "echo \"Enhanced intelligence engine tests coming soon\" && exit 0",
-    "dev": "node scripts/enhanced-intelligence.js",
-    "build": "echo \"Static build - no compilation needed\""
+    "start": "node src/index.js",
+    "test": "node src/test.js",
+    "validate": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); new c().validateSetup()\"",
+    "collect": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); const t = require('./src/templates/github-updates-optimized'); console.log('Collecting...')\""
+  },
+  "dependencies": {
+    "https": "^1.0.0"
   },
   "keywords": [
     "ai",
     "crypto",
-    "blockchain",
+    "github",
     "intelligence",
-    "analytics",
-    "defi",
-    "near",
-    "icp",
-    "bittensor"
+    "automation",
+    "real-time"
   ],
-  "author": "NEARWEEK",
+  "author": "UserOwned.AI",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NEARWEEK/userowned.ai"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "^20.0.0"
+    "url": "https://github.com/NEARWEEK/userowned.ai.git"
   },
   "engines": {
     "node": ">=18.0.0"
