@@ -1,0 +1,307 @@
+# GitHub Updates - 10:55 CET with fallback triggers
+name: GitHub Updates 10:55 CET
+
+on:
+  schedule:
+    - cron: '55 9 * * *'  # 10:55 CET
+    - cron: '56 9 * * *'  # 10:56 CET backup
+    - cron: '57 9 * * *'  # 10:57 CET backup
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run even if no updates'
+        required: false
+        default: 'false'
+
+jobs:
+  github-updates-1055:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    steps:
+    - name: Force workflow to run from main branch
+      run: |
+        echo "🔧 Running from branch: ${{ github.ref }}"
+        echo "🔧 Triggered by: ${{ github.event_name }}"
+        echo "🔧 Repository: ${{ github.repository }}"
+        
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: main  # Force main branch
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm ci --prefer-offline --no-audit
+        echo "✅ Dependencies installed"
+        
+    - name: GitHub API Test
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🔑 Testing GitHub API..."
+        
+        # Test rate limit
+        RATE_LIMIT=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+          "https://api.github.com/rate_limit" | \
+          jq -r '.rate.remaining // "error"')
+        
+        echo "📊 GitHub API rate limit: $RATE_LIMIT"
+        
+        if [ "$RATE_LIMIT" = "error" ] || [ "$RATE_LIMIT" -lt 100 ]; then
+          echo "❌ GitHub API issue or low rate limit"
+          exit 1
+        fi
+        
+        echo "✅ GitHub API ready"
+        
+    - name: Collect GitHub Data
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "📊 Collecting real GitHub data..."
+        
+        # Create a simple Node.js script to collect data
+        cat > collect_data.js << 'EOF'
+        const https = require('https');
+        
+        const repos = [
+          'opentensor/bittensor',
+          'near/nearcore', 
+          'dfinity/ic',
+          'RNDR-Inc/rndr-py',
+          'fetchai/fetchai-ledger',
+          'akash-network/node'
+        ];
+        
+        const repoNames = {
+          'opentensor/bittensor': 'Bittensor',
+          'near/nearcore': 'NEAR',
+          'dfinity/ic': 'ICP', 
+          'RNDR-Inc/rndr-py': 'Render',
+          'fetchai/fetchai-ledger': 'Fetch.ai',
+          'akash-network/node': 'Akash'
+        };
+        
+        const twitterAccounts = {
+          'opentensor/bittensor': '@opentensor',
+          'near/nearcore': '@nearprotocol',
+          'dfinity/ic': '@dfinity',
+          'RNDR-Inc/rndr-py': '@rendernetwork', 
+          'fetchai/fetchai-ledger': '@fetch_ai',
+          'akash-network/node': '@akashnet_'
+        };
+        
+        async function makeRequest(path) {
+          return new Promise((resolve, reject) => {
+            const options = {
+              hostname: 'api.github.com',
+              path: path,
+              headers: {
+                'Authorization': `token ${process.env.GITHUB_TOKEN}`,
+                'User-Agent': 'UserOwned-AI-Intelligence/2.0'
+              }
+            };
+            
+            https.get(options, (res) => {
+              let data = '';
+              res.on('data', chunk => data += chunk);
+              res.on('end', () => {
+                try {
+                  if (res.statusCode >= 400) {
+                    reject(new Error(`API error: ${res.statusCode}`));
+                    return;
+                  }
+                  resolve(JSON.parse(data));
+                } catch (error) {
+                  reject(error);
+                }
+              });
+            }).on('error', reject);
+          });
+        }
+        
+        async function getRecentActivity(repo) {
+          try {
+            const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+            
+            const [releases, commits] = await Promise.all([
+              makeRequest(`/repos/${repo}/releases?per_page=3`),
+              makeRequest(`/repos/${repo}/commits?since=${since}&per_page=5`)
+            ]);
+            
+            const updates = [];
+            
+            // Add recent releases
+            releases.forEach(release => {
+              const releaseDate = new Date(release.published_at);
+              const daysSince = (Date.now() - releaseDate.getTime()) / (24 * 60 * 60 * 1000);
+              if (daysSince <= 1) {
+                updates.push({
+                  type: 'release',
+                  repo: repo,
+                  title: release.name || release.tag_name,
+                  url: release.html_url,
+                  date: release.published_at
+                });
+              }
+            });
+            
+            // Add recent significant commits 
+            commits.forEach(commit => {
+              const message = commit.commit.message;
+              if (!message.toLowerCase().startsWith('merge') && 
+                  !message.toLowerCase().includes('typo') &&
+                  message.length > 20) {
+                updates.push({
+                  type: 'commit',
+                  repo: repo,
+                  title: message.split('\n')[0],
+                  url: commit.html_url,
+                  date: commit.commit.author.date
+                });
+              }
+            });
+            
+            return updates;
+          } catch (error) {
+            console.error(`Error processing ${repo}:`, error.message);
+            return [];
+          }
+        }
+        
+        async function main() {
+          console.log('🔍 Collecting data from repositories...');
+          
+          const allUpdates = [];
+          
+          for (const repo of repos) {
+            console.log(`   Processing ${repoNames[repo]}...`);
+            const updates = await getRecentActivity(repo);
+            allUpdates.push(...updates);
+            await new Promise(resolve => setTimeout(resolve, 100)); // Rate limiting
+          }
+          
+          // Sort by date (newest first)
+          allUpdates.sort((a, b) => new Date(b.date) - new Date(a.date));
+          
+          console.log(`📊 Found ${allUpdates.length} total updates`);
+          
+          // Generate content
+          const date = new Date().toISOString().split('T')[0];
+          const topUpdates = allUpdates.slice(0, 4);
+          
+          if (topUpdates.length === 0) {
+            console.log('ℹ️ No significant updates found');
+            
+            const telegramContent = `🤖 UserOwned.AI\nAI x CRYPTO GITHUB UPDATES [${date}] 📊\n\nQuiet day in the repos - teams are in deep development mode.\n\nWe'll be back tomorrow with fresh updates!\n\n🔗 @userownedai | @NEARWEEK`;
+            
+            const xContent = `What shipped on @opentensor @nearprotocol @dfinity GitHub today?\n\nQuiet day in the repos - teams focusing on deep development work.\n\nBack tomorrow with fresh updates!`;
+            
+            require('fs').writeFileSync('/tmp/telegram_content.txt', telegramContent);
+            require('fs').writeFileSync('/tmp/x_content.txt', xContent);
+            return;
+          }
+          
+          // Generate Telegram content
+          let telegramContent = `🤖 UserOwned.AI\nAI x CRYPTO GITHUB UPDATES [${date}] 📊\n\n`;
+          telegramContent += `What shipped on the AI x Crypto GitHub today? Here's the latest from the devs!\n\n`;
+          
+          topUpdates.forEach((update, i) => {
+            const repoName = repoNames[update.repo];
+            const typeLabel = update.type === 'release' ? `NEW RELEASE - ${update.title}` : 'DEVELOPMENT ACTIVITY';
+            
+            telegramContent += `${i + 1}/\n${typeLabel} - ${repoName}\n\n`;
+            telegramContent += `What changed:\n• ${update.title}\n\n`;
+            telegramContent += `Why it matters:\nThis ${update.type} advances ${repoName}'s AI x crypto development capabilities.\n\n`;
+          });
+          
+          telegramContent += `🔗 @userownedai | @NEARWEEK`;
+          
+          // Generate X content
+          const uniqueTwitters = [...new Set(topUpdates.map(u => twitterAccounts[u.repo]))].join(' ');
+          let xContent = `What shipped on ${uniqueTwitters} GitHub today? Here's the latest from the AI x Crypto devs! 🧵\n\n`;
+          
+          topUpdates.slice(0, 3).forEach((update, i) => {
+            const repoName = repoNames[update.repo];
+            const shortTitle = update.title.length > 60 ? update.title.substring(0, 57) + '...' : update.title;
+            xContent += `${i + 1}/ ${repoName}: ${shortTitle}\n\n`;
+          });
+          
+          // Save content
+          require('fs').writeFileSync('/tmp/telegram_content.txt', telegramContent);
+          require('fs').writeFileSync('/tmp/x_content.txt', xContent.trim());
+          
+          console.log('✅ Content generated successfully');
+          console.log(`📊 Updates processed: ${topUpdates.length}`);
+        }
+        
+        main().catch(error => {
+          console.error('❌ Error:', error.message);
+          process.exit(1);
+        });
+        EOF
+        
+        # Run the data collection
+        node collect_data.js
+        
+    - name: Post to Telegram
+      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "📱 Posting to Telegram..."
+        
+        if [ ! -f /tmp/telegram_content.txt ]; then
+          echo "❌ No Telegram content found"
+          exit 1
+        fi
+        
+        CONTENT=$(cat /tmp/telegram_content.txt)
+        
+        # Post with proper escaping
+        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d $(jq -n --arg chat_id "$TELEGRAM_CHAT_ID" --arg text "$CONTENT" '{
+            chat_id: $chat_id,
+            text: $text,
+            disable_web_page_preview: true
+          }') && echo "\n✅ Posted to Telegram" || echo "\n❌ Telegram posting failed"
+        
+    - name: Post to X
+      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      env:
+        ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      run: |
+        echo "🐦 Posting to X..."
+        
+        if [ ! -f /tmp/x_content.txt ]; then
+          echo "❌ No X content found"
+          exit 1
+        fi
+        
+        CONTENT=$(cat /tmp/x_content.txt)
+        
+        # Post to X via Zapier
+        curl -s -X POST "$ZAPIER_WEBHOOK_URL" \
+          -H "Content-Type: application/json" \
+          -d $(jq -n --arg text "$CONTENT" --arg timestamp "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '{
+            text: $text,
+            source: "userowned-ai-1055",
+            timestamp: $timestamp
+          }') && echo "\n✅ Posted to X" || echo "\n❌ X posting failed"
+        
+    - name: Manual Trigger Available
+      run: |
+        echo "\n🎯 EXECUTION COMPLETE!"
+        echo "📅 Scheduled: 10:55 CET daily"
+        echo "🔧 Manual trigger: https://github.com/${{ github.repository }}/actions/workflows/github-updates-1055.yml"
+        echo "📊 Next run: Tomorrow 10:55 CET"
+        echo "\n⚡ If scheduled run fails, use manual trigger above"
