@@ -22,7 +22,7 @@ const template = {
   },
 
   generateTelegram(topThree, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     const leader = topThree[0];
     const totalCommits = topThree.reduce((sum, eco) => sum + (eco.github?.commits_7d || 0), 0);
     
@@ -58,7 +58,7 @@ ${topThree.map((eco, i) => `${i + 1}. ${eco.symbol}: ${eco.score}/100`).join('\n
   },
 
   generateGithubIssue(ecosystems, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     return `## 🤖 Narrative AI x Crypto Analysis - ${date} (Format D: Narrative)
 
 ### Market Story

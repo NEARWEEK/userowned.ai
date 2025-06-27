@@ -22,7 +22,7 @@ const template = {
   },
 
   generateTelegram(topThree, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     const medals = ['🥇', '🥈', '🥉'];
     
     return `🤖 AI x CRYPTO DAILY INTEL 🚀
@@ -61,7 +61,7 @@ ${topThree.map((eco, i) =>
   },
 
   generateGithubIssue(ecosystems, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     return `## 🤖 Visual AI x Crypto Report - ${date} (Format C: Visual)
 
 ### 🏆 Today's Champions

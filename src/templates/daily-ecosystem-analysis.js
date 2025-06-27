@@ -38,7 +38,7 @@ const template = {
    * Generate Telegram content
    */
   generateTelegram(topThree, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     
     return `🤖 User-Owned AI Daily Intelligence - ${date}
 
@@ -66,7 +66,7 @@ ${topThree.map((eco, i) =>
    * Generate X/Twitter content
    */
   generateX(topThree, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     
     return `🤖 UserOwned.ai Daily Intel ${date}
 
@@ -86,7 +86,7 @@ ${topThree.map((eco, i) =>
    * Generate detailed GitHub issue report
    */
   generateGithubIssue(ecosystems, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     
     let report = `## 🤖 Daily AI Ecosystem Intelligence Report\n\n`;
     report += `**Generated**: ${timestamp}\n`;

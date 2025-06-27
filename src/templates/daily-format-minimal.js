@@ -22,7 +22,7 @@ const template = {
   },
 
   generateTelegram(topThree, defiData, timestamp) {
-    const date = new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp || Date.now()).toISOString().split('T')[0];
     
     return `🤖 AI x Crypto Daily - ${date}
 
