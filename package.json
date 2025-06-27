@@ -1,0 +1,36 @@
+{
+  "name": "userowned-ai",
+  "version": "2.0.0",
+  "description": "Enhanced AI x Crypto Ecosystem Intelligence Platform",
+  "main": "scripts/enhanced-intelligence.js",
+  "scripts": {
+    "start": "node scripts/enhanced-intelligence.js",
+    "test": "echo \"Enhanced intelligence engine tests coming soon\" && exit 0",
+    "dev": "node scripts/enhanced-intelligence.js",
+    "build": "echo \"Static build - no compilation needed\""
+  },
+  "keywords": [
+    "ai",
+    "crypto",
+    "blockchain",
+    "intelligence",
+    "analytics",
+    "defi",
+    "near",
+    "icp",
+    "bittensor"
+  ],
+  "author": "NEARWEEK",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NEARWEEK/userowned.ai"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,185 @@
+# Enhanced UserOwned.ai Daily Intelligence
+# Upgraded to match NEARWEEK/CORE quality standards
+name: Enhanced UserOwned.ai Intelligence
+
+on:
+  schedule:
+    - cron: '40 13 * * *'  # Daily at 14:40 CET
+  workflow_dispatch:
+
+jobs:
+  enhanced-ai-crypto-intelligence:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js for Enhanced Processing
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm init -y
+        npm install --save-dev @types/node
+        
+    - name: Run Enhanced Intelligence Engine
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🚀 Enhanced UserOwned.ai Intelligence Engine Starting..."
+        node scripts/enhanced-intelligence.js
+        
+    - name: Process Results for Distribution
+      run: |
+        echo "📊 Processing enhanced intelligence results..."
+        
+        # Read the generated report
+        INTELLIGENCE_REPORT=$(cat /tmp/intelligence_report.txt)
+        ECOSYSTEM_DATA=$(cat /tmp/ecosystem_data.json)
+        
+        # Extract top 3 scores for summary
+        TOP_NEAR=$(echo "$ECOSYSTEM_DATA" | jq -r '.[] | select(.symbol == "NEAR") | .score')
+        TOP_ICP=$(echo "$ECOSYSTEM_DATA" | jq -r '.[] | select(.symbol == "ICP") | .score')
+        TOP_TAO=$(echo "$ECOSYSTEM_DATA" | jq -r '.[] | select(.symbol == "TAO") | .score')
+        
+        # Create enhanced Telegram content
+        cat > /tmp/telegram_enhanced.txt << EOF
+🤖 Enhanced User-Owned AI Intelligence
+
+🏆 AI Ecosystem Comprehensive Scores:
+1. NEAR Protocol: ${TOP_NEAR}/100 ⭐
+2. Internet Computer: ${TOP_ICP}/100 🔬 
+3. Bittensor: ${TOP_TAO}/100 🧠
+
+📊 Multi-Source Analysis:
+• GitHub development velocity
+• DeFi TVL performance 
+• On-chain adoption metrics
+• DApp ecosystem usage
+
+🔭 Enhanced with NEARWEEK/CORE methodology
+📈 Full analysis: userowned.ai
+🔗 @userownedai | @NEARWEEK
+EOF
+        
+        # Create enhanced X content
+        cat > /tmp/x_enhanced.txt << EOF
+🤖 Enhanced UserOwned.ai Intelligence
+
+🏆 AI x Crypto Ecosystem Rankings (Multi-Source):
+1. NEAR: ${TOP_NEAR}/100 ⭐ - Complete AI infrastructure
+2. ICP: ${TOP_ICP}/100 🔬 - On-chain AI hosting
+3. TAO: ${TOP_TAO}/100 🧠 - Pure AI protocol
+
+📊 Enhanced methodology:
+• 4+ data sources
+• Professional calculations
+• VC-grade insights
+
+🔭 Powered by NEARWEEK intelligence
+📈 userowned.ai
+
+#UserOwnedAI #NEAR #ICP #Bittensor #AI #Crypto
+EOF
+        
+        echo "TELEGRAM_CONTENT<<EOF" >> $GITHUB_ENV
+        cat /tmp/telegram_enhanced.txt >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+        
+        echo "X_CONTENT<<EOF" >> $GITHUB_ENV
+        cat /tmp/x_enhanced.txt >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+        
+        echo "FULL_REPORT<<EOF" >> $GITHUB_ENV
+        echo "$INTELLIGENCE_REPORT" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+
+    - name: Post Enhanced Report to Telegram
+      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "📱 Posting enhanced intelligence to Telegram..."
+        
+        curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\",
+            \"text\": \"$TELEGRAM_CONTENT\",
+            \"parse_mode\": \"HTML\",
+            \"disable_web_page_preview\": true
+          }"
+        
+        echo "✅ Enhanced report posted to Telegram"
+
+    - name: Post to X via Buffer (Enhanced)
+      run: |
+        echo "🐦 Posting enhanced content to X via Buffer..."
+        
+        if [ -n "${{ secrets.ZAPIER_WEBHOOK_URL }}" ]; then
+          curl -s -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"text\": \"$X_CONTENT\",
+              \"source\": \"userowned-ai-enhanced\",
+              \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+              \"version\": \"enhanced\"
+            }"
+          
+          echo "✅ Enhanced content sent to Buffer for X posting"
+        else
+          echo "⚠️ No Zapier webhook configured"
+        fi
+        
+    - name: Create Intelligence Report Issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const title = `🤖 Daily AI Intelligence Report - ${new Date().toISOString().split('T')[0]}`;
+          const body = `## Enhanced UserOwned.ai Intelligence Report
+
+### 📈 Generated: ${new Date().toISOString()}
+
+${{ env.FULL_REPORT }}
+
+---
+
+**Methodology**: Multi-source analysis combining GitHub development metrics, DeFi TVL data, on-chain adoption signals, and DApp ecosystem usage.
+
+**Data Sources**: 
+- GitHub API (development velocity)
+- DefiLlama (financial metrics)
+- On-chain analytics (adoption)
+- DApp ecosystem data
+
+**Next Report**: Tomorrow at 14:40 CET
+
+*Enhanced UserOwned.ai Intelligence by NEARWEEK*`;
+          
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: title,
+            body: body,
+            labels: ['intelligence-report', 'daily', 'enhanced']
+          });
+        
+    - name: Display Enhanced Results
+      run: |
+        echo "🎯 Enhanced UserOwned.ai Intelligence Report Completed!"
+        echo ""
+        echo "🔭 ENHANCEMENTS DEPLOYED:"
+        echo "• Node.js calculation engine"
+        echo "• Multi-source data verification"
+        echo "• Professional error handling"
+        echo "• Enhanced scoring algorithm"
+        echo "• NEARWEEK/CORE methodology"
+        echo ""
+        echo "📈 INTELLIGENCE SUMMARY:"
+        echo "$FULL_REPORT" | head -20
+        echo ""
+        echo "✅ Enhanced automation operational!"
+        echo "📱 Telegram: Enhanced reporting"
+        echo "🐦 X: Professional analysis"
+        echo "🚀 Next enhancement: Backend API (Week 2)"
