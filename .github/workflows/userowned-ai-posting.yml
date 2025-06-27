@@ -65,6 +65,7 @@ jobs:
     - name: Run template and post to channels
       env:
         GITHUB_TOKEN: ${{ secrets.DEV_TOKEN_GIT }}
+        DEV_TOKEN_GIT: ${{ secrets.DEV_TOKEN_GIT }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
