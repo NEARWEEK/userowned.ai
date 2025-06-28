@@ -1,0 +1,281 @@
+name: NEARWEEK AI Telegram Bot
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Every minute for faster responses
+  workflow_dispatch:
+
+jobs:
+  telegram-ai-bot:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - run: npm install axios
+    - name: Run AI-Enhanced Bot with MCP
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        ZAPIER_API_KEY: ${{ secrets.ZAPIER_API_KEY }}
+      run: |
+        node -e "
+        const axios = require('axios');
+        const fs = require('fs');
+        
+        const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+        const ZAPIER_KEY = process.env.ZAPIER_API_KEY;
+        const BASE_URL = \`https://api.telegram.org/bot\${BOT_TOKEN}\`;
+        
+        let lastUpdateId = 0;
+        let subscribers = [];
+        
+        // Load state
+        try { 
+          if (fs.existsSync('last_update.txt')) lastUpdateId = parseInt(fs.readFileSync('last_update.txt', 'utf8')); 
+        } catch (e) {}
+        
+        try { 
+          if (fs.existsSync('subscribers.json')) subscribers = JSON.parse(fs.readFileSync('subscribers.json', 'utf8')); 
+        } catch (e) {}
+        
+        async function getUpdates() {
+          try {
+            const response = await axios.get(\`\${BASE_URL}/getUpdates\`, { 
+              params: { offset: lastUpdateId + 1, timeout: 30 } 
+            });
+            return response.data.result;
+          } catch (error) { 
+            console.error('Telegram API Error:', error.message); 
+            return []; 
+          }
+        }
+        
+        async function sendMessage(chatId, text) {
+          try {
+            await axios.post(\`\${BASE_URL}/sendMessage\`, { 
+              chat_id: chatId, 
+              text: text, 
+              parse_mode: 'Markdown' 
+            });
+          } catch (error) { 
+            console.error('Send Message Error:', error.message); 
+          }
+        }
+        
+        async function callGeminiViaMCP(prompt, instructions = '') {
+          try {
+            // Use your Zapier MCP Gemini integration
+            const response = await axios.post('https://hooks.zapier.com/hooks/catch/YOUR_HOOK_ID/', {
+              prompt: prompt,
+              instructions: instructions || 'You are NEARWEEK AI assistant. Provide concise, helpful responses about crypto and NEAR Protocol. Keep responses under 300 characters for Telegram.',
+              model: 'gemini-pro'
+            }, {
+              headers: {
+                'Authorization': \`Bearer \${ZAPIER_KEY}\`,
+                'Content-Type': 'application/json'
+              }
+            });
+            
+            return response.data.response || response.data.text || 'AI response received';
+          } catch (error) {
+            console.error('Gemini MCP Error:', error.message);
+            return '🤖 AI assistant temporarily unavailable. Try again shortly.';
+          }
+        }
+        
+        async function getNearPrice() {
+          try {
+            const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=near&vs_currencies=usd,btc&include_24hr_change=true&include_market_cap=true');
+            const data = response.data.near;
+            
+            const priceChange = data.usd_24h_change > 0 ? '📈' : '📉';
+            
+            return \`💰 *NEAR Protocol*\\n\\n\` +
+                   \`Price: $\${data.usd} \${priceChange}\\n\` +
+                   \`24h: \${data.usd_24h_change?.toFixed(2)}%\\n\` +
+                   \`BTC: ₿\${data.btc?.toFixed(8)}\\n\` +
+                   \`Market Cap: $\${(data.usd_market_cap / 1e9).toFixed(2)}B\`;
+          } catch (error) { 
+            return '❌ Price data temporarily unavailable'; 
+          }
+        }
+        
+        async function getCryptoNews() {
+          try {
+            const response = await axios.get('https://www.reddit.com/r/CryptoCurrency/.json?limit=5');
+            let news = '📰 *Latest Crypto News*\\n\\n';
+            
+            response.data.data.children.slice(0, 3).forEach((post, index) => {
+              const title = post.data.title.substring(0, 75) + (post.data.title.length > 75 ? '...' : '');
+              const score = post.data.score;
+              news += \`\${index + 1}. [\${title}](https://reddit.com\${post.data.permalink}) 👍\${score}\\n\\n\`;
+            });
+            
+            return news;
+          } catch (error) { 
+            return '❌ News feed temporarily unavailable'; 
+          }
+        }
+        
+        async function processCommand(message) {
+          const chatId = message.chat.id;
+          const text = message.text || '';
+          const userId = message.from.id;
+          const username = message.from.username || message.from.first_name || 'User';
+          
+          console.log(\`Processing command from \${username}: \${text}\`);
+          
+          // AI Commands using Gemini via MCP
+          if (text.toLowerCase().startsWith('/ai ')) {
+            const query = text.slice(4);
+            const aiResponse = await callGeminiViaMCP(query, 'Answer this crypto/NEAR question concisely for Telegram (under 300 chars)');
+            await sendMessage(chatId, \`🤖 *AI Assistant*\\n\\n\${aiResponse}\`);
+            return;
+          }
+          
+          if (text.toLowerCase().startsWith('/analyze')) {
+            const analysis = await callGeminiViaMCP(
+              'Analyze current NEAR Protocol market conditions and ecosystem developments', 
+              'Provide 3 key market insights about NEAR Protocol. Keep under 350 characters. Use bullet points.'
+            );
+            await sendMessage(chatId, \`📊 *NEAR Analysis*\\n\\n\${analysis}\`);
+            return;
+          }
+          
+          if (text.toLowerCase().startsWith('/explain ')) {
+            const topic = text.slice(9);
+            const explanation = await callGeminiViaMCP(
+              \`Explain \\\"\${topic}\\\" in simple terms\`, 
+              'Explain this crypto concept for beginners. Keep under 250 characters. Be clear and simple.'
+            );
+            await sendMessage(chatId, \`💡 *\${topic}*\\n\\n\${explanation}\`);
+            return;
+          }
+          
+          if (text.toLowerCase().startsWith('/predict')) {
+            const prediction = await callGeminiViaMCP(
+              'What are the key factors that could influence NEAR Protocol price in the short term?',
+              'Provide balanced analysis of NEAR price factors. Include disclaimer about predictions. Under 300 chars.'
+            );
+            await sendMessage(chatId, \`🔮 *NEAR Outlook*\\n\\n\${prediction}\`);
+            return;
+          }
+          
+          if (text.toLowerCase().startsWith('/summary')) {
+            const summary = await callGeminiViaMCP(
+              'Summarize the most important developments in the NEAR ecosystem this week',
+              'Provide weekly NEAR ecosystem summary. Focus on major developments, partnerships, or technical updates. Under 400 chars.'
+            );
+            await sendMessage(chatId, \`📋 *Weekly NEAR Summary*\\n\\n\${summary}\`);
+            return;
+          }
+          
+          // Regular Commands
+          switch (text.toLowerCase()) {
+            case '/start':
+              await sendMessage(chatId, \`🤖 *NEARWEEK AI Bot*\\n\\nHello \${username}! Get NEAR news, prices, and AI insights.\\n\\n/help for all commands\`);
+              break;
+              
+            case '/help':
+              await sendMessage(chatId, 
+                '🔧 *Commands:*\\n\\n' +
+                '**Basic:**\\n' +
+                '/start - Welcome message\\n' +
+                '/price - NEAR price data\\n' +
+                '/news - Latest crypto news\\n' +
+                '/subscribe - Join newsletter\\n' +
+                '/stats - Bot statistics\\n\\n' +
+                '**AI Features:**\\n' +
+                '/ai [question] - Ask anything\\n' +
+                '/analyze - Market analysis\\n' +
+                '/explain [topic] - Explain concepts\\n' +
+                '/predict - Price outlook\\n' +
+                '/summary - Weekly NEAR recap'
+              );
+              break;
+              
+            case '/subscribe':
+              if (!subscribers.find(sub => sub.userId === userId)) {
+                subscribers.push({ 
+                  userId, 
+                  chatId, 
+                  username,
+                  subscribedAt: new Date().toISOString(),
+                  source: 'telegram_bot'
+                });
+                fs.writeFileSync('subscribers.json', JSON.stringify(subscribers, null, 2));
+                await sendMessage(chatId, \`✅ Welcome to NEARWEEK, \${username}!\\n\\nYou'll receive AI-curated NEAR updates and insights.\`);
+              } else {
+                await sendMessage(chatId, \`✅ You're already subscribed, \${username}!\`);
+              }
+              break;
+              
+            case '/unsubscribe':
+              const index = subscribers.findIndex(sub => sub.userId === userId);
+              if (index !== -1) {
+                subscribers.splice(index, 1);
+                fs.writeFileSync('subscribers.json', JSON.stringify(subscribers, null, 2));
+                await sendMessage(chatId, \`✅ Unsubscribed successfully, \${username}\`);
+              } else {
+                await sendMessage(chatId, '❌ You are not currently subscribed');
+              }
+              break;
+              
+            case '/price':
+              const priceInfo = await getNearPrice();
+              await sendMessage(chatId, priceInfo);
+              break;
+              
+            case '/news':
+              const newsInfo = await getCryptoNews();
+              await sendMessage(chatId, newsInfo);
+              break;
+              
+            case '/stats':
+              await sendMessage(chatId, 
+                \`📊 *NEARWEEK Bot Stats*\\n\\n\` +
+                \`Subscribers: \${subscribers.length}\\n\` +
+                \`AI-Powered: ✅ Gemini\\n\` +
+                \`Response Time: ~1 min\\n\` +
+                \`[Visit NEARWEEK.com](https://nearweek.com)\`
+              );
+              break;
+              
+            default:
+              if (text.startsWith('/')) {
+                await sendMessage(chatId, '❓ Unknown command. Try /help to see all available commands including AI features!');
+              }
+              // Ignore non-command messages
+          }
+        }
+        
+        async function main() {
+          console.log('🤖 NEARWEEK AI Bot polling for updates...');
+          
+          const updates = await getUpdates();
+          
+          for (const update of updates) {
+            if (update.message && update.message.text) {
+              await processCommand(update.message);
+            }
+            lastUpdateId = Math.max(lastUpdateId, update.update_id);
+          }
+          
+          // Save state
+          fs.writeFileSync('last_update.txt', lastUpdateId.toString());
+          
+          if (updates.length > 0) {
+            console.log(\`✅ Processed \${updates.length} updates. Last ID: \${lastUpdateId}\`);
+          }
+        }
+        
+        main().catch(console.error);
+        "
+    - name: Commit bot state updates
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action Bot"
+        git add -A
+        git diff --staged --quiet || git commit -m "🤖 Update AI bot state - $(date)"
+        git push || echo "No state changes to commit"
