@@ -1,30 +1,14 @@
-# UserOwned.ai Automated Posting Workflow
-# Uses the working run-template.js script for reliable posting
-name: UserOwned.ai Intelligence Posting
+# UserOwned.ai Daily GitHub Updates - NEARWEEK Format
+name: UserOwned.ai Daily GitHub Updates
 
 on:
   schedule:
-    # Test posting - 15:25 CET (14:25 UTC)
-    - cron: '25 14 * * *'
+    # Daily at 10:00 CET (9:00 UTC)
+    - cron: '0 9 * * *'
   workflow_dispatch:
-    inputs:
-      template_type:
-        description: 'Template to execute'
-        required: true
-        default: 'daily-minimal'
-        type: choice
-        options:
-          - daily-minimal
-          - daily-detailed
-          - daily-visual
-          - daily-narrative
-          - daily-technical
-          - daily-competitive
-          - daily-investor
-          - daily-ecosystem
 
 jobs:
-  post-intelligence:
+  github-updates:
     runs-on: ubuntu-latest
     
     steps:
@@ -39,57 +23,22 @@ jobs:
     - name: Install dependencies
       run: npm install
         
-    - name: Determine template type
-      id: template
-      run: |
-        if [ "${{ github.event_name }}" = "schedule" ]; then
-          # A/B Testing: Cycle through different formats daily
-          DAY_OF_WEEK=$(date +%u)  # 1=Monday, 7=Sunday
-          case $DAY_OF_WEEK in
-            1) TEMPLATE_TYPE="daily-minimal" ;;      # Monday - Format A
-            2) TEMPLATE_TYPE="daily-detailed" ;;     # Tuesday - Format B
-            3) TEMPLATE_TYPE="daily-visual" ;;       # Wednesday - Format C
-            4) TEMPLATE_TYPE="daily-narrative" ;;    # Thursday - Format D
-            5) TEMPLATE_TYPE="daily-technical" ;;    # Friday - Format E
-            6) TEMPLATE_TYPE="daily-competitive" ;;  # Saturday - Format F
-            7) TEMPLATE_TYPE="daily-investor" ;;     # Sunday - Format G
-            *) TEMPLATE_TYPE="daily-minimal" ;;      # Fallback
-          esac
-        else
-          TEMPLATE_TYPE="${{ github.event.inputs.template_type }}"
-        fi
-        
-        echo "template_type=$TEMPLATE_TYPE" >> $GITHUB_OUTPUT
-        echo "🎯 Selected template: $TEMPLATE_TYPE (A/B Testing Format)"
-        
-    - name: Run template and post to channels
+    - name: Fetch GitHub Updates
       env:
         GITHUB_TOKEN: ${{ secrets.DEV_TOKEN_GIT }}
-        DEV_TOKEN_GIT: ${{ secrets.DEV_TOKEN_GIT }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
       run: |
-        echo "🚀 UserOwned.ai Intelligence System"
-        echo "📋 Template: ${{ steps.template.outputs.template_type }}"
-        echo "⏰ Timestamp: $(date -u)"
-        echo ""
+        echo "📊 Fetching GitHub updates..."
         
-        # Execute the working template script with posting enabled
-        node src/scripts/run-template.js ${{ steps.template.outputs.template_type }} --post
+        # Execute GitHub updates with NEARWEEK format
+        node src/scripts/github-updates-nearweek.js --post
         
     - name: Create execution summary
       run: |
-        echo "## 🎯 UserOwned.ai Intelligence Report" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "**Template**: ${{ steps.template.outputs.template_type }}" >> $GITHUB_STEP_SUMMARY
+        echo "## 📊 GitHub Updates Posted" >> $GITHUB_STEP_SUMMARY
         echo "**Execution Time**: $(date -u)" >> $GITHUB_STEP_SUMMARY
         echo "**Status**: ✅ Completed" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📊 Distribution Channels" >> $GITHUB_STEP_SUMMARY
-        echo "- 📱 Telegram: Posted to POOOL group" >> $GITHUB_STEP_SUMMARY
-        echo "- 🐦 X/Twitter: Posted via Zapier webhook" >> $GITHUB_STEP_SUMMARY
-        echo "- 📄 GitHub: Issue created with detailed report" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "---" >> $GITHUB_STEP_SUMMARY
-        echo "*UserOwned.ai Intelligence System*" >> $GITHUB_STEP_SUMMARY
+        echo "**Format**: NEARWEEK Developer Focus" >> $GITHUB_STEP_SUMMARY
+        echo "**Channels**: Telegram + X via Buffer" >> $GITHUB_STEP_SUMMARY
