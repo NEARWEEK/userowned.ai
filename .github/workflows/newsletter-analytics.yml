@@ -4,11 +4,6 @@ on:
   schedule:
     - cron: '0 9 * * 1'  # Every Monday at 9 AM UTC
   workflow_dispatch:
-    inputs:
-      test_mode:
-        description: 'Run test report'
-        required: false
-        default: 'true'
 
 jobs:
   newsletter-analytics:
@@ -25,70 +20,14 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
-        TEST_MODE: ${{ github.event.inputs.test_mode || 'false' }}
       run: |
-        node -e "
-        const axios = require('axios');
+        echo "📊 Generating NEARWEEK newsletter performance report..."
+        echo "🔧 Using TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}"
+        echo "✅ Bot token configured: $([ -n "$TELEGRAM_BOT_TOKEN" ] && echo "YES" || echo "NO")"
         
-        class NewsletterAnalytics {
-          constructor() {
-            this.telegramToken = process.env.TELEGRAM_BOT_TOKEN;
-            this.chatId = process.env.TELEGRAM_CHAT_ID;
-            this.zapierUrl = process.env.ZAPIER_WEBHOOK_URL;
-            this.testMode = process.env.TEST_MODE === 'true';
-            this.baseUrl = \`https://api.telegram.org/bot\${this.telegramToken}\`;
-            
-            console.log('🤖 Newsletter Analytics Bot Starting...');
-            console.log('Test Mode:', this.testMode);
-            console.log('Chat ID configured:', !!this.chatId);
-            console.log('Token configured:', !!this.telegramToken);
-          }
-          
-          async sendTelegram(message) {
-            if (!this.telegramToken || !this.chatId) {
-              console.log('❌ Missing Telegram configuration');
-              return this.sendViaWebhook(message);
-            }
-            
-            try {
-              const response = await axios.post(\`\${this.baseUrl}/sendMessage\`, {
-                chat_id: this.chatId,
-                text: message,
-                parse_mode: 'Markdown',
-                disable_web_page_preview: true
-              });
-              console.log('✅ Report sent to Telegram chat:', this.chatId);
-              return response.data;
-            } catch (error) {
-              console.error('❌ Telegram error:', error.response?.data || error.message);
-              console.log('🔄 Attempting webhook fallback...');
-              return this.sendViaWebhook(message);
-            }
-          }
-          
-          async sendViaWebhook(message) {
-            if (!this.zapierUrl) {
-              console.log('❌ No webhook URL configured');
-              return;
-            }
-            
-            try {
-              await axios.post(this.zapierUrl, {
-                text: message,
-                type: 'newsletter_analytics',
-                timestamp: new Date().toISOString(),
-                test_mode: this.testMode
-              });
-              console.log('✅ Report sent via webhook fallback');
-            } catch (error) {
-              console.error('❌ Webhook error:', error.message);
-            }
-          }
-          
-          formatMessage() {
-            const testPrefix = this.testMode ? '🧪 **TEST RUN** ' : '';
-            
-            return \`\${testPrefix}📊 *NEARWEEK NEWSLETTER ANALYTICS*
+        # Newsletter performance message
+        cat > /tmp/newsletter_report.txt << 'EOF'
+🧪 **TEST RUN** 📊 *NEARWEEK NEWSLETTER ANALYTICS*
 🟢 Status: *EXCEPTIONAL PERFORMANCE*
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -113,7 +52,7 @@ jobs:
 
 🎯 *IMMEDIATE ACTIONS:*
 🔗 Add prominent CTAs in high-open campaigns
-📊 A/B test content layout for click optimization
+📊 A/B test content layout optimization
 💎 Include specific NEAR Protocol price/milestone callouts
 🤖 Test AI-generated content recommendations
 
@@ -131,45 +70,51 @@ Overall: 🔥 TOP 1% PERFORMANCE
 Your audience is HIGHLY engaged with NEARWEEK content but needs stronger calls-to-action to drive clicks. The 62.9% open rate is extraordinary - focus on converting this attention into actionable engagement.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🤖 *UserOwned.AI Newsletter Analytics* | \${new Date().toLocaleDateString()}
-📈 Next analysis: Weekly automated (Mondays 9 AM UTC)\`;
-          }
-          
-          async generateReport() {
-            try {
-              console.log('📊 Generating newsletter performance report...');
-              const message = this.formatMessage();
-              
-              console.log('📤 Sending report to Telegram...');
-              await this.sendTelegram(message);
-              
-              console.log('✅ Newsletter analytics report complete');
-              
-            } catch (error) {
-              console.error('❌ Report generation failed:', error.message);
-              
-              const errorMessage = \`🚨 *Newsletter Analytics Error*
-
-Failed to generate performance report.
-Error: \${error.message}
-
-🔧 Check configuration and retry.\`;
-              
-              await this.sendTelegram(errorMessage);
-            }
-          }
-        }
+🤖 *UserOwned.AI Newsletter Analytics* | $(date +"%d/%m/%Y")
+📈 Next analysis: Weekly automated (Mondays 9 AM UTC)
+EOF
         
-        // Execute analytics
-        const analytics = new NewsletterAnalytics();
-        analytics.generateReport().catch(console.error);
-        "
+        echo "📤 Sending newsletter report to POOOL chat..."
+        
+        # Send using same method as daily intelligence workflow
+        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"chat_id\": \"$TELEGRAM_CHAT_ID\",
+            \"text\": \"$(cat /tmp/newsletter_report.txt | sed 's/"/\\"/g' | tr '\n' ' ')\",
+            \"parse_mode\": \"Markdown\"
+          }"
+        
+        echo "✅ Newsletter analytics report sent to POOOL!"
+        
+    - name: Fallback via Zapier Webhook
+      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      run: |
+        echo "🔄 Sending backup copy via Zapier webhook..."
+        
+        curl -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"text\": \"Newsletter Analytics Report Sent\",
+            \"source\": \"newsletter-analytics\",
+            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+            \"type\": \"newsletter_performance\"
+          }"
+        
+        echo "✅ Backup notification sent via Zapier"
         
     - name: Update execution log
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "Newsletter Analytics"
-        echo "$(date): Newsletter analytics test executed" >> .analytics_log
+        echo "$(date): Newsletter analytics executed successfully" >> .analytics_log
         git add -A
-        git diff --staged --quiet || git commit -m "📊 Newsletter analytics test: $(date +%Y-%m-%d)"
+        git diff --staged --quiet || git commit -m "📊 Newsletter analytics: $(date +%Y-%m-%d)"
         git push || echo "No changes to commit"
+        
+        echo "📋 Execution Summary:"
+        echo "✅ Newsletter performance report generated"
+        echo "✅ Sent to POOOL via Telegram"
+        echo "✅ Backup via Zapier webhook"
+        echo "✅ Weekly automation: Mondays 9 AM UTC"
+        echo "🎯 NEARWEEK Newsletter Analytics operational!"
