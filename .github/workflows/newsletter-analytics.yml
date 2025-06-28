@@ -9,34 +9,33 @@ jobs:
   newsletter-analytics:
     runs-on: ubuntu-latest
     steps:
-    - name: Send Newsletter Report to POOOL
-      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        echo "📊 Sending newsletter analytics to Telegram POOOL..."
-        
-        # Create newsletter report
-        cat > /tmp/newsletter_report.txt << 'EOF'
-🧪 Newsletter Analytics Test
-
-📊 NEARWEEK Performance:
-• Open Rate: 62.9% 🔥 (+84.3%)
-• Click Rate: 2.4% ⚠️ (-20.4%)
-• Subscribers: 2,401
-
-🏆 WINS: 3x industry average open rate
-🎯 ACTIONS: Add CTAs, A/B test layout
-📊 VS Industry: 285% above crypto avg
-
-🤖 UserOwned.AI Newsletter Analytics
-EOF
-        
-        # Send to Telegram using same method as daily-intelligence.yml
-        curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\",
-            \"text\": \"$(cat /tmp/newsletter_report.txt | sed 's/"/\\"/g' | tr '\n' ' ')\",
-            \"parse_mode\": \"HTML\"
-          }"
-        
-        echo "✅ Posted to Telegram POOOL"
+      - name: Send Newsletter Report to POOOL
+        if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          echo "📊 Sending newsletter analytics to Telegram POOOL..."
+          
+          # Create newsletter report
+          cat > /tmp/newsletter_report.txt << 'EOF'
+          🧪 Newsletter Analytics Test
+          📊 NEARWEEK Performance:
+          • Open Rate: 62.9% 🔥 (+84.3%)
+          • Click Rate: 2.4% ⚠️ (-20.4%)
+          • Subscribers: 2,401
+          
+          🏆 WINS: 3x industry average open rate
+          🎯 ACTIONS: Add CTAs, A/B test layout
+          📊 VS Industry: 285% above crypto avg
+          
+          🤖 UserOwned.AI Newsletter Analytics
+          EOF
+          
+          # Send to Telegram using same method as daily-intelligence.yml
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\",
+              \"text\": \"$(cat /tmp/newsletter_report.txt | sed 's/"/\\"/g' | tr '\n' ' ')\",
+              \"parse_mode\": \"HTML\"
+            }"
+          
+          echo "✅ Posted to Telegram POOOL"
