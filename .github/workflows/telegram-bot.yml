@@ -2,7 +2,7 @@ name: NEARWEEK AI Telegram Bot
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # Every minute for faster responses
+    - cron: '*/1 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
       with:
         node-version: '18'
     - run: npm install axios
-    - name: Run AI-Enhanced Bot
+    - name: Run AI Bot
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
@@ -22,257 +22,151 @@ jobs:
         node -e "
         const axios = require('axios');
         const fs = require('fs');
-        
         const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
         const ZAPIER_URL = process.env.ZAPIER_WEBHOOK_URL;
         const BASE_URL = \`https://api.telegram.org/bot\${BOT_TOKEN}\`;
-        
         let lastUpdateId = 0;
         let subscribers = [];
-        
-        // Load state
-        try { 
-          if (fs.existsSync('last_update.txt')) lastUpdateId = parseInt(fs.readFileSync('last_update.txt', 'utf8')); 
-        } catch (e) {}
-        
-        try { 
-          if (fs.existsSync('subscribers.json')) subscribers = JSON.parse(fs.readFileSync('subscribers.json', 'utf8')); 
-        } catch (e) {}
-        
+        try { if (fs.existsSync('last_update.txt')) lastUpdateId = parseInt(fs.readFileSync('last_update.txt', 'utf8')); } catch (e) {}
+        try { if (fs.existsSync('subscribers.json')) subscribers = JSON.parse(fs.readFileSync('subscribers.json', 'utf8')); } catch (e) {}
         async function getUpdates() {
           try {
-            const response = await axios.get(\`\${BASE_URL}/getUpdates\`, { 
-              params: { offset: lastUpdateId + 1, timeout: 30 } 
-            });
+            const response = await axios.get(\`\${BASE_URL}/getUpdates\`, { params: { offset: lastUpdateId + 1, timeout: 30 } });
             return response.data.result;
-          } catch (error) { 
-            console.error('Telegram API Error:', error.message); 
-            return []; 
-          }
+          } catch (error) { console.error('Error:', error.message); return []; }
         }
-        
         async function sendMessage(chatId, text) {
           try {
-            await axios.post(\`\${BASE_URL}/sendMessage\`, { 
-              chat_id: chatId, 
-              text: text, 
-              parse_mode: 'Markdown' 
-            });
-          } catch (error) { 
-            console.error('Send Message Error:', error.message); 
-          }
+            await axios.post(\`\${BASE_URL}/sendMessage\`, { chat_id: chatId, text: text, parse_mode: 'Markdown' });
+          } catch (error) { console.error('Error:', error.message); }
         }
-        
         async function callGeminiAI(prompt, type = 'general') {
           try {
             const response = await axios.post(ZAPIER_URL, {
               prompt: prompt,
               type: type,
-              instructions: 'You are NEARWEEK AI assistant. Provide concise, helpful responses about crypto and NEAR Protocol. Keep responses under 300 characters for Telegram.'
-            }, {
-              headers: { 'Content-Type': 'application/json' }
+              instructions: 'NEARWEEK AI assistant. Concise crypto/NEAR responses under 300 chars for Telegram.'
             });
-            
             return response.data.response || response.data.text || response.data.content || 'AI response received';
           } catch (error) {
-            console.error('Gemini AI Error:', error.message);
-            return '🤖 AI assistant temporarily unavailable. Try again shortly.';
+            console.error('AI Error:', error.message);
+            return '🤖 AI temporarily unavailable';
           }
         }
-        
         async function getNearPrice() {
           try {
             const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=near&vs_currencies=usd,btc&include_24hr_change=true&include_market_cap=true');
             const data = response.data.near;
-            
             const priceChange = data.usd_24h_change > 0 ? '📈' : '📉';
-            
-            return \`💰 *NEAR Protocol*\\n\\n\` +
-                   \`Price: $\${data.usd} \${priceChange}\\n\` +
-                   \`24h: \${data.usd_24h_change?.toFixed(2)}%\\n\` +
-                   \`BTC: ₿\${data.btc?.toFixed(8)}\\n\` +
-                   \`Market Cap: $\${(data.usd_market_cap / 1e9).toFixed(2)}B\`;
-          } catch (error) { 
-            return '❌ Price data temporarily unavailable'; 
-          }
+            return \`💰 *NEAR Protocol*\\n\\nPrice: $\${data.usd} \${priceChange}\\n24h: \${data.usd_24h_change?.toFixed(2)}%\\nBTC: ₿\${data.btc?.toFixed(8)}\\nMCap: $\${(data.usd_market_cap / 1e9).toFixed(2)}B\`;
+          } catch (error) { return '❌ Price unavailable'; }
         }
-        
         async function getCryptoNews() {
           try {
             const response = await axios.get('https://www.reddit.com/r/CryptoCurrency/.json?limit=5');
-            let news = '📰 *Latest Crypto News*\\n\\n';
-            
+            let news = '📰 *Crypto News*\\n\\n';
             response.data.data.children.slice(0, 3).forEach((post, index) => {
               const title = post.data.title.substring(0, 75) + (post.data.title.length > 75 ? '...' : '');
-              const score = post.data.score;
-              news += \`\${index + 1}. [\${title}](https://reddit.com\${post.data.permalink}) 👍\${score}\\n\\n\`;
+              news += \`\${index + 1}. [\${title}](https://reddit.com\${post.data.permalink}) 👍\${post.data.score}\\n\\n\`;
             });
-            
             return news;
-          } catch (error) { 
-            return '❌ News feed temporarily unavailable'; 
-          }
+          } catch (error) { return '❌ News unavailable'; }
         }
-        
         async function processCommand(message) {
           const chatId = message.chat.id;
           const text = message.text || '';
           const userId = message.from.id;
           const username = message.from.username || message.from.first_name || 'User';
-          
-          console.log(\`Processing command from \${username}: \${text}\`);
-          
-          // AI Commands using Gemini via Zapier MCP
+          console.log(\`\${username}: \${text}\`);
           if (text.toLowerCase().startsWith('/ai ')) {
             const query = text.slice(4);
             const aiResponse = await callGeminiAI(query, 'crypto_question');
             await sendMessage(chatId, \`🤖 *AI Assistant*\\n\\n\${aiResponse}\`);
             return;
           }
-          
           if (text.toLowerCase().startsWith('/analyze')) {
-            const analysis = await callGeminiAI(
-              'Analyze current NEAR Protocol market conditions and ecosystem developments. Provide 3 key insights.', 
-              'market_analysis'
-            );
+            const analysis = await callGeminiAI('Analyze NEAR Protocol market and ecosystem. 3 key insights.', 'market_analysis');
             await sendMessage(chatId, \`📊 *NEAR Analysis*\\n\\n\${analysis}\`);
             return;
           }
-          
           if (text.toLowerCase().startsWith('/explain ')) {
             const topic = text.slice(9);
-            const explanation = await callGeminiAI(
-              \`Explain \\\"\${topic}\\\" in simple terms for crypto beginners\`, 
-              'explanation'
-            );
+            const explanation = await callGeminiAI(\`Explain \\\"\${topic}\\\" simply for crypto beginners\`, 'explanation');
             await sendMessage(chatId, \`💡 *\${topic}*\\n\\n\${explanation}\`);
             return;
           }
-          
           if (text.toLowerCase().startsWith('/predict')) {
-            const prediction = await callGeminiAI(
-              'What are the key factors that could influence NEAR Protocol price? Include balanced analysis with disclaimer.',
-              'price_analysis'
-            );
+            const prediction = await callGeminiAI('NEAR price factors and outlook with disclaimer', 'price_analysis');
             await sendMessage(chatId, \`🔮 *NEAR Outlook*\\n\\n\${prediction}\`);
             return;
           }
-          
           if (text.toLowerCase().startsWith('/summary')) {
-            const summary = await callGeminiAI(
-              'Summarize the most important developments in the NEAR ecosystem this week',
-              'ecosystem_summary'
-            );
-            await sendMessage(chatId, \`📋 *Weekly NEAR Summary*\\n\\n\${summary}\`);
+            const summary = await callGeminiAI('Weekly NEAR ecosystem developments summary', 'ecosystem_summary');
+            await sendMessage(chatId, \`📋 *Weekly Summary*\\n\\n\${summary}\`);
             return;
           }
-          
-          // Regular Commands
           switch (text.toLowerCase()) {
             case '/start':
-              await sendMessage(chatId, \`🤖 *NEARWEEK AI Bot*\\n\\nHello \${username}! Get NEAR news, prices, and AI insights.\\n\\n/help for all commands\`);
+              await sendMessage(chatId, \`🤖 *NEARWEEK AI Bot*\\n\\nHello \${username}! NEAR news, prices, AI insights.\\n\\n/help for commands\`);
               break;
-              
             case '/help':
-              await sendMessage(chatId, 
-                '🔧 *Commands:*\\n\\n' +
-                '**Basic:**\\n' +
-                '/start - Welcome message\\n' +
-                '/price - NEAR price data\\n' +
-                '/news - Latest crypto news\\n' +
-                '/subscribe - Join newsletter\\n' +
-                '/stats - Bot statistics\\n\\n' +
-                '**🤖 AI Features:**\\n' +
-                '/ai [question] - Ask anything\\n' +
-                '/analyze - Market analysis\\n' +
-                '/explain [topic] - Explain concepts\\n' +
-                '/predict - Price outlook\\n' +
-                '/summary - Weekly NEAR recap'
-              );
+              await sendMessage(chatId, '🔧 *Commands:*\\n\\n**Basic:**\\n/start /price /news /subscribe /stats\\n\\n**🤖 AI:**\\n/ai [question] - Ask anything\\n/analyze - Market analysis\\n/explain [topic] - Explain concepts\\n/predict - Price outlook\\n/summary - Weekly recap');
               break;
-              
             case '/subscribe':
               if (!subscribers.find(sub => sub.userId === userId)) {
-                subscribers.push({ 
-                  userId, 
-                  chatId, 
-                  username,
-                  subscribedAt: new Date().toISOString(),
-                  source: 'telegram_ai_bot'
-                });
+                subscribers.push({ userId, chatId, username, subscribedAt: new Date().toISOString(), source: 'telegram_ai_bot' });
                 fs.writeFileSync('subscribers.json', JSON.stringify(subscribers, null, 2));
-                await sendMessage(chatId, \`✅ Welcome to NEARWEEK, \${username}!\\n\\nYou'll receive AI-curated NEAR updates and insights.\`);
+                await sendMessage(chatId, \`✅ Welcome \${username}! AI-curated NEAR updates coming.\`);
               } else {
-                await sendMessage(chatId, \`✅ You're already subscribed, \${username}!\`);
+                await sendMessage(chatId, \`✅ Already subscribed, \${username}!\`);
               }
               break;
-              
             case '/unsubscribe':
               const index = subscribers.findIndex(sub => sub.userId === userId);
               if (index !== -1) {
                 subscribers.splice(index, 1);
                 fs.writeFileSync('subscribers.json', JSON.stringify(subscribers, null, 2));
-                await sendMessage(chatId, \`✅ Unsubscribed successfully, \${username}\`);
+                await sendMessage(chatId, \`✅ Unsubscribed, \${username}\`);
               } else {
-                await sendMessage(chatId, '❌ You are not currently subscribed');
+                await sendMessage(chatId, '❌ Not subscribed');
               }
               break;
-              
             case '/price':
               const priceInfo = await getNearPrice();
               await sendMessage(chatId, priceInfo);
               break;
-              
             case '/news':
               const newsInfo = await getCryptoNews();
               await sendMessage(chatId, newsInfo);
               break;
-              
             case '/stats':
-              await sendMessage(chatId, 
-                \`📊 *NEARWEEK AI Bot Stats*\\n\\n\` +
-                \`Subscribers: \${subscribers.length}\\n\` +
-                \`AI-Powered: ✅ Gemini\\n\` +
-                \`Response Time: ~1 min\\n\` +
-                \`Features: Price, News, AI Chat\\n\` +
-                \`[Visit NEARWEEK.com](https://nearweek.com)\`
-              );
+              await sendMessage(chatId, \`📊 *NEARWEEK AI Stats*\\n\\nSubscribers: \${subscribers.length}\\nAI: ✅ Gemini\\nSpeed: ~1min\\n[NEARWEEK.com](https://nearweek.com)\`);
               break;
-              
             default:
               if (text.startsWith('/')) {
-                await sendMessage(chatId, '❓ Unknown command. Try /help to see all available commands including AI features!');
+                await sendMessage(chatId, '❓ Unknown command. Try /help for AI features!');
               }
-              // Ignore non-command messages
           }
         }
-        
         async function main() {
-          console.log('🤖 NEARWEEK AI Bot polling for updates...');
-          
+          console.log('🤖 AI Bot polling...');
           const updates = await getUpdates();
-          
           for (const update of updates) {
             if (update.message && update.message.text) {
               await processCommand(update.message);
             }
             lastUpdateId = Math.max(lastUpdateId, update.update_id);
           }
-          
-          // Save state
           fs.writeFileSync('last_update.txt', lastUpdateId.toString());
-          
           if (updates.length > 0) {
-            console.log(\`✅ Processed \${updates.length} updates. Last ID: \${lastUpdateId}\`);
+            console.log(\`✅ Processed \${updates.length} updates. ID: \${lastUpdateId}\`);
           }
         }
-        
         main().catch(console.error);
         "
-    - name: Commit AI bot state updates
-      run: |
+    - run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action AI Bot"
+        git config --local user.name "AI Bot"
         git add -A
-        git diff --staged --quiet || git commit -m "🤖 Update AI bot state - $(date)"
-        git push || echo "No state changes to commit"
+        git diff --staged --quiet || git commit -m "🤖 AI bot update"
+        git push || echo "No changes"
