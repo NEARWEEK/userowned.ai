@@ -1,9 +1,10 @@
-# Daily GitHub Updates - NEARWEEK Format
-name: Daily GitHub Updates
+# UserOwned.ai Daily GitHub Updates - NEARWEEK Format
+name: UserOwned.ai Daily GitHub Updates
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # Daily at 10:00 CET (9:00 UTC)
+    # Daily at 10:00 CET (9:00 UTC)  
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:
@@ -14,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
+    - name: Setup Node.js  
       uses: actions/setup-node@v4
       with:
         node-version: '18'
@@ -22,21 +23,12 @@ jobs:
     - name: Install dependencies
       run: npm install
         
-    - name: Fetch GitHub Updates
+    - name: Fetch and Post GitHub Updates
       env:
         GITHUB_TOKEN: ${{ secrets.DEV_TOKEN_GIT }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
       run: |
-        echo "🔄 Fetching latest GitHub updates..."
-        
-        # Execute GitHub updates script with NEARWEEK format
-        node src/scripts/github-updates.js --format=nearweek --post
-        
-    - name: Create execution summary
-      run: |
-        echo "## 📊 GitHub Updates Posted" >> $GITHUB_STEP_SUMMARY
-        echo "**Execution Time**: $(date -u)" >> $GITHUB_STEP_SUMMARY
-        echo "**Status**: ✅ Completed" >> $GITHUB_STEP_SUMMARY
-        echo "**Format**: NEARWEEK Developer Focus" >> $GITHUB_STEP_SUMMARY
+        echo "📊 Fetching GitHub updates..."
+        node src/scripts/github-updates-nearweek.js --post
