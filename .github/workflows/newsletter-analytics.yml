@@ -9,112 +9,50 @@ jobs:
   newsletter-analytics:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-    - run: npm install axios
-    
-    - name: Generate Newsletter Performance Report
+    - name: Send Newsletter Performance Report to POOOL
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
       run: |
         echo "📊 Generating NEARWEEK newsletter performance report..."
-        echo "🔧 Using TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}"
-        echo "✅ Bot token configured: $([ -n "$TELEGRAM_BOT_TOKEN" ] && echo "YES" || echo "NO")"
+        echo "📱 Posting to Telegram POOOL..."
         
-        # Newsletter performance message
-        cat > /tmp/newsletter_report.txt << 'EOF'
-🧪 **TEST RUN** 📊 *NEARWEEK NEWSLETTER ANALYTICS*
-🟢 Status: *EXCEPTIONAL PERFORMANCE*
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        # Create newsletter report for Telegram (using same method as daily-intelligence.yml)
+        cat > /tmp/telegram_report.txt << 'EOF'
+🧪 Newsletter Analytics Test
 
-📧 *Latest:* 🚀NEARWEEK #38 🚀
-📅 *Sent:* 03/01/2022 | 2,401 subscribers
+📊 NEARWEEK Performance Report:
+• Open Rate: 62.9% 🔥🔥🔥 (+84.3%)
+• Click Rate: 2.4% ⚠️ (-20.4%)
+• Subscribers: 2,401
 
-📈 *PERFORMANCE METRICS:*
-• *Open Rate:* 62.9% 🔥🔥🔥 📈 +84.3%
-• *Click Rate:* 2.4% ⚠️ 📉 -20.4%
-• *Click-to-Open:* 3.9%
-• *Unsubscribes:* 4
-
-🏆 *MAJOR WINS:*
+🏆 MAJOR WINS:
 🎯 EXCEPTIONAL 62.9% open rate - 3x industry average!
 🚀 Best performing campaign in series history
-📈 Year-end recap format drives massive engagement
-🔥 Emoji + rocket subject line strategy working perfectly
 
-⚠️ *AREAS FOR IMPROVEMENT:*
-📉 Click rate below recent historical average
-🎯 High opens not converting to clicks as expected
+🎯 IMMEDIATE ACTIONS:
+🔗 Add prominent CTAs in campaigns
+📊 A/B test content layout
+💎 Include NEAR price callouts
 
-🎯 *IMMEDIATE ACTIONS:*
-🔗 Add prominent CTAs in high-open campaigns
-📊 A/B test content layout optimization
-💎 Include specific NEAR Protocol price/milestone callouts
-🤖 Test AI-generated content recommendations
+📊 VS Industry: 285% above crypto avg
 
-🧪 *THIS WEEK'S EXPERIMENTS:*
-📊 Segment high-openers for premium content
-🤖 Test AI-generated market predictions
-⚡ Try breaking news vs weekly roundup timing
-
-📊 *VS INDUSTRY BENCHMARKS:*
-Open Rate: ✅ 285% ABOVE crypto avg (22%)
-Click Rate: ❌ 31% BELOW tech avg (3.5%)
-Overall: 🔥 TOP 1% PERFORMANCE
-
-💡 *STRATEGIC INSIGHT:*
-Your audience is HIGHLY engaged with NEARWEEK content but needs stronger calls-to-action to drive clicks. The 62.9% open rate is extraordinary - focus on converting this attention into actionable engagement.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🤖 *UserOwned.AI Newsletter Analytics* | $(date +"%d/%m/%Y")
-📈 Next analysis: Weekly automated (Mondays 9 AM UTC)
+🤖 UserOwned.AI Newsletter Analytics
+📈 Weekly automation: Mondays 9 AM UTC
 EOF
         
-        echo "📤 Sending newsletter report to POOOL chat..."
-        
-        # Send using same method as daily intelligence workflow
-        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+        # Send to Telegram using exact same method as daily-intelligence.yml
+        curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
           -H "Content-Type: application/json" \
           -d "{
-            \"chat_id\": \"$TELEGRAM_CHAT_ID\",
-            \"text\": \"$(cat /tmp/newsletter_report.txt | sed 's/"/\\"/g' | tr '\n' ' ')\",
-            \"parse_mode\": \"Markdown\"
+            \"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\",
+            \"text\": \"$(cat /tmp/telegram_report.txt | sed 's/"/\\"/g' | tr '\n' ' ')\",
+            \"parse_mode\": \"HTML\"
           }"
         
-        echo "✅ Newsletter analytics report sent to POOOL!"
-        
-    - name: Fallback via Zapier Webhook
-      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
-      run: |
-        echo "🔄 Sending backup copy via Zapier webhook..."
-        
-        curl -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"text\": \"Newsletter Analytics Report Sent\",
-            \"source\": \"newsletter-analytics\",
-            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
-            \"type\": \"newsletter_performance\"
-          }"
-        
-        echo "✅ Backup notification sent via Zapier"
+        echo "✅ Posted to Telegram POOOL"
         
     - name: Update execution log
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "Newsletter Analytics"
-        echo "$(date): Newsletter analytics executed successfully" >> .analytics_log
-        git add -A
-        git diff --staged --quiet || git commit -m "📊 Newsletter analytics: $(date +%Y-%m-%d)"
-        git push || echo "No changes to commit"
-        
-        echo "📋 Execution Summary:"
-        echo "✅ Newsletter performance report generated"
-        echo "✅ Sent to POOOL via Telegram"
-        echo "✅ Backup via Zapier webhook"
-        echo "✅ Weekly automation: Mondays 9 AM UTC"
+        echo "$(date): Newsletter analytics executed successfully" >> newsletter-analytics.log
         echo "🎯 NEARWEEK Newsletter Analytics operational!"
