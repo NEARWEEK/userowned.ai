@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Newsletter Report to POOOL
-        if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
+        if: vars.TELEGRAM_BOT_TOKEN && vars.TELEGRAM_CHAT_ID
         run: |
           echo "📊 Sending newsletter analytics to Telegram POOOL..."
           
