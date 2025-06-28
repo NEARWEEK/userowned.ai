@@ -45,7 +45,7 @@ jobs:
             const response = await axios.post(ZAPIER_URL, {
               prompt: prompt,
               type: type,
-              instructions: 'NEARWEEK AI assistant. Concise crypto/NEAR responses under 300 chars for Telegram.'
+              instructions: 'NEARWEEK AI assistant. Concise crypto/NEAR responses under 300 chars.'
             });
             return response.data.response || response.data.text || response.data.content || 'AI response';
           } catch (error) {
@@ -167,5 +167,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "AI Bot"
         git add -A
-        git diff --staged --quiet || git commit -m "🤖 AI update"
+        git diff --staged --quiet || git commit -m "🚑 Fix invalid cron + restore bot code"
         git push || echo "No changes"
