@@ -11,6 +11,7 @@ const dailyFormatNarrative = require('./daily-format-narrative');
 const dailyFormatTechnical = require('./daily-format-technical');
 const dailyFormatCompetitive = require('./daily-format-competitive');
 const dailyFormatInvestor = require('./daily-format-investor');
+const mailchimpWeeklyAnalytics = require('./mailchimp-weekly-analytics');
 
 /**
  * Available content templates
@@ -23,7 +24,8 @@ const templates = {
   'daily-narrative': dailyFormatNarrative,
   'daily-technical': dailyFormatTechnical,
   'daily-competitive': dailyFormatCompetitive,
-  'daily-investor': dailyFormatInvestor
+  'daily-investor': dailyFormatInvestor,
+  'mailchimp-weekly': mailchimpWeeklyAnalytics
 };
 
 /**
