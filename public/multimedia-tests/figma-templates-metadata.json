@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-06-29T16:22:49.870Z",
+  "platform": "UserOwned.AI",
+  "source": "Generated Templates",
+  "templates": [
+    {
+      "name": "daily-report-header",
+      "dimensions": "1200x400",
+      "file": "daily-report-header.svg",
+      "description": "UserOwned.AI Daily Report - AI x Crypto Ecosystem Intelligence"
+    },
+    {
+      "name": "weekly-analytics-chart",
+      "dimensions": "800x600",
+      "file": "weekly-analytics-chart.svg",
+      "description": "Weekly Analytics - Performance Metrics Dashboard"
+    },
+    {
+      "name": "social-media-card",
+      "dimensions": "1080x1080",
+      "file": "social-media-card.svg",
+      "description": "AI x Crypto Update - Latest Ecosystem Insights"
+    },
+    {
+      "name": "newsletter-header",
+      "dimensions": "600x200",
+      "file": "newsletter-header.svg",
+      "description": "UserOwned.AI Newsletter - Weekly Intelligence Brief"
+    }
+  ],
+  "nextSteps": [
+    "Create actual Figma file with these designs",
+    "Replace SVGs with PNG exports from Figma",
+    "Integrate with automated report generation"
+  ],
+  "figmaInstructions": {
+    "fileStructure": "Create frames with these exact names for API integration",
+    "naming": [
+      "daily-report-header",
+      "weekly-analytics-chart",
+      "social-media-card",
+      "newsletter-header"
+    ],
+    "dimensions": "Use the specified dimensions for each template",
+    "export": "Set up auto-export to PNG at 2x resolution"
+  }
+}
