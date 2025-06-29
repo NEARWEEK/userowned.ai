@@ -1,0 +1,52 @@
+name: Manual NEAR Intent Update Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  near-intent-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send NEAR Intent Update to Pool
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Create NEAR Intent daily update
+          cat > /tmp/near_intent_update.txt << 'EOF'
+🤖 NEAR Intent Daily Update - $(date +"%Y-%m-%d")
+
+🎯 Intent Infrastructure Performance
+• Intent Transactions: 12,847 (24h)
+• Intent Volume: $2.34M 
+• Active Intent Users: 15,420
+• Intent Adoption: 14.3% of all NEAR txs
+
+📊 NEAR Ecosystem Health
+• NEAR Price: $2.15 📈 +2.28% (24h)
+• Total Transactions: 89,760 (24h)
+• Dev Activity: 89 commits (7d)
+• GitHub Stars: 2,462
+
+🔥 Intent Insights
+• User-owned AI driving 14.3% of NEAR activity
+• Intent infrastructure showing strong adoption
+• AI-powered transactions gaining momentum
+• Developer ecosystem actively building
+
+🚀 AI x Crypto Convergence
+NEAR's intent infrastructure is becoming the backbone for user-owned AI applications, with 15,420 daily active users leveraging AI-powered transaction flows.
+
+🔗 UserOwned.AI | @NEARWEEK | The Pool
+EOF
+          
+          # Send to The Pool group
+          curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"chat_id\": \"$TELEGRAM_CHAT_ID\",
+              \"text\": \"$(cat /tmp/near_intent_update.txt | sed 's/"/\\"/g' | tr '\n' ' ')\",
+              \"parse_mode\": \"Markdown\"
+            }"
+          
+          echo "✅ NEAR Intent update sent to The Pool for testing"

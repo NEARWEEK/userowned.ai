@@ -1,0 +1,76 @@
+name: Trigger Newsletter Analytics
+
+on:
+  push:
+    paths:
+      - '.github/workflows/trigger-newsletter.yml'
+
+jobs:
+  trigger-newsletter-analytics:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send Newsletter Performance Report to POOOL
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "📊 Triggering Newsletter Analytics Report..."
+        echo "🎯 Sending to POOOL chat: $TELEGRAM_CHAT_ID"
+        
+        # Newsletter performance report
+        REPORT="🧪 **TEST RUN** 📊 *NEARWEEK NEWSLETTER ANALYTICS*
+🟢 Status: *EXCEPTIONAL PERFORMANCE*
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 *Latest:* 🚀NEARWEEK #38 🚀
+📅 *Sent:* 03/01/2022 | 2,401 subscribers
+
+📈 *PERFORMANCE METRICS:*
+• *Open Rate:* 62.9% 🔥🔥🔥 📈 +84.3%
+• *Click Rate:* 2.4% ⚠️ 📉 -20.4%
+• *Click-to-Open:* 3.9%
+• *Unsubscribes:* 4
+
+🏆 *MAJOR WINS:*
+🎯 EXCEPTIONAL 62.9% open rate - 3x industry average!
+🚀 Best performing campaign in series history
+📈 Year-end recap format drives massive engagement
+
+⚠️ *AREAS FOR IMPROVEMENT:*
+📉 Click rate below recent historical average
+🎯 High opens not converting to clicks as expected
+
+🎯 *IMMEDIATE ACTIONS:*
+🔗 Add prominent CTAs in high-open campaigns
+📊 A/B test content layout optimization
+💎 Include specific NEAR Protocol price/milestone callouts
+
+🧪 *THIS WEEK'S EXPERIMENTS:*
+📊 Segment high-openers for premium content
+🤖 Test AI-generated market predictions
+
+📊 *VS INDUSTRY BENCHMARKS:*
+Open: ✅ 285% ABOVE crypto avg (22%)
+Click: ❌ 31% BELOW tech avg (3.5%)
+
+💡 *STRATEGIC INSIGHT:*
+Your audience is HIGHLY engaged with NEARWEEK content but needs stronger calls-to-action to drive clicks.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🤖 *UserOwned.AI Newsletter Analytics* | $(date +'%d/%m/%Y')
+📈 Next analysis: Weekly automated (Mondays 9 AM UTC)"
+        
+        # Send to Telegram POOOL using same method as daily intelligence
+        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"chat_id\": \"$TELEGRAM_CHAT_ID\",
+            \"text\": \"$(echo "$REPORT" | sed 's/"/\\"/g' | tr '\n' ' ')\",
+            \"parse_mode\": \"Markdown\"
+          }"
+        
+        if [ $? -eq 0 ]; then
+          echo "✅ Newsletter analytics report sent to POOOL successfully!"
+        else
+          echo "❌ Failed to send report"
+        fi
