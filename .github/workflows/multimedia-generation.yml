@@ -1,0 +1,138 @@
+name: Multimedia Content Generation
+
+on:
+  schedule:
+    # Run every day at 15:00 UTC (4 PM CET) for daily visuals
+    - cron: '0 15 * * *'
+  workflow_dispatch: # Allow manual trigger
+    inputs:
+      content_type:
+        description: 'Type of content to generate'
+        required: true
+        default: 'daily-visual'
+        type: choice
+        options:
+        - daily-visual
+        - weekly-summary
+        - ecosystem-analysis
+        - test-all-apis
+
+jobs:
+  generate-multimedia:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Test Multimedia APIs
+      env:
+        NODE_ENV: production
+        FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        RUNWAY_API_KEY: ${{ secrets.RUNWAY_API_KEY }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: -1001559796949  # POOOL group
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🎨 Testing multimedia APIs with organizational secrets..."
+        
+        # Test Figma API
+        if [ -n "$FIGMA_API_KEY" ]; then
+          echo "✅ Figma API key available"
+          node scripts/test-figma-api.js
+        else
+          echo "⚠️ Figma API key not found in secrets"
+        fi
+        
+        # Test Runway API
+        if [ -n "$RUNWAY_API_KEY" ]; then
+          echo "✅ Runway API key available"
+          node scripts/test-runway-api.js
+        else
+          echo "⚠️ Runway API key not found in secrets"
+        fi
+        
+    - name: Generate Content Based on Type
+      env:
+        NODE_ENV: production
+        FIGMA_API_KEY: ${{ secrets.FIGMA_API_KEY }}
+        RUNWAY_API_KEY: ${{ secrets.RUNWAY_API_KEY }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: -1001559796949
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        CONTENT_TYPE="${{ github.event.inputs.content_type || 'daily-visual' }}"
+        echo "🎬 Generating content type: $CONTENT_TYPE"
+        
+        case $CONTENT_TYPE in
+          "daily-visual")
+            echo "📊 Generating daily visual report..."
+            # This would integrate with your existing daily template
+            node src/scripts/run-template.js daily-ecosystem --multimedia
+            ;;
+          "weekly-summary")
+            echo "📈 Generating weekly multimedia summary..."
+            node scripts/demo-multimedia.js --post
+            ;;
+          "ecosystem-analysis")
+            echo "🌐 Generating ecosystem analysis with visuals..."
+            node src/scripts/run-template.js daily-ecosystem --post --multimedia
+            ;;
+          "test-all-apis")
+            echo "🧪 Testing all multimedia APIs..."
+            node scripts/demo-multimedia.js --post
+            ;;
+        esac
+        
+    - name: Upload Generated Content
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: multimedia-content-${{ github.run_number }}
+        path: |
+          public/multimedia-tests/
+          logs/
+        retention-days: 7
+        
+    - name: Post Results to Telegram
+      if: success()
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: -1001559796949
+      run: |
+        # Count generated files
+        IMAGE_COUNT=$(find public/multimedia-tests/ -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" 2>/dev/null | wc -l || echo "0")
+        REPORT_COUNT=$(find public/multimedia-tests/ -name "*.json" 2>/dev/null | wc -l || echo "0")
+        
+        MESSAGE="🎨 <b>UserOwned.AI Multimedia Generation Complete</b>
+        <i>$(date -u +'%Y-%m-%d %H:%M UTC')</i>
+        
+        <b>🎬 Content Type:</b> ${{ github.event.inputs.content_type || 'daily-visual' }}
+        <b>📊 Generated Content:</b>
+        🖼️ Images: ${IMAGE_COUNT}
+        📄 Reports: ${REPORT_COUNT}
+        
+        <b>✅ Status:</b> Successfully generated via GitHub Actions
+        <b>🔗 Workflow:</b> <a href=\"https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\">View Details</a>
+        
+        🤖 Automated by UserOwned.AI | @ai_x_crypto"
+        
+        curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d "{\"chat_id\":\"${TELEGRAM_CHAT_ID}\",\"text\":\"${MESSAGE}\",\"parse_mode\":\"HTML\",\"disable_web_page_preview\":true}"
+        
+    - name: Log completion
+      if: success()
+      run: echo "✅ Multimedia generation workflow completed successfully!"
+      
+    - name: Log failure
+      if: failure()
+      run: echo "❌ Multimedia generation workflow failed - check logs"
