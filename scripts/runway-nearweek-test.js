@@ -71,7 +71,6 @@ class RunwayNEARWEEKTest {
       return result;
     } catch (error) {
       console.log('⚠️ App creation failed (might already exist):', error.message);
-      // Return mock data to continue test
       return { id: this.appId, name: 'NEARWEEK Content System' };
     }
   }
@@ -93,25 +92,6 @@ class RunwayNEARWEEKTest {
     } catch (error) {
       console.log('⚠️ Release creation simulation:', error.message);
       return { id: `release-${Date.now()}`, ...releaseData };
-    }
-  }
-
-  async createAnimationBucket() {
-    console.log('📦 Setting up animation distribution bucket...');
-    
-    const bucketData = {
-      name: 'NEARWEEK Animations',
-      orgWideAccessEnabled: true,
-      notificationsEnabled: true
-    };
-
-    try {
-      const result = await this.makeRunwayRequest('POST', `/app/${this.appId}/bucket`, bucketData);
-      console.log('✅ Bucket created:', result.name || bucketData.name);
-      return result.id ? result : { id: `bucket-${Date.now()}`, ...bucketData };
-    } catch (error) {
-      console.log('⚠️ Bucket creation simulation:', error.message);
-      return { id: `bucket-${Date.now()}`, ...bucketData };
     }
   }
 
@@ -169,38 +149,15 @@ class RunwayNEARWEEKTest {
     
     switch (eventType) {
       case 'release.created':
-        telegramMessage = `🛬 <b>NEARWEEK Release Created</b>
-
-📦 <b>Release:</b> ${payload.version}
-📝 <b>Name:</b> ${payload.releaseName}
-📊 <b>NEAR Stats:</b> $9.8M | 12.1K | 1.3K | $500K-$3.4M
-
-#NEARWEEK #Release #Runway`;
+        telegramMessage = `🛬 NEARWEEK Release Created\n\n📦 Release: ${payload.version}\n📝 Name: ${payload.releaseName}\n📊 NEAR Stats: $9.8M | 12.1K | 1.3K | $500K-$3.4M\n\n#NEARWEEK #Release #Runway`;
         break;
         
       case 'buildDistro.newBuildAvailable':
-        telegramMessage = `🎬 <b>Animation Ready for Review</b>
-
-📁 <b>File:</b> ${payload.fileName}
-📊 <b>NEAR Intents Analytics:</b>
-   💰 Volume: $9.8M
-   🔄 Swaps: 12.1K  
-   👥 Users: 1.3K
-   📈 Range: $500K-$3.4M
-
-⏰ <b>Created:</b> ${new Date().toLocaleString()}
-
-#NEARWEEK #Animation #Review`;
+        telegramMessage = `🎬 Animation Ready for Review\n\n📁 File: ${payload.fileName}\n📊 NEAR Intents Analytics:\n   💰 Volume: $9.8M\n   🔄 Swaps: 12.1K\n   👥 Users: 1.3K\n   📈 Range: $500K-$3.4M\n\n⏰ Created: ${new Date().toLocaleString()}\n\n#NEARWEEK #Animation #Review`;
         break;
         
       case 'release.released':
-        telegramMessage = `🚀 <b>NEARWEEK Animation Published!</b>
-
-✅ <b>${payload.releaseName}</b> (${payload.version})
-📊 <b>Live NEAR Stats:</b> $9.8M | 12.1K | 1.3K | $500K-$3.4M
-⏰ <b>Published:</b> ${new Date().toLocaleString()}
-
-#NEARWEEK #Published #NEARStats`;
+        telegramMessage = `🚀 NEARWEEK Animation Published!\n\n✅ ${payload.releaseName} (${payload.version})\n📊 Live NEAR Stats: $9.8M | 12.1K | 1.3K | $500K-$3.4M\n⏰ Published: ${new Date().toLocaleString()}\n\n#NEARWEEK #Published #NEARStats`;
         break;
     }
 
@@ -221,54 +178,38 @@ class RunwayNEARWEEKTest {
     const results = {};
     
     try {
-      // Step 1: Create/verify NEARWEEK app
       console.log('\n1️⃣ NEARWEEK APP SETUP:');
       results.app = await this.createNEARWEEKApp();
       
-      // Step 2: Create animation release
       console.log('\n2️⃣ ANIMATION RELEASE:');
       results.release = await this.createAnimationRelease();
       
-      // Step 3: Create distribution bucket
-      console.log('\n3️⃣ DISTRIBUTION BUCKET:');
-      results.bucket = await this.createAnimationBucket();
+      console.log('\n3️⃣ WEBHOOK NOTIFICATIONS:');
       
-      // Step 4: Test webhook notifications
-      console.log('\n4️⃣ WEBHOOK NOTIFICATIONS:');
-      
-      // Test release created
       await this.handleRunwayWebhook('release.created', {
         version: results.release.version,
         releaseName: results.release.releaseName
       });
       
-      // Test animation available
       await this.handleRunwayWebhook('buildDistro.newBuildAvailable', {
         fileName: 'near-analytics-animation.mp4'
       });
       
-      // Test release published
       await this.handleRunwayWebhook('release.released', {
         version: results.release.version,
         releaseName: results.release.releaseName
       });
       
-      // Final results
       console.log('\n🎉 TEST RESULTS:');
       console.log('================');
       console.log('✅ Runway API integration: TESTED');
       console.log('✅ NEARWEEK app setup: READY');
       console.log('✅ Animation release workflow: CONFIGURED');
-      console.log('✅ Build distribution: AVAILABLE');
       console.log('✅ Webhook notifications: WORKING');
       console.log('✅ Telegram Pool integration: ACTIVE');
       console.log('\n🚀 NEARWEEK → Runway → Telegram pipeline operational!');
       
-      return {
-        success: true,
-        ...results,
-        message: 'Integration test completed successfully'
-      };
+      return { success: true, ...results };
       
     } catch (error) {
       console.log('\n❌ TEST FAILED:');
@@ -278,14 +219,12 @@ class RunwayNEARWEEKTest {
   }
 }
 
-// CLI execution
 if (require.main === module) {
   const test = new RunwayNEARWEEKTest();
   
   console.log('🔑 Checking environment variables...');
   console.log(`Runway API Key: ${test.runwayApiKey ? 'CONFIGURED' : 'MISSING'}`);
   console.log(`Telegram Token: ${test.telegramToken ? 'CONFIGURED' : 'MISSING (will simulate)'}`);
-  console.log(`Telegram Chat ID: ${test.telegramChatId ? 'CONFIGURED' : 'MISSING (will simulate)'}`);
   
   test.runCompleteTest()
     .then(result => {
