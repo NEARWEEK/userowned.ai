@@ -52,7 +52,7 @@
    npm start
    ```
 
-## 📊 Expected Performance
+## 📈 Expected Performance
 
 - **Response Time**: <15 minutes
 - **Accuracy**: 85%+
