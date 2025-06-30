@@ -1,0 +1,195 @@
+{
+  "total_processed": 3,
+  "successful": 3,
+  "failed": 0,
+  "dry_run": 0,
+  "success_rate": "100.0",
+  "results": [
+    {
+      "post_id": "1751314774338_0",
+      "handle": "@NEARProtocol",
+      "success": true,
+      "status": 200,
+      "response": {
+        "status": "processed",
+        "relevance_score": 80,
+        "priority": "high",
+        "action": "queued_for_approval",
+        "estimated_publish_time": "15 minutes",
+        "actions_taken": [
+          {
+            "type": "buffer_post",
+            "status": "queued",
+            "data": {
+              "success": true,
+              "platform": "buffer",
+              "data": {
+                "text": "🔥 TRENDING: Community update: NEAR Protocol reaches new milestone in transaction volume\n\nvia @NEARProtocol\n\n#NEARWEEK #AI #Crypto",
+                "method": "queue",
+                "tags": "nearweek,automation,high,score-80",
+                "organizationId": "NEARWEEK",
+                "channelId": "just_deployed_x_free_profile"
+              }
+            }
+          },
+          {
+            "type": "team_notification",
+            "status": "sent",
+            "data": {
+              "success": true,
+              "platform": "telegram",
+              "data": {
+                "text": "🚨 HIGH PRIORITY CONTENT\n\nScore: 80/100\nTweet: Community update: NEAR Protocol reaches new milestone in transaction volume\nAuthor: @NEARProtocol\n\n⏰ Action needed: Review queued post",
+                "format": "Markdown",
+                "disable_notification": false
+              }
+            }
+          },
+          {
+            "type": "github_issue",
+            "status": "created",
+            "data": {
+              "success": true,
+              "platform": "github",
+              "data": {
+                "title": "[AUTO] HIGH: Community update: NEAR Protocol reaches new milest...",
+                "body": "**Automated Content Processing**\n\n**Tweet ID**: 1751314774338_0\n**Relevance Score**: 80/100\n**Priority**: high\n**Author**: @NEARProtocol\n\n**Content**:\nCommunity update: NEAR Protocol reaches new milestone in transaction volume\n\n**Actions Taken**:\n- Queued for Buffer (manual approval)\n- Team notification sent\n\n**Metrics**:\n- Likes: 363\n- Retweets: 89\n- Replies: 31",
+                "labels": [
+                  "automation",
+                  "high",
+                  "content-processing"
+                ],
+                "assignees": []
+              }
+            }
+          }
+        ],
+        "timestamp": "2025-06-30T20:21:07.428Z"
+      }
+    },
+    {
+      "post_id": "1751314774342_1",
+      "handle": "@NEARProtocol",
+      "success": true,
+      "status": 200,
+      "response": {
+        "status": "processed",
+        "relevance_score": 100,
+        "priority": "high",
+        "action": "queued_for_approval",
+        "estimated_publish_time": "15 minutes",
+        "actions_taken": [
+          {
+            "type": "buffer_post",
+            "status": "queued",
+            "data": {
+              "success": true,
+              "platform": "buffer",
+              "data": {
+                "text": "🔥 TRENDING: NEAR Protocol developer tools now support advanced AI integration capabilities\n\nvia @NEARProtocol\n\n#NEARWEEK #AI #Crypto",
+                "method": "queue",
+                "tags": "nearweek,automation,high,score-100",
+                "organizationId": "NEARWEEK",
+                "channelId": "just_deployed_x_free_profile"
+              }
+            }
+          },
+          {
+            "type": "team_notification",
+            "status": "sent",
+            "data": {
+              "success": true,
+              "platform": "telegram",
+              "data": {
+                "text": "🚨 HIGH PRIORITY CONTENT\n\nScore: 100/100\nTweet: NEAR Protocol developer tools now support advanced AI integration capabilities\nAuthor: @NEARProtocol\n\n⏰ Action needed: Review queued post",
+                "format": "Markdown",
+                "disable_notification": false
+              }
+            }
+          },
+          {
+            "type": "github_issue",
+            "status": "created",
+            "data": {
+              "success": true,
+              "platform": "github",
+              "data": {
+                "title": "[AUTO] HIGH: NEAR Protocol developer tools now support advanced...",
+                "body": "**Automated Content Processing**\n\n**Tweet ID**: 1751314774342_1\n**Relevance Score**: 100/100\n**Priority**: high\n**Author**: @NEARProtocol\n\n**Content**:\nNEAR Protocol developer tools now support advanced AI integration capabilities\n\n**Actions Taken**:\n- Queued for Buffer (manual approval)\n- Team notification sent\n\n**Metrics**:\n- Likes: 313\n- Retweets: 61\n- Replies: 17",
+                "labels": [
+                  "automation",
+                  "high",
+                  "content-processing"
+                ],
+                "assignees": []
+              }
+            }
+          }
+        ],
+        "timestamp": "2025-06-30T20:21:09.441Z"
+      }
+    },
+    {
+      "post_id": "1751314774342_2",
+      "handle": "@NEARProtocol",
+      "success": true,
+      "status": 200,
+      "response": {
+        "status": "processed",
+        "relevance_score": 80,
+        "priority": "high",
+        "action": "queued_for_approval",
+        "estimated_publish_time": "15 minutes",
+        "actions_taken": [
+          {
+            "type": "buffer_post",
+            "status": "queued",
+            "data": {
+              "success": true,
+              "platform": "buffer",
+              "data": {
+                "text": "🔥 TRENDING: Community update: NEAR Protocol reaches new milestone in transaction volume\n\nvia @NEARProtocol\n\n#NEARWEEK #AI #Crypto",
+                "method": "queue",
+                "tags": "nearweek,automation,high,score-80",
+                "organizationId": "NEARWEEK",
+                "channelId": "just_deployed_x_free_profile"
+              }
+            }
+          },
+          {
+            "type": "team_notification",
+            "status": "sent",
+            "data": {
+              "success": true,
+              "platform": "telegram",
+              "data": {
+                "text": "🚨 HIGH PRIORITY CONTENT\n\nScore: 80/100\nTweet: Community update: NEAR Protocol reaches new milestone in transaction volume\nAuthor: @NEARProtocol\n\n⏰ Action needed: Review queued post",
+                "format": "Markdown",
+                "disable_notification": false
+              }
+            }
+          },
+          {
+            "type": "github_issue",
+            "status": "created",
+            "data": {
+              "success": true,
+              "platform": "github",
+              "data": {
+                "title": "[AUTO] HIGH: Community update: NEAR Protocol reaches new milest...",
+                "body": "**Automated Content Processing**\n\n**Tweet ID**: 1751314774342_2\n**Relevance Score**: 80/100\n**Priority**: high\n**Author**: @NEARProtocol\n\n**Content**:\nCommunity update: NEAR Protocol reaches new milestone in transaction volume\n\n**Actions Taken**:\n- Queued for Buffer (manual approval)\n- Team notification sent\n\n**Metrics**:\n- Likes: 473\n- Retweets: 50\n- Replies: 24",
+                "labels": [
+                  "automation",
+                  "high",
+                  "content-processing"
+                ],
+                "assignees": []
+              }
+            }
+          }
+        ],
+        "timestamp": "2025-06-30T20:21:11.448Z"
+      }
+    }
+  ]
+}

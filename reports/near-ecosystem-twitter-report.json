@@ -1,0 +1,6804 @@
+{
+  "summary": {
+    "total_handles_queried": 26,
+    "total_posts_collected": 264,
+    "high_relevance_posts": 204,
+    "categories_covered": 7
+  },
+  "high_relevance_posts": [
+    {
+      "id": "1751314774338_0",
+      "text": "Community update: NEAR Protocol reaches new milestone in transaction volume",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T20:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 89,
+        "like_count": 363,
+        "reply_count": 31,
+        "quote_count": 0
+      },
+      "relevance_score": 90,
+      "ai_crypto_keywords": [],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_1",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T19:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 61,
+        "like_count": 313,
+        "reply_count": 17,
+        "quote_count": 8
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_2",
+      "text": "Community update: NEAR Protocol reaches new milestone in transaction volume",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T18:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 50,
+        "like_count": 473,
+        "reply_count": 24,
+        "quote_count": 23
+      },
+      "relevance_score": 90,
+      "ai_crypto_keywords": [],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_3",
+      "text": "Exciting updates coming to NEAR Protocol ecosystem! 🚀 #NEAR #Web3",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T17:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 90,
+        "like_count": 393,
+        "reply_count": 13,
+        "quote_count": 6
+      },
+      "relevance_score": 96,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "web3"
+        },
+        {
+          "category": "near",
+          "keyword": "near"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_4",
+      "text": "New partnership announcement: NEAR Protocol collaborating with leading DeFi protocols",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T16:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 33,
+        "like_count": 369,
+        "reply_count": 31,
+        "quote_count": 15
+      },
+      "relevance_score": 93,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "defi"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_5",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T15:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 69,
+        "like_count": 222,
+        "reply_count": 36,
+        "quote_count": 7
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_6",
+      "text": "Community update: NEAR Protocol reaches new milestone in transaction volume",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T14:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 25,
+        "like_count": 321,
+        "reply_count": 33,
+        "quote_count": 8
+      },
+      "relevance_score": 90,
+      "ai_crypto_keywords": [],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_7",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T13:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 29,
+        "like_count": 422,
+        "reply_count": 34,
+        "quote_count": 24
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_8",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T12:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 43,
+        "like_count": 375,
+        "reply_count": 26,
+        "quote_count": 16
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_9",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T11:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 57,
+        "like_count": 143,
+        "reply_count": 6,
+        "quote_count": 4
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_10",
+      "text": "Exciting updates coming to NEAR Protocol ecosystem! 🚀 #NEAR #Web3",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T10:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 79,
+        "like_count": 77,
+        "reply_count": 40,
+        "quote_count": 12
+      },
+      "relevance_score": 96,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "web3"
+        },
+        {
+          "category": "near",
+          "keyword": "near"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_11",
+      "text": "New partnership announcement: NEAR Protocol collaborating with leading DeFi protocols",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T09:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 2,
+        "like_count": 383,
+        "reply_count": 1,
+        "quote_count": 5
+      },
+      "relevance_score": 93,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "defi"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_12",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T08:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 35,
+        "like_count": 423,
+        "reply_count": 23,
+        "quote_count": 8
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_13",
+      "text": "New partnership announcement: NEAR Protocol collaborating with leading DeFi protocols",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T07:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 1,
+        "like_count": 106,
+        "reply_count": 16,
+        "quote_count": 22
+      },
+      "relevance_score": 93,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "defi"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_14",
+      "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+      "author": {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "verified": true
+      },
+      "created_at": "2025-06-30T06:19:34.338Z",
+      "public_metrics": {
+        "retweet_count": 75,
+        "like_count": 75,
+        "reply_count": 7,
+        "quote_count": 14
+      },
+      "relevance_score": 95,
+      "ai_crypto_keywords": [
+        {
+          "category": "ai",
+          "keyword": "ai"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_0",
+      "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+      "author": {
+        "username": "NEARFoundation",
+        "name": "NEAR Foundation",
+        "verified": true
+      },
+      "created_at": "2025-06-30T20:19:34.342Z",
+      "public_metrics": {
+        "retweet_count": 50,
+        "like_count": 119,
+        "reply_count": 29,
+        "quote_count": 7
+      },
+      "relevance_score": 96,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "web3"
+        },
+        {
+          "category": "near",
+          "keyword": "near"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_1",
+      "text": "Community update: NEAR Foundation reaches new milestone in transaction volume",
+      "author": {
+        "username": "NEARFoundation",
+        "name": "NEAR Foundation",
+        "verified": true
+      },
+      "created_at": "2025-06-30T19:19:34.342Z",
+      "public_metrics": {
+        "retweet_count": 38,
+        "like_count": 198,
+        "reply_count": 15,
+        "quote_count": 22
+      },
+      "relevance_score": 90,
+      "ai_crypto_keywords": [],
+      "handle_info": {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_2",
+      "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+      "author": {
+        "username": "NEARFoundation",
+        "name": "NEAR Foundation",
+        "verified": true
+      },
+      "created_at": "2025-06-30T18:19:34.342Z",
+      "public_metrics": {
+        "retweet_count": 62,
+        "like_count": 388,
+        "reply_count": 0,
+        "quote_count": 7
+      },
+      "relevance_score": 96,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "web3"
+        },
+        {
+          "category": "near",
+          "keyword": "near"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_3",
+      "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+      "author": {
+        "username": "NEARFoundation",
+        "name": "NEAR Foundation",
+        "verified": true
+      },
+      "created_at": "2025-06-30T17:19:34.342Z",
+      "public_metrics": {
+        "retweet_count": 95,
+        "like_count": 292,
+        "reply_count": 49,
+        "quote_count": 23
+      },
+      "relevance_score": 96,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "web3"
+        },
+        {
+          "category": "near",
+          "keyword": "near"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    },
+    {
+      "id": "1751314774342_4",
+      "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+      "author": {
+        "username": "NEARFoundation",
+        "name": "NEAR Foundation",
+        "verified": true
+      },
+      "created_at": "2025-06-30T16:19:34.342Z",
+      "public_metrics": {
+        "retweet_count": 53,
+        "like_count": 52,
+        "reply_count": 41,
+        "quote_count": 19
+      },
+      "relevance_score": 96,
+      "ai_crypto_keywords": [
+        {
+          "category": "crypto",
+          "keyword": "web3"
+        },
+        {
+          "category": "near",
+          "keyword": "near"
+        }
+      ],
+      "handle_info": {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical",
+        "category_type": "organizations"
+      }
+    }
+  ],
+  "categorized_posts": {
+    "Org": [
+      {
+        "id": "1751314774338_0",
+        "text": "Community update: NEAR Protocol reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 89,
+          "like_count": 363,
+          "reply_count": 31,
+          "quote_count": 0
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_1",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 61,
+          "like_count": 313,
+          "reply_count": 17,
+          "quote_count": 8
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_2",
+        "text": "Community update: NEAR Protocol reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 50,
+          "like_count": 473,
+          "reply_count": 24,
+          "quote_count": 23
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_3",
+        "text": "Exciting updates coming to NEAR Protocol ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 90,
+          "like_count": 393,
+          "reply_count": 13,
+          "quote_count": 6
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_4",
+        "text": "New partnership announcement: NEAR Protocol collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 33,
+          "like_count": 369,
+          "reply_count": 31,
+          "quote_count": 15
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_5",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 69,
+          "like_count": 222,
+          "reply_count": 36,
+          "quote_count": 7
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_6",
+        "text": "Community update: NEAR Protocol reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 25,
+          "like_count": 321,
+          "reply_count": 33,
+          "quote_count": 8
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_7",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 29,
+          "like_count": 422,
+          "reply_count": 34,
+          "quote_count": 24
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_8",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T12:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 43,
+          "like_count": 375,
+          "reply_count": 26,
+          "quote_count": 16
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_9",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T11:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 57,
+          "like_count": 143,
+          "reply_count": 6,
+          "quote_count": 4
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_10",
+        "text": "Exciting updates coming to NEAR Protocol ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T10:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 79,
+          "like_count": 77,
+          "reply_count": 40,
+          "quote_count": 12
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_11",
+        "text": "New partnership announcement: NEAR Protocol collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T09:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 2,
+          "like_count": 383,
+          "reply_count": 1,
+          "quote_count": 5
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_12",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T08:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 423,
+          "reply_count": 23,
+          "quote_count": 8
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_13",
+        "text": "New partnership announcement: NEAR Protocol collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T07:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 1,
+          "like_count": 106,
+          "reply_count": 16,
+          "quote_count": 22
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_14",
+        "text": "NEAR Protocol developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARProtocol",
+          "name": "NEAR Protocol",
+          "verified": true
+        },
+        "created_at": "2025-06-30T06:19:34.338Z",
+        "public_metrics": {
+          "retweet_count": 75,
+          "like_count": 75,
+          "reply_count": 7,
+          "quote_count": 14
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_0",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 50,
+          "like_count": 119,
+          "reply_count": 29,
+          "quote_count": 7
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_1",
+        "text": "Community update: NEAR Foundation reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 38,
+          "like_count": 198,
+          "reply_count": 15,
+          "quote_count": 22
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_2",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 388,
+          "reply_count": 0,
+          "quote_count": 7
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_3",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 95,
+          "like_count": 292,
+          "reply_count": 49,
+          "quote_count": 23
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_4",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 53,
+          "like_count": 52,
+          "reply_count": 41,
+          "quote_count": 19
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_5",
+        "text": "NEAR Foundation developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 49,
+          "like_count": 447,
+          "reply_count": 38,
+          "quote_count": 16
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_6",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 92,
+          "like_count": 63,
+          "reply_count": 32,
+          "quote_count": 2
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_7",
+        "text": "New partnership announcement: NEAR Foundation collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 66,
+          "like_count": 308,
+          "reply_count": 24,
+          "quote_count": 15
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_8",
+        "text": "New partnership announcement: NEAR Foundation collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T12:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 73,
+          "like_count": 309,
+          "reply_count": 32,
+          "quote_count": 18
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_9",
+        "text": "Community update: NEAR Foundation reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T11:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 12,
+          "like_count": 178,
+          "reply_count": 45,
+          "quote_count": 1
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_10",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T10:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 94,
+          "like_count": 468,
+          "reply_count": 15,
+          "quote_count": 7
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_11",
+        "text": "Exciting updates coming to NEAR Foundation ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T09:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 87,
+          "like_count": 385,
+          "reply_count": 26,
+          "quote_count": 18
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_12",
+        "text": "Community update: NEAR Foundation reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T08:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 55,
+          "like_count": 44,
+          "reply_count": 37,
+          "quote_count": 6
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_13",
+        "text": "New partnership announcement: NEAR Foundation collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T07:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 236,
+          "reply_count": 5,
+          "quote_count": 12
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_14",
+        "text": "Community update: NEAR Foundation reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARFoundation",
+          "name": "NEAR Foundation",
+          "verified": true
+        },
+        "created_at": "2025-06-30T06:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 89,
+          "like_count": 244,
+          "reply_count": 26,
+          "quote_count": 0
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_0",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 3,
+          "like_count": 152,
+          "reply_count": 16,
+          "quote_count": 7
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_1",
+        "text": "New partnership announcement: NEAR AI collaborating with leading DeFi protocols",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 71,
+          "like_count": 102,
+          "reply_count": 4,
+          "quote_count": 4
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_2",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 30,
+          "like_count": 258,
+          "reply_count": 23,
+          "quote_count": 6
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_3",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 18,
+          "like_count": 39,
+          "reply_count": 15,
+          "quote_count": 5
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_4",
+        "text": "New partnership announcement: NEAR AI collaborating with leading DeFi protocols",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 71,
+          "like_count": 201,
+          "reply_count": 42,
+          "quote_count": 18
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_5",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 23,
+          "like_count": 476,
+          "reply_count": 6,
+          "quote_count": 13
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_6",
+        "text": "New partnership announcement: NEAR AI collaborating with leading DeFi protocols",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 40,
+          "like_count": 165,
+          "reply_count": 13,
+          "quote_count": 5
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_7",
+        "text": "New partnership announcement: NEAR AI collaborating with leading DeFi protocols",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 83,
+          "like_count": 363,
+          "reply_count": 40,
+          "quote_count": 11
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_8",
+        "text": "Community update: NEAR AI reaches new milestone in transaction volume",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T12:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 87,
+          "like_count": 32,
+          "reply_count": 41,
+          "quote_count": 22
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_9",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T11:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 11,
+          "like_count": 287,
+          "reply_count": 8,
+          "quote_count": 8
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_10",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T10:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 27,
+          "like_count": 46,
+          "reply_count": 47,
+          "quote_count": 14
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_11",
+        "text": "NEAR AI developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T09:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 36,
+          "like_count": 334,
+          "reply_count": 0,
+          "quote_count": 6
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_12",
+        "text": "New partnership announcement: NEAR AI collaborating with leading DeFi protocols",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T08:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 37,
+          "like_count": 27,
+          "reply_count": 33,
+          "quote_count": 24
+        },
+        "relevance_score": 93,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_13",
+        "text": "Exciting updates coming to NEAR AI ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T07:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 46,
+          "like_count": 209,
+          "reply_count": 19,
+          "quote_count": 4
+        },
+        "relevance_score": 96,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_14",
+        "text": "Community update: NEAR AI reaches new milestone in transaction volume",
+        "author": {
+          "username": "near_ai",
+          "name": "NEAR AI",
+          "verified": true
+        },
+        "created_at": "2025-06-30T06:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 85,
+          "like_count": 333,
+          "reply_count": 21,
+          "quote_count": 13
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      }
+    ],
+    "KOL": [
+      {
+        "id": "1751314774342_0",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 48,
+          "like_count": 496,
+          "reply_count": 35,
+          "quote_count": 0
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_1",
+        "text": "Thoughts on the future of AI x crypto convergence in the Illia Polosukhin ecosystem",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 1,
+          "like_count": 9,
+          "reply_count": 31,
+          "quote_count": 23
+        },
+        "relevance_score": 98,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_2",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 82,
+          "like_count": 468,
+          "reply_count": 6,
+          "quote_count": 16
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_3",
+        "text": "Building the future of decentralized AI with Illia Polosukhin infrastructure",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 26,
+          "like_count": 41,
+          "reply_count": 4,
+          "quote_count": 5
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_4",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 79,
+          "like_count": 24,
+          "reply_count": 0,
+          "quote_count": 21
+        },
+        "relevance_score": 98,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_5",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 488,
+          "reply_count": 9,
+          "quote_count": 14
+        },
+        "relevance_score": 98,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_6",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 7,
+          "like_count": 64,
+          "reply_count": 12,
+          "quote_count": 16
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_7",
+        "text": "Thoughts on the future of AI x crypto convergence in the Illia Polosukhin ecosystem",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 93,
+          "like_count": 167,
+          "reply_count": 17,
+          "quote_count": 6
+        },
+        "relevance_score": 98,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_8",
+        "text": "Building the future of decentralized AI with Illia Polosukhin infrastructure",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T12:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 49,
+          "like_count": 329,
+          "reply_count": 8,
+          "quote_count": 23
+        },
+        "relevance_score": 95,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_9",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T11:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 425,
+          "reply_count": 42,
+          "quote_count": 0
+        },
+        "relevance_score": 98,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_10",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T10:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 37,
+          "like_count": 178,
+          "reply_count": 49,
+          "quote_count": 2
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_11",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T09:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 71,
+          "like_count": 23,
+          "reply_count": 32,
+          "quote_count": 13
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_12",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T08:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 82,
+          "like_count": 373,
+          "reply_count": 37,
+          "quote_count": 2
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314774342_13",
+        "text": "Thoughts on the future of AI x crypto convergence in the Illia Polosukhin ecosystem",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T07:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 51,
+          "like_count": 244,
+          "reply_count": 15,
+          "quote_count": 6
+        },
+        "relevance_score": 98,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314774342_14",
+        "text": "Just shipped a major update to Illia Polosukhin - excited to see what builders create",
+        "author": {
+          "username": "ilblackdragon",
+          "name": "Illia Polosukhin",
+          "verified": true
+        },
+        "created_at": "2025-06-30T06:19:34.342Z",
+        "public_metrics": {
+          "retweet_count": 43,
+          "like_count": 185,
+          "reply_count": 42,
+          "quote_count": 16
+        },
+        "relevance_score": 90,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_0",
+        "text": "Thoughts on the future of AI x crypto convergence in the Bowen Wang ecosystem",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 51,
+          "like_count": 294,
+          "reply_count": 38,
+          "quote_count": 3
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_1",
+        "text": "Building the future of decentralized AI with Bowen Wang infrastructure",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 36,
+          "like_count": 284,
+          "reply_count": 11,
+          "quote_count": 24
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_2",
+        "text": "Just shipped a major update to Bowen Wang - excited to see what builders create",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 14,
+          "like_count": 6,
+          "reply_count": 7,
+          "quote_count": 14
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_3",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 19,
+          "like_count": 322,
+          "reply_count": 0,
+          "quote_count": 5
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_4",
+        "text": "Building the future of decentralized AI with Bowen Wang infrastructure",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 72,
+          "like_count": 437,
+          "reply_count": 1,
+          "quote_count": 4
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_5",
+        "text": "Thoughts on the future of AI x crypto convergence in the Bowen Wang ecosystem",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 28,
+          "like_count": 83,
+          "reply_count": 25,
+          "quote_count": 17
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_6",
+        "text": "Building the future of decentralized AI with Bowen Wang infrastructure",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 43,
+          "like_count": 380,
+          "reply_count": 42,
+          "quote_count": 14
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_7",
+        "text": "Building the future of decentralized AI with Bowen Wang infrastructure",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 34,
+          "like_count": 478,
+          "reply_count": 32,
+          "quote_count": 10
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_8",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T12:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 77,
+          "like_count": 458,
+          "reply_count": 5,
+          "quote_count": 12
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_9",
+        "text": "Building the future of decentralized AI with Bowen Wang infrastructure",
+        "author": {
+          "username": "BowenWang18",
+          "name": "Bowen Wang",
+          "verified": true
+        },
+        "created_at": "2025-06-30T11:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 22,
+          "like_count": 292,
+          "reply_count": 48,
+          "quote_count": 5
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_0",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 10,
+          "like_count": 405,
+          "reply_count": 10,
+          "quote_count": 4
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_1",
+        "text": "Building the future of decentralized AI with Kendall Cole infrastructure",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 378,
+          "reply_count": 41,
+          "quote_count": 23
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_2",
+        "text": "Just shipped a major update to Kendall Cole - excited to see what builders create",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 47,
+          "like_count": 216,
+          "reply_count": 30,
+          "quote_count": 23
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_3",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 6,
+          "like_count": 199,
+          "reply_count": 26,
+          "quote_count": 2
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_4",
+        "text": "Building the future of decentralized AI with Kendall Cole infrastructure",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 90,
+          "like_count": 305,
+          "reply_count": 23,
+          "quote_count": 15
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_5",
+        "text": "Just shipped a major update to Kendall Cole - excited to see what builders create",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 22,
+          "like_count": 115,
+          "reply_count": 21,
+          "quote_count": 5
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_6",
+        "text": "Building the future of decentralized AI with Kendall Cole infrastructure",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 85,
+          "like_count": 5,
+          "reply_count": 16,
+          "quote_count": 23
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_7",
+        "text": "Thoughts on the future of AI x crypto convergence in the Kendall Cole ecosystem",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 47,
+          "like_count": 365,
+          "reply_count": 2,
+          "quote_count": 20
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_8",
+        "text": "Thoughts on the future of AI x crypto convergence in the Kendall Cole ecosystem",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T12:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 74,
+          "like_count": 350,
+          "reply_count": 38,
+          "quote_count": 13
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_9",
+        "text": "Building the future of decentralized AI with Kendall Cole infrastructure",
+        "author": {
+          "username": "kendaIIc",
+          "name": "Kendall Cole",
+          "verified": true
+        },
+        "created_at": "2025-06-30T11:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 68,
+          "like_count": 223,
+          "reply_count": 28,
+          "quote_count": 12
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_0",
+        "text": "Building the future of decentralized AI with Chronear infrastructure",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T20:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 42,
+          "like_count": 173,
+          "reply_count": 23,
+          "quote_count": 23
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_1",
+        "text": "Thoughts on the future of AI x crypto convergence in the Chronear ecosystem",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T19:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 24,
+          "like_count": 325,
+          "reply_count": 16,
+          "quote_count": 15
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_2",
+        "text": "Thoughts on the future of AI x crypto convergence in the Chronear ecosystem",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T18:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 56,
+          "like_count": 119,
+          "reply_count": 23,
+          "quote_count": 9
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_3",
+        "text": "Thoughts on the future of AI x crypto convergence in the Chronear ecosystem",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T17:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 23,
+          "like_count": 254,
+          "reply_count": 6,
+          "quote_count": 12
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_4",
+        "text": "The intersection of AI and blockchain is getting more interesting every day",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T16:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 185,
+          "reply_count": 41,
+          "quote_count": 6
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "blockchain"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_5",
+        "text": "Thoughts on the future of AI x crypto convergence in the Chronear ecosystem",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T15:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 32,
+          "like_count": 462,
+          "reply_count": 3,
+          "quote_count": 11
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "crypto"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_6",
+        "text": "Just shipped a major update to Chronear - excited to see what builders create",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T14:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 71,
+          "like_count": 118,
+          "reply_count": 20,
+          "quote_count": 20
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_7",
+        "text": "Building the future of decentralized AI with Chronear infrastructure",
+        "author": {
+          "username": "chronear",
+          "name": "Chronear",
+          "verified": true
+        },
+        "created_at": "2025-06-30T13:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 18,
+          "like_count": 276,
+          "reply_count": 3,
+          "quote_count": 16
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      }
+    ],
+    "Developer": [
+      {
+        "id": "1751314775342_0",
+        "text": "Community update: NEAR Dev Hub reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 243,
+          "reply_count": 37,
+          "quote_count": 11
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_1",
+        "text": "Community update: NEAR Dev Hub reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 3,
+          "like_count": 307,
+          "reply_count": 27,
+          "quote_count": 1
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_2",
+        "text": "NEAR Dev Hub developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 50,
+          "like_count": 17,
+          "reply_count": 28,
+          "quote_count": 18
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_3",
+        "text": "New partnership announcement: NEAR Dev Hub collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 66,
+          "like_count": 194,
+          "reply_count": 7,
+          "quote_count": 3
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_4",
+        "text": "NEAR Dev Hub developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 18,
+          "like_count": 176,
+          "reply_count": 27,
+          "quote_count": 7
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_5",
+        "text": "Exciting updates coming to NEAR Dev Hub ecosystem! 🚀 #NEAR #Web3",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 79,
+          "like_count": 316,
+          "reply_count": 10,
+          "quote_count": 20
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "web3"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_6",
+        "text": "New partnership announcement: NEAR Dev Hub collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 3,
+          "like_count": 319,
+          "reply_count": 9,
+          "quote_count": 2
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_7",
+        "text": "NEAR Dev Hub developer tools now support advanced AI integration capabilities",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 260,
+          "reply_count": 14,
+          "quote_count": 6
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_8",
+        "text": "New partnership announcement: NEAR Dev Hub collaborating with leading DeFi protocols",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 22,
+          "like_count": 459,
+          "reply_count": 33,
+          "quote_count": 23
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_9",
+        "text": "Community update: NEAR Dev Hub reaches new milestone in transaction volume",
+        "author": {
+          "username": "NEARDevHub",
+          "name": "NEAR Dev Hub",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:35.342Z",
+        "public_metrics": {
+          "retweet_count": 9,
+          "like_count": 91,
+          "reply_count": 28,
+          "quote_count": 9
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      }
+    ],
+    "Builder": [
+      {
+        "id": "1751314775343_0",
+        "text": "Open source contribution to Alex Skidanov ecosystem now available",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 18,
+          "like_count": 315,
+          "reply_count": 17,
+          "quote_count": 17
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_1",
+        "text": "Developer experience improvements coming to Alex Skidanov platform",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 52,
+          "like_count": 306,
+          "reply_count": 11,
+          "quote_count": 20
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_2",
+        "text": "Developer experience improvements coming to Alex Skidanov platform",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 41,
+          "like_count": 198,
+          "reply_count": 25,
+          "quote_count": 22
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_3",
+        "text": "Developer experience improvements coming to Alex Skidanov platform",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 66,
+          "like_count": 248,
+          "reply_count": 21,
+          "quote_count": 12
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_4",
+        "text": "Just deployed a new feature on Alex Skidanov - feedback welcome! 🛠️",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 458,
+          "reply_count": 4,
+          "quote_count": 10
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_5",
+        "text": "Just deployed a new feature on Alex Skidanov - feedback welcome! 🛠️",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 40,
+          "like_count": 53,
+          "reply_count": 44,
+          "quote_count": 10
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_6",
+        "text": "Developer experience improvements coming to Alex Skidanov platform",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 64,
+          "like_count": 271,
+          "reply_count": 40,
+          "quote_count": 7
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_7",
+        "text": "Working on exciting integrations between AI and DeFi on Alex Skidanov",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 82,
+          "like_count": 26,
+          "reply_count": 12,
+          "quote_count": 19
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775343_8",
+        "text": "Developer experience improvements coming to Alex Skidanov platform",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 77,
+          "like_count": 328,
+          "reply_count": 36,
+          "quote_count": 18
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314775343_9",
+        "text": "Just deployed a new feature on Alex Skidanov - feedback welcome! 🛠️",
+        "author": {
+          "username": "AlexSkidanov",
+          "name": "Alex Skidanov",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:35.343Z",
+        "public_metrics": {
+          "retweet_count": 82,
+          "like_count": 15,
+          "reply_count": 40,
+          "quote_count": 21
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      }
+    ],
+    "DeFi": [
+      {
+        "id": "1751314775344_0",
+        "text": "MoreMarkets TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 46,
+          "like_count": 198,
+          "reply_count": 48,
+          "quote_count": 1
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_1",
+        "text": "Major DeFi integration: MoreMarkets now supports advanced trading strategies",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 61,
+          "like_count": 268,
+          "reply_count": 16,
+          "quote_count": 6
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_2",
+        "text": "Major DeFi integration: MoreMarkets now supports advanced trading strategies",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 8,
+          "like_count": 434,
+          "reply_count": 8,
+          "quote_count": 0
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_3",
+        "text": "MoreMarkets TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 52,
+          "like_count": 164,
+          "reply_count": 30,
+          "quote_count": 18
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_4",
+        "text": "Major DeFi integration: MoreMarkets now supports advanced trading strategies",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 6,
+          "like_count": 40,
+          "reply_count": 30,
+          "quote_count": 9
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_5",
+        "text": "MoreMarkets TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 17,
+          "like_count": 263,
+          "reply_count": 9,
+          "quote_count": 9
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_6",
+        "text": "MoreMarkets TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 47,
+          "like_count": 406,
+          "reply_count": 29,
+          "quote_count": 11
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_7",
+        "text": "MoreMarkets TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 54,
+          "like_count": 130,
+          "reply_count": 42,
+          "quote_count": 3
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_8",
+        "text": "MoreMarkets introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 17,
+          "like_count": 455,
+          "reply_count": 3,
+          "quote_count": 2
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314775344_9",
+        "text": "MoreMarkets introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "moremarketsxyz",
+          "name": "MoreMarkets",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:35.344Z",
+        "public_metrics": {
+          "retweet_count": 23,
+          "like_count": 17,
+          "reply_count": 39,
+          "quote_count": 2
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_0",
+        "text": "Rhea Finance introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 24,
+          "reply_count": 3,
+          "quote_count": 20
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_1",
+        "text": "Major DeFi integration: Rhea Finance now supports advanced trading strategies",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 56,
+          "like_count": 283,
+          "reply_count": 14,
+          "quote_count": 3
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_2",
+        "text": "Rhea Finance introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 45,
+          "like_count": 272,
+          "reply_count": 22,
+          "quote_count": 7
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_3",
+        "text": "Major DeFi integration: Rhea Finance now supports advanced trading strategies",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 12,
+          "like_count": 275,
+          "reply_count": 23,
+          "quote_count": 13
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_4",
+        "text": "Rhea Finance introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 98,
+          "like_count": 447,
+          "reply_count": 37,
+          "quote_count": 23
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_5",
+        "text": "New yield farming opportunities now live on Rhea Finance protocol",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 40,
+          "like_count": 20,
+          "reply_count": 2,
+          "quote_count": 19
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314778347_6",
+        "text": "Rhea Finance TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 48,
+          "like_count": 313,
+          "reply_count": 37,
+          "quote_count": 24
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_7",
+        "text": "Major DeFi integration: Rhea Finance now supports advanced trading strategies",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 89,
+          "like_count": 45,
+          "reply_count": 25,
+          "quote_count": 17
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_8",
+        "text": "Rhea Finance TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 46,
+          "like_count": 450,
+          "reply_count": 9,
+          "quote_count": 2
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778347_9",
+        "text": "New yield farming opportunities now live on Rhea Finance protocol",
+        "author": {
+          "username": "rhea_finance",
+          "name": "Rhea Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:38.347Z",
+        "public_metrics": {
+          "retweet_count": 27,
+          "like_count": 269,
+          "reply_count": 38,
+          "quote_count": 22
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314778348_0",
+        "text": "Major DeFi integration: Templar Protocol now supports advanced trading strategies",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 99,
+          "like_count": 315,
+          "reply_count": 33,
+          "quote_count": 5
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_1",
+        "text": "Templar Protocol introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 59,
+          "like_count": 349,
+          "reply_count": 15,
+          "quote_count": 4
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_2",
+        "text": "Templar Protocol TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 22,
+          "like_count": 194,
+          "reply_count": 26,
+          "quote_count": 19
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_3",
+        "text": "Templar Protocol TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 21,
+          "like_count": 296,
+          "reply_count": 10,
+          "quote_count": 10
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_4",
+        "text": "Templar Protocol TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 17,
+          "like_count": 432,
+          "reply_count": 33,
+          "quote_count": 6
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_5",
+        "text": "Major DeFi integration: Templar Protocol now supports advanced trading strategies",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 61,
+          "like_count": 403,
+          "reply_count": 46,
+          "quote_count": 6
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_6",
+        "text": "Templar Protocol introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 33,
+          "like_count": 442,
+          "reply_count": 9,
+          "quote_count": 8
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_7",
+        "text": "Templar Protocol TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 46,
+          "like_count": 328,
+          "reply_count": 7,
+          "quote_count": 10
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_8",
+        "text": "New yield farming opportunities now live on Templar Protocol protocol",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 20,
+          "like_count": 324,
+          "reply_count": 10,
+          "quote_count": 19
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314778348_9",
+        "text": "Major DeFi integration: Templar Protocol now supports advanced trading strategies",
+        "author": {
+          "username": "TemplarProtocol",
+          "name": "Templar Protocol",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 64,
+          "like_count": 259,
+          "reply_count": 32,
+          "quote_count": 13
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_0",
+        "text": "Major DeFi integration: Proximity now supports advanced trading strategies",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 78,
+          "like_count": 10,
+          "reply_count": 18,
+          "quote_count": 22
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_1",
+        "text": "Proximity introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 29,
+          "like_count": 94,
+          "reply_count": 27,
+          "quote_count": 22
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_2",
+        "text": "Proximity TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 51,
+          "like_count": 333,
+          "reply_count": 30,
+          "quote_count": 13
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_3",
+        "text": "Major DeFi integration: Proximity now supports advanced trading strategies",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 70,
+          "like_count": 42,
+          "reply_count": 31,
+          "quote_count": 8
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_4",
+        "text": "Proximity introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 29,
+          "like_count": 35,
+          "reply_count": 23,
+          "quote_count": 8
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_5",
+        "text": "Proximity introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 29,
+          "like_count": 272,
+          "reply_count": 23,
+          "quote_count": 4
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778348_6",
+        "text": "New yield farming opportunities now live on Proximity protocol",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 50,
+          "like_count": 474,
+          "reply_count": 19,
+          "quote_count": 7
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314778349_7",
+        "text": "New yield farming opportunities now live on Proximity protocol",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 19,
+          "like_count": 102,
+          "reply_count": 25,
+          "quote_count": 8
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314778349_8",
+        "text": "Proximity introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 80,
+          "like_count": 230,
+          "reply_count": 36,
+          "quote_count": 23
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_9",
+        "text": "Proximity TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "proximityfi",
+          "name": "Proximity",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:38.348Z",
+        "public_metrics": {
+          "retweet_count": 28,
+          "like_count": 76,
+          "reply_count": 17,
+          "quote_count": 4
+        },
+        "relevance_score": 81,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_0",
+        "text": "NEAR Intents introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 319,
+          "reply_count": 16,
+          "quote_count": 0
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_1",
+        "text": "Major DeFi integration: NEAR Intents now supports advanced trading strategies",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 2,
+          "like_count": 240,
+          "reply_count": 38,
+          "quote_count": 20
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_2",
+        "text": "NEAR Intents introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 2,
+          "like_count": 152,
+          "reply_count": 2,
+          "quote_count": 12
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_3",
+        "text": "New yield farming opportunities now live on NEAR Intents protocol",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 48,
+          "like_count": 451,
+          "reply_count": 31,
+          "quote_count": 9
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314778349_4",
+        "text": "Major DeFi integration: NEAR Intents now supports advanced trading strategies",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 14,
+          "like_count": 251,
+          "reply_count": 32,
+          "quote_count": 9
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_5",
+        "text": "Major DeFi integration: NEAR Intents now supports advanced trading strategies",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 77,
+          "like_count": 390,
+          "reply_count": 44,
+          "quote_count": 4
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_6",
+        "text": "NEAR Intents introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 91,
+          "like_count": 350,
+          "reply_count": 29,
+          "quote_count": 18
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_7",
+        "text": "Major DeFi integration: NEAR Intents now supports advanced trading strategies",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 5,
+          "like_count": 336,
+          "reply_count": 36,
+          "quote_count": 12
+        },
+        "relevance_score": 78,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_8",
+        "text": "NEAR Intents introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 70,
+          "like_count": 490,
+          "reply_count": 23,
+          "quote_count": 6
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_9",
+        "text": "NEAR Intents introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "nearintents",
+          "name": "NEAR Intents",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 14,
+          "like_count": 329,
+          "reply_count": 4,
+          "quote_count": 21
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_0",
+        "text": "Major DeFi integration: Frax Finance now supports advanced trading strategies",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 12,
+          "like_count": 92,
+          "reply_count": 3,
+          "quote_count": 3
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_1",
+        "text": "Frax Finance TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 18,
+          "like_count": 422,
+          "reply_count": 44,
+          "quote_count": 13
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_2",
+        "text": "Frax Finance introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 6,
+          "like_count": 404,
+          "reply_count": 37,
+          "quote_count": 2
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_3",
+        "text": "Major DeFi integration: Frax Finance now supports advanced trading strategies",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 76,
+          "like_count": 140,
+          "reply_count": 17,
+          "quote_count": 4
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_4",
+        "text": "New yield farming opportunities now live on Frax Finance protocol",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 39,
+          "like_count": 298,
+          "reply_count": 18,
+          "quote_count": 10
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_5",
+        "text": "Frax Finance introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 81,
+          "like_count": 286,
+          "reply_count": 33,
+          "quote_count": 8
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_6",
+        "text": "New yield farming opportunities now live on Frax Finance protocol",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 25,
+          "like_count": 48,
+          "reply_count": 12,
+          "quote_count": 3
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_7",
+        "text": "Frax Finance TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "fraxfinance",
+          "name": "Frax Finance",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 60,
+          "like_count": 145,
+          "reply_count": 14,
+          "quote_count": 13
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_0",
+        "text": "New yield farming opportunities now live on Intear protocol",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 38,
+          "like_count": 462,
+          "reply_count": 40,
+          "quote_count": 0
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_1",
+        "text": "New yield farming opportunities now live on Intear protocol",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 42,
+          "like_count": 163,
+          "reply_count": 8,
+          "quote_count": 16
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_2",
+        "text": "New yield farming opportunities now live on Intear protocol",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 48,
+          "like_count": 477,
+          "reply_count": 38,
+          "quote_count": 23
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_3",
+        "text": "Intear TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 91,
+          "like_count": 325,
+          "reply_count": 36,
+          "quote_count": 9
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_4",
+        "text": "New yield farming opportunities now live on Intear protocol",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 5,
+          "like_count": 297,
+          "reply_count": 44,
+          "quote_count": 4
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_5",
+        "text": "Major DeFi integration: Intear now supports advanced trading strategies",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 39,
+          "like_count": 303,
+          "reply_count": 38,
+          "quote_count": 16
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_6",
+        "text": "New yield farming opportunities now live on Intear protocol",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 56,
+          "like_count": 398,
+          "reply_count": 6,
+          "quote_count": 12
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782354_7",
+        "text": "Intear TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "intelnear",
+          "name": "Intear",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 37,
+          "like_count": 40,
+          "reply_count": 4,
+          "quote_count": 20
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782354_0",
+        "text": "Strawberry AI TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 31,
+          "like_count": 162,
+          "reply_count": 44,
+          "quote_count": 22
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_1",
+        "text": "Major DeFi integration: Strawberry AI now supports advanced trading strategies",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 99,
+          "like_count": 327,
+          "reply_count": 4,
+          "quote_count": 12
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_2",
+        "text": "Strawberry AI introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 24,
+          "like_count": 156,
+          "reply_count": 9,
+          "quote_count": 21
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_3",
+        "text": "Strawberry AI TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 87,
+          "like_count": 252,
+          "reply_count": 8,
+          "quote_count": 12
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_4",
+        "text": "Strawberry AI introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 64,
+          "like_count": 38,
+          "reply_count": 11,
+          "quote_count": 4
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_5",
+        "text": "Strawberry AI TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 15,
+          "like_count": 290,
+          "reply_count": 2,
+          "quote_count": 4
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_6",
+        "text": "Major DeFi integration: Strawberry AI now supports advanced trading strategies",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 75,
+          "like_count": 391,
+          "reply_count": 2,
+          "quote_count": 23
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_7",
+        "text": "Major DeFi integration: Strawberry AI now supports advanced trading strategies",
+        "author": {
+          "username": "StrawberryAI_5",
+          "name": "Strawberry AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:42.354Z",
+        "public_metrics": {
+          "retweet_count": 42,
+          "like_count": 108,
+          "reply_count": 25,
+          "quote_count": 10
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_0",
+        "text": "Infinex introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 94,
+          "like_count": 282,
+          "reply_count": 1,
+          "quote_count": 23
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_1",
+        "text": "Infinex TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 35,
+          "like_count": 207,
+          "reply_count": 20,
+          "quote_count": 19
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_2",
+        "text": "New yield farming opportunities now live on Infinex protocol",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 3,
+          "like_count": 452,
+          "reply_count": 24,
+          "quote_count": 15
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782355_3",
+        "text": "Infinex introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 72,
+          "like_count": 172,
+          "reply_count": 25,
+          "quote_count": 15
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_4",
+        "text": "Infinex TVL reaches new all-time high! 📈 #DeFi #NEAR",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 24,
+          "like_count": 36,
+          "reply_count": 29,
+          "quote_count": 11
+        },
+        "relevance_score": 66,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_5",
+        "text": "New yield farming opportunities now live on Infinex protocol",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 37,
+          "reply_count": 26,
+          "quote_count": 1
+        },
+        "relevance_score": 60,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314782355_6",
+        "text": "Infinex introduces cross-chain liquidity solutions with zero fees",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 40,
+          "like_count": 407,
+          "reply_count": 6,
+          "quote_count": 8
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314782355_7",
+        "text": "Major DeFi integration: Infinex now supports advanced trading strategies",
+        "author": {
+          "username": "infinex",
+          "name": "Infinex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:42.355Z",
+        "public_metrics": {
+          "retweet_count": 32,
+          "like_count": 3,
+          "reply_count": 47,
+          "quote_count": 4
+        },
+        "relevance_score": 63,
+        "ai_crypto_keywords": [
+          {
+            "category": "crypto",
+            "keyword": "defi"
+          }
+        ]
+      }
+    ],
+    "AI": [
+      {
+        "id": "1751314778349_0",
+        "text": "Breakthrough in decentralized AI: Intellex enables privacy-preserving ML",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 24,
+          "like_count": 96,
+          "reply_count": 39,
+          "quote_count": 23
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_1",
+        "text": "Intellex AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 28,
+          "like_count": 433,
+          "reply_count": 6,
+          "quote_count": 17
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_2",
+        "text": "Breakthrough in decentralized AI: Intellex enables privacy-preserving ML",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 57,
+          "like_count": 289,
+          "reply_count": 20,
+          "quote_count": 1
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_3",
+        "text": "Intellex AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 34,
+          "like_count": 286,
+          "reply_count": 11,
+          "quote_count": 0
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_4",
+        "text": "Intellex integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 14,
+          "like_count": 301,
+          "reply_count": 33,
+          "quote_count": 20
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_5",
+        "text": "Intellex AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 80,
+          "like_count": 16,
+          "reply_count": 47,
+          "quote_count": 8
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_6",
+        "text": "Breakthrough in decentralized AI: Intellex enables privacy-preserving ML",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 14,
+          "like_count": 421,
+          "reply_count": 46,
+          "quote_count": 5
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_7",
+        "text": "New AI model deployment on Intellex achieves 99.9% accuracy",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 63,
+          "like_count": 287,
+          "reply_count": 47,
+          "quote_count": 20
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_8",
+        "text": "New AI model deployment on Intellex achieves 99.9% accuracy",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 2,
+          "like_count": 20,
+          "reply_count": 38,
+          "quote_count": 16
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314778349_9",
+        "text": "Intellex integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "intellex_xyz",
+          "name": "Intellex",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:38.349Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 45,
+          "reply_count": 49,
+          "quote_count": 1
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_0",
+        "text": "Breakthrough in decentralized AI: XTrace AI enables privacy-preserving ML",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 27,
+          "like_count": 253,
+          "reply_count": 36,
+          "quote_count": 8
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_1",
+        "text": "New AI model deployment on XTrace AI achieves 99.9% accuracy",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 57,
+          "like_count": 208,
+          "reply_count": 1,
+          "quote_count": 17
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_2",
+        "text": "XTrace AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 71,
+          "like_count": 102,
+          "reply_count": 14,
+          "quote_count": 13
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_3",
+        "text": "New AI model deployment on XTrace AI achieves 99.9% accuracy",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 40,
+          "like_count": 279,
+          "reply_count": 28,
+          "quote_count": 21
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_4",
+        "text": "XTrace AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 18,
+          "like_count": 380,
+          "reply_count": 22,
+          "quote_count": 10
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_5",
+        "text": "XTrace AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 51,
+          "like_count": 99,
+          "reply_count": 39,
+          "quote_count": 22
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_6",
+        "text": "XTrace AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 19,
+          "like_count": 123,
+          "reply_count": 0,
+          "quote_count": 10
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_7",
+        "text": "Breakthrough in decentralized AI: XTrace AI enables privacy-preserving ML",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 94,
+          "like_count": 199,
+          "reply_count": 21,
+          "quote_count": 23
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_8",
+        "text": "XTrace AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 29,
+          "like_count": 133,
+          "reply_count": 48,
+          "quote_count": 11
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781351_9",
+        "text": "New AI model deployment on XTrace AI achieves 99.9% accuracy",
+        "author": {
+          "username": "XTrace_AI",
+          "name": "XTrace AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:41.351Z",
+        "public_metrics": {
+          "retweet_count": 22,
+          "like_count": 474,
+          "reply_count": 44,
+          "quote_count": 22
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_0",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 19,
+          "like_count": 247,
+          "reply_count": 3,
+          "quote_count": 4
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_1",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 34,
+          "like_count": 415,
+          "reply_count": 39,
+          "quote_count": 10
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_2",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 429,
+          "reply_count": 20,
+          "quote_count": 6
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_3",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 93,
+          "like_count": 455,
+          "reply_count": 21,
+          "quote_count": 15
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_4",
+        "text": "New AI model deployment on Phala Network achieves 99.9% accuracy",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 25,
+          "like_count": 208,
+          "reply_count": 19,
+          "quote_count": 9
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_5",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 78,
+          "like_count": 87,
+          "reply_count": 19,
+          "quote_count": 19
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_6",
+        "text": "Phala Network AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 3,
+          "like_count": 86,
+          "reply_count": 49,
+          "quote_count": 17
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_7",
+        "text": "Phala Network integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 63,
+          "like_count": 438,
+          "reply_count": 29,
+          "quote_count": 18
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_8",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 280,
+          "reply_count": 34,
+          "quote_count": 17
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_9",
+        "text": "Breakthrough in decentralized AI: Phala Network enables privacy-preserving ML",
+        "author": {
+          "username": "PhalaNetwork",
+          "name": "Phala Network",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 65,
+          "like_count": 372,
+          "reply_count": 7,
+          "quote_count": 21
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_0",
+        "text": "Public AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 320,
+          "reply_count": 4,
+          "quote_count": 1
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_1",
+        "text": "New AI model deployment on Public AI achieves 99.9% accuracy",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 19,
+          "like_count": 407,
+          "reply_count": 5,
+          "quote_count": 7
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_2",
+        "text": "Public AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 93,
+          "like_count": 196,
+          "reply_count": 1,
+          "quote_count": 0
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_3",
+        "text": "Public AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 7,
+          "like_count": 22,
+          "reply_count": 19,
+          "quote_count": 1
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_4",
+        "text": "Public AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 70,
+          "like_count": 496,
+          "reply_count": 22,
+          "quote_count": 9
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_5",
+        "text": "Public AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 48,
+          "like_count": 327,
+          "reply_count": 5,
+          "quote_count": 10
+        },
+        "relevance_score": 83,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_6",
+        "text": "Breakthrough in decentralized AI: Public AI enables privacy-preserving ML",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 48,
+          "reply_count": 5,
+          "quote_count": 12
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_7",
+        "text": "Breakthrough in decentralized AI: Public AI enables privacy-preserving ML",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 36,
+          "like_count": 462,
+          "reply_count": 8,
+          "quote_count": 22
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_8",
+        "text": "Public AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 74,
+          "like_count": 394,
+          "reply_count": 7,
+          "quote_count": 14
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781352_9",
+        "text": "New AI model deployment on Public AI achieves 99.9% accuracy",
+        "author": {
+          "username": "PublicAI_",
+          "name": "Public AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:41.352Z",
+        "public_metrics": {
+          "retweet_count": 54,
+          "like_count": 206,
+          "reply_count": 48,
+          "quote_count": 6
+        },
+        "relevance_score": 85,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_0",
+        "text": "Breakthrough in decentralized AI: Datrics AI enables privacy-preserving ML",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 51,
+          "like_count": 230,
+          "reply_count": 42,
+          "quote_count": 12
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_1",
+        "text": "Datrics AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 68,
+          "like_count": 260,
+          "reply_count": 17,
+          "quote_count": 23
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_2",
+        "text": "Breakthrough in decentralized AI: Datrics AI enables privacy-preserving ML",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 70,
+          "like_count": 63,
+          "reply_count": 16,
+          "quote_count": 13
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_3",
+        "text": "Datrics AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 7,
+          "like_count": 43,
+          "reply_count": 32,
+          "quote_count": 13
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_4",
+        "text": "Datrics AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 75,
+          "like_count": 498,
+          "reply_count": 43,
+          "quote_count": 0
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_5",
+        "text": "Breakthrough in decentralized AI: Datrics AI enables privacy-preserving ML",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 93,
+          "like_count": 334,
+          "reply_count": 1,
+          "quote_count": 3
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_6",
+        "text": "Datrics AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 31,
+          "like_count": 133,
+          "reply_count": 30,
+          "quote_count": 4
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_7",
+        "text": "Breakthrough in decentralized AI: Datrics AI enables privacy-preserving ML",
+        "author": {
+          "username": "AiDatrics",
+          "name": "Datrics AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 23,
+          "like_count": 5,
+          "reply_count": 32,
+          "quote_count": 2
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_0",
+        "text": "IQ AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 26,
+          "like_count": 114,
+          "reply_count": 25,
+          "quote_count": 16
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_1",
+        "text": "New AI model deployment on IQ AI achieves 99.9% accuracy",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 27,
+          "like_count": 232,
+          "reply_count": 49,
+          "quote_count": 23
+        },
+        "relevance_score": 70,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_2",
+        "text": "New AI model deployment on IQ AI achieves 99.9% accuracy",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 81,
+          "like_count": 400,
+          "reply_count": 37,
+          "quote_count": 15
+        },
+        "relevance_score": 70,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_3",
+        "text": "IQ AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 26,
+          "like_count": 472,
+          "reply_count": 46,
+          "quote_count": 6
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_4",
+        "text": "IQ AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 31,
+          "like_count": 332,
+          "reply_count": 11,
+          "quote_count": 14
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_5",
+        "text": "IQ AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 52,
+          "like_count": 477,
+          "reply_count": 11,
+          "quote_count": 13
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_6",
+        "text": "Breakthrough in decentralized AI: IQ AI enables privacy-preserving ML",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 174,
+          "reply_count": 14,
+          "quote_count": 5
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785357_7",
+        "text": "IQ AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "IQAICOM",
+          "name": "IQ AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:45.357Z",
+        "public_metrics": {
+          "retweet_count": 47,
+          "like_count": 478,
+          "reply_count": 48,
+          "quote_count": 4
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_0",
+        "text": "Breakthrough in decentralized AI: Silverstream AI enables privacy-preserving ML",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 9,
+          "like_count": 263,
+          "reply_count": 43,
+          "quote_count": 9
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_1",
+        "text": "Breakthrough in decentralized AI: Silverstream AI enables privacy-preserving ML",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 78,
+          "like_count": 271,
+          "reply_count": 47,
+          "quote_count": 18
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_2",
+        "text": "Silverstream AI integrates with leading AI frameworks for seamless development",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 62,
+          "like_count": 45,
+          "reply_count": 9,
+          "quote_count": 21
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_3",
+        "text": "Silverstream AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 47,
+          "like_count": 352,
+          "reply_count": 35,
+          "quote_count": 2
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_4",
+        "text": "New AI model deployment on Silverstream AI achieves 99.9% accuracy",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 8,
+          "like_count": 11,
+          "reply_count": 19,
+          "quote_count": 15
+        },
+        "relevance_score": 70,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_5",
+        "text": "New AI model deployment on Silverstream AI achieves 99.9% accuracy",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 16,
+          "like_count": 378,
+          "reply_count": 44,
+          "quote_count": 4
+        },
+        "relevance_score": 70,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "ai",
+            "keyword": "model"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_6",
+        "text": "Breakthrough in decentralized AI: Silverstream AI enables privacy-preserving ML",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 74,
+          "like_count": 212,
+          "reply_count": 23,
+          "quote_count": 16
+        },
+        "relevance_score": 65,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314785358_7",
+        "text": "Silverstream AI AI agents now processing 10M+ requests daily 🤖 #AI #NEAR",
+        "author": {
+          "username": "silverstreamAI",
+          "name": "Silverstream AI",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:45.358Z",
+        "public_metrics": {
+          "retweet_count": 86,
+          "like_count": 260,
+          "reply_count": 19,
+          "quote_count": 19
+        },
+        "relevance_score": 68,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          },
+          {
+            "category": "near",
+            "keyword": "near"
+          }
+        ]
+      }
+    ],
+    "L2": [
+      {
+        "id": "1751314781353_0",
+        "text": "Aurora EVM compatibility opens new possibilities for developers",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T20:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 37,
+          "like_count": 32,
+          "reply_count": 9,
+          "quote_count": 6
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_1",
+        "text": "Cross-chain bridge integration enables seamless Aurora interoperability",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T19:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 72,
+          "like_count": 391,
+          "reply_count": 27,
+          "quote_count": 7
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781353_2",
+        "text": "Aurora network processes 100,000+ transactions with sub-second finality",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T18:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 32,
+          "like_count": 319,
+          "reply_count": 33,
+          "quote_count": 2
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_3",
+        "text": "Aurora EVM compatibility opens new possibilities for developers",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T17:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 22,
+          "like_count": 101,
+          "reply_count": 31,
+          "quote_count": 9
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_4",
+        "text": "Aurora network processes 100,000+ transactions with sub-second finality",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T16:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 86,
+          "like_count": 418,
+          "reply_count": 13,
+          "quote_count": 18
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_5",
+        "text": "Cross-chain bridge integration enables seamless Aurora interoperability",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T15:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 4,
+          "like_count": 319,
+          "reply_count": 5,
+          "quote_count": 24
+        },
+        "relevance_score": 80,
+        "ai_crypto_keywords": [
+          {
+            "category": "ai",
+            "keyword": "ai"
+          }
+        ]
+      },
+      {
+        "id": "1751314781353_6",
+        "text": "Major scaling milestone: Aurora reduces gas fees by 90%",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T14:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 49,
+          "like_count": 498,
+          "reply_count": 12,
+          "quote_count": 4
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_7",
+        "text": "Major scaling milestone: Aurora reduces gas fees by 90%",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T13:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 60,
+          "like_count": 333,
+          "reply_count": 1,
+          "quote_count": 21
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_8",
+        "text": "Aurora EVM compatibility opens new possibilities for developers",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T12:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 34,
+          "like_count": 301,
+          "reply_count": 46,
+          "quote_count": 8
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      },
+      {
+        "id": "1751314781353_9",
+        "text": "Aurora EVM compatibility opens new possibilities for developers",
+        "author": {
+          "username": "auroraisnear",
+          "name": "Aurora",
+          "verified": false
+        },
+        "created_at": "2025-06-30T11:19:41.353Z",
+        "public_metrics": {
+          "retweet_count": 61,
+          "like_count": 467,
+          "reply_count": 14,
+          "quote_count": 1
+        },
+        "relevance_score": 75,
+        "ai_crypto_keywords": []
+      }
+    ]
+  },
+  "generated_at": "2025-06-30T20:19:45.359Z"
+}

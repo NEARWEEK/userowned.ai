@@ -1,0 +1,279 @@
+{
+  "near_ecosystem_handles": {
+    "organizations": [
+      {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical"
+      },
+      {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical"
+      },
+      {
+        "handle": "@near_ai",
+        "name": "NEAR AI",
+        "website": "near.ai",
+        "category": "Org",
+        "priority": "critical"
+      },
+      {
+        "handle": "@NEARDevHub",
+        "name": "NEAR Dev Hub",
+        "category": "Developer",
+        "priority": "high"
+      }
+    ],
+    "key_opinion_leaders": [
+      {
+        "handle": "@ilblackdragon",
+        "name": "Illia Polosukhin",
+        "affiliation": "NEAR",
+        "category": "KOL",
+        "priority": "critical"
+      },
+      {
+        "handle": "@BowenWang18",
+        "name": "Bowen Wang",
+        "affiliation": "NEAR",
+        "category": "KOL",
+        "priority": "high"
+      },
+      {
+        "handle": "@AlexSkidanov",
+        "name": "Alex Skidanov",
+        "affiliation": "NEAR AI",
+        "category": "Builder",
+        "priority": "high"
+      },
+      {
+        "handle": "@kendaIIc",
+        "name": "Kendall Cole",
+        "affiliation": "Proximity Labs",
+        "category": "KOL",
+        "priority": "high"
+      },
+      {
+        "handle": "@chronear",
+        "name": "Chronear",
+        "affiliation": "NEAR",
+        "category": "KOL",
+        "priority": "medium"
+      }
+    ],
+    "defi_projects": [
+      {
+        "handle": "@moremarketsxyz",
+        "name": "MoreMarkets",
+        "website": "moremarkets.xyz",
+        "category": "DeFi",
+        "priority": "high"
+      },
+      {
+        "handle": "@rhea_finance",
+        "name": "Rhea Finance",
+        "website": "rhea.finance",
+        "category": "DeFi",
+        "priority": "high"
+      },
+      {
+        "handle": "@TemplarProtocol",
+        "name": "Templar Protocol",
+        "website": "templarfi.org",
+        "category": "DeFi",
+        "priority": "high"
+      },
+      {
+        "handle": "@fraxfinance",
+        "name": "Frax Finance",
+        "website": "frax.finance",
+        "category": "DeFi",
+        "priority": "medium"
+      },
+      {
+        "handle": "@proximityfi",
+        "name": "Proximity",
+        "website": "proximity.dev",
+        "category": "DeFi",
+        "priority": "high"
+      },
+      {
+        "handle": "@intelnear",
+        "name": "Intear",
+        "website": "intear.tech",
+        "category": "DeFi",
+        "priority": "medium"
+      },
+      {
+        "handle": "@StrawberryAI_5",
+        "name": "Strawberry AI",
+        "website": "usestrawberry.ai",
+        "category": "DeFi",
+        "priority": "medium"
+      },
+      {
+        "handle": "@infinex",
+        "name": "Infinex",
+        "website": "infinex.xyz",
+        "category": "DeFi",
+        "priority": "medium"
+      },
+      {
+        "handle": "@nearintents",
+        "name": "NEAR Intents",
+        "website": "app.near-intents.org",
+        "category": "DeFi",
+        "priority": "high"
+      }
+    ],
+    "ai_projects": [
+      {
+        "handle": "@intellex_xyz",
+        "name": "Intellex",
+        "website": "intellex.xyz",
+        "category": "AI",
+        "priority": "high"
+      },
+      {
+        "handle": "@XTrace_AI",
+        "name": "XTrace AI",
+        "website": "xtrace.ai",
+        "category": "AI",
+        "priority": "high"
+      },
+      {
+        "handle": "@PhalaNetwork",
+        "name": "Phala Network",
+        "website": "phala.network",
+        "category": "AI",
+        "priority": "high"
+      },
+      {
+        "handle": "@AiDatrics",
+        "name": "Datrics AI",
+        "website": "datrics.ai",
+        "category": "AI",
+        "priority": "medium"
+      },
+      {
+        "handle": "@IQAICOM",
+        "name": "IQ AI",
+        "website": "iqai.com",
+        "category": "AI",
+        "priority": "medium"
+      },
+      {
+        "handle": "@PublicAI_",
+        "name": "Public AI",
+        "website": "publicai.io",
+        "category": "AI",
+        "priority": "high"
+      },
+      {
+        "handle": "@silverstreamAI",
+        "name": "Silverstream AI",
+        "website": "silverstream.ai",
+        "category": "AI",
+        "priority": "medium"
+      },
+      {
+        "handle": "@tryjutsu",
+        "name": "Jutsu",
+        "website": "jutsu.ai",
+        "category": "AI",
+        "priority": "medium"
+      }
+    ],
+    "infrastructure": [
+      {
+        "handle": "@auroraisnear",
+        "name": "Aurora",
+        "website": "aurora.dev",
+        "category": "L2",
+        "priority": "high"
+      }
+    ],
+    "community_memes": [
+      {
+        "handle": "@dragonisnear",
+        "name": "Black Dragon",
+        "category": "Meme",
+        "priority": "low"
+      },
+      {
+        "handle": "@ShitzuCommunity",
+        "name": "Shitzu",
+        "category": "Meme",
+        "priority": "low"
+      }
+    ],
+    "builders": [
+      {
+        "handle": "@bgmshana",
+        "name": "Hang Yin",
+        "affiliation": "Phala Network",
+        "category": "Builder",
+        "priority": "medium"
+      },
+      {
+        "handle": "@starpause",
+        "name": "Jordan",
+        "affiliation": "Public AI",
+        "category": "Builder",
+        "priority": "medium"
+      },
+      {
+        "handle": "@slimedrgn",
+        "name": "Slime Dragon",
+        "affiliation": "INTEAR",
+        "category": "Builder",
+        "priority": "medium"
+      },
+      {
+        "handle": "@mraltantutar",
+        "name": "Altan Tutar",
+        "affiliation": "More Markets",
+        "category": "Builder",
+        "priority": "medium"
+      }
+    ],
+    "uncategorized": [
+      {
+        "name": "Postt",
+        "website": "postt.ai",
+        "category": "AI",
+        "priority": "medium",
+        "note": "No Twitter handle provided"
+      },
+      {
+        "name": "Kirill",
+        "affiliation": "Datrics AI",
+        "category": "Builder",
+        "priority": "medium",
+        "note": "No Twitter handle provided"
+      }
+    ]
+  },
+  "metadata": {
+    "total_handles": 30,
+    "critical_priority": 4,
+    "high_priority": 11,
+    "medium_priority": 13,
+    "low_priority": 2,
+    "categories": {
+      "Org": 4,
+      "KOL": 5,
+      "DeFi": 9,
+      "AI": 8,
+      "L2": 1,
+      "Meme": 2,
+      "Builder": 4,
+      "Developer": 1
+    },
+    "last_updated": "2025-06-30T20:15:00.000Z"
+  }
+}

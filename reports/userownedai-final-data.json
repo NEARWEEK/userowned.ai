@@ -1,0 +1,23 @@
+{
+  "generated_at": "2025-06-30T21:20:51.996Z",
+  "newsletter_type": "UserOwned.AI Weekly Digest",
+  "accounts_monitored": [
+    "elonmusk",
+    "sama",
+    "VitalikButerin",
+    "naval",
+    "balajis",
+    "karpathy",
+    "AndrewYNg"
+  ],
+  "total_tweets": 10,
+  "total_engagement": 292952,
+  "average_relevance": 90,
+  "top_categories": [
+    "AI/Tech",
+    "Crypto/Web3",
+    "Business"
+  ],
+  "api_limitations_note": "Generated with sample data due to X API search limitations on current tier",
+  "real_implementation_note": "Real version would use live X API data when search access is available"
+}

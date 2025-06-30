@@ -17,7 +17,7 @@
     "logs": "tail -f logs/automation.log",
     "errors": "tail -f logs/error.log",
     "content:nearweek": "node scripts/multi-stream-content-generator.js nearweek",
-    "content:defi": "node scripts/multi-stream-content-generator.js defi", 
+    "content:defi": "node scripts/multi-stream-content-generator.js defi",
     "content:nft": "node scripts/multi-stream-content-generator.js nft",
     "content:gaming": "node scripts/multi-stream-content-generator.js gaming",
     "content:all": "node scripts/multi-stream-content-generator.js all",
@@ -26,20 +26,27 @@
     "scheduler:status": "node scripts/stream-scheduler.js status",
     "scheduler:test": "node scripts/stream-scheduler.js test nearweek",
     "runway:video": "node scripts/runway-video-processor.js",
-    "runway:test": "node scripts/runway-nearweek-test.js"
+    "runway:test": "node scripts/runway-nearweek-test.js",
+    "twitter:mock": "node scripts/query-near-ecosystem-handles.js",
+    "twitter:real": "node scripts/query-near-ecosystem-handles-real.js",
+    "twitter:critical": "node scripts/query-near-ecosystem-handles-real.js --critical-only",
+    "news:generate": "node scripts/generate-news-from-twitter-handles.js",
+    "webhook:test": "node scripts/integrate-twitter-handles-to-webhook.js --dry-run",
+    "api:status": "node scripts/diagnose-twitter-api-issue.js",
+    "api:test": "node scripts/test-twitter-api-connection.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
+    "axios": "^1.6.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
-    "dotenv": "^16.3.1",
-    "axios": "^1.6.2",
     "node-cron": "^3.0.3",
-    "winston": "^3.11.0",
-    "express-rate-limit": "^7.1.5",
-    "canvas": "^2.11.2",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.2",
+    "twitter-api-v2": "^1.24.0",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"

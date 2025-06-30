@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "total_tweets": 0,
+    "high_relevance_count": 0,
+    "high_relevance_tweets": [],
+    "avg_relevance": 0,
+    "handles_with_data": 0
+  },
+  "results": [
+    {
+      "handle_info": {
+        "handle": "@NEARProtocol",
+        "name": "NEAR Protocol",
+        "website": "near.org",
+        "category": "Org",
+        "priority": "critical"
+      },
+      "tweets": [],
+      "query_metadata": {
+        "timestamp": "2025-06-30T20:47:22.215Z",
+        "success": false,
+        "error": "Request failed with code 429"
+      }
+    },
+    {
+      "handle_info": {
+        "handle": "@NEARFoundation",
+        "name": "NEAR Foundation",
+        "category": "Org",
+        "priority": "critical"
+      },
+      "tweets": [],
+      "query_metadata": {
+        "timestamp": "2025-06-30T20:47:25.383Z",
+        "success": false,
+        "error": "Request failed with code 429"
+      }
+    },
+    {
+      "handle_info": {
+        "handle": "@near_ai",
+        "name": "NEAR AI",
+        "website": "near.ai",
+        "category": "Org",
+        "priority": "critical"
+      },
+      "tweets": [],
+      "query_metadata": {
+        "timestamp": "2025-06-30T20:47:28.520Z",
+        "success": false,
+        "error": "Request failed with code 429"
+      }
+    },
+    {
+      "handle_info": {
+        "handle": "@ilblackdragon",
+        "name": "Illia Polosukhin",
+        "affiliation": "NEAR",
+        "category": "KOL",
+        "priority": "critical"
+      },
+      "tweets": [],
+      "query_metadata": {
+        "timestamp": "2025-06-30T20:47:31.664Z",
+        "success": false,
+        "error": "Request failed with code 429"
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2025-06-30T20:47:31.665Z",
+    "api_requests_used": 0,
+    "handles_monitored": 4,
+    "data_source": "real_twitter_api_v2"
+  }
+}
