@@ -1,0 +1,134 @@
+{
+  "decision_framework": {
+    "current_state": {
+      "monitoring_accounts": 5,
+      "infrastructure": "Zapier + Buffer + webhook system",
+      "cost": 0,
+      "limitations": "Manual following verification, limited scale"
+    },
+    "immediate_expansion": {
+      "target_accounts": 7,
+      "method": "Zapier zap extension",
+      "setup_time": "15 minutes",
+      "additional_cost": 0,
+      "expected_volume_increase": "75%"
+    }
+  },
+  
+  "upgrade_triggers": {
+    "zapier_to_api_migration": {
+      "account_threshold": 20,
+      "use_case_complexity": "Custom workflows beyond basic monitoring",
+      "following_management_needs": "Programmatic following/unfollowing required",
+      "analytics_requirements": "Advanced metrics and custom reporting",
+      "cost_justification": "$100/month justified by scale and functionality"
+    },
+    "circleboom_addition": {
+      "following_list_management": "Managing >50 different account lists",
+      "bulk_operations": "Need bulk following/unfollowing capabilities",
+      "follower_analytics": "Detailed follower analysis required",
+      "export_requirements": "Regular CSV/JSON exports for analysis"
+    }
+  },
+  
+  "capacity_analysis": {
+    "current_zapier_plan": {
+      "max_zaps": "Depends on plan tier",
+      "current_usage": "5 zaps (monitoring)",
+      "immediate_expansion": "12 zaps total (5 existing + 7 new)",
+      "growth_capacity": "Up to 20-30 accounts feasible"
+    },
+    "x_api_v2_pro": {
+      "tweet_limit": "300,000 tweets/month",
+      "following_lookups": "1,000 following lookups/month",
+      "rate_limits": "15 requests per 15 minutes for following endpoints",
+      "custom_development": "Full API access for custom use cases"
+    }
+  },
+  
+  "cost_comparison_matrix": {
+    "12_accounts": {
+      "zapier_only": "$0/month",
+      "x_api_v2_pro": "$100/month",
+      "circleboom": "$40/month",
+      "recommended": "Zapier only (cost effective)"
+    },
+    "30_accounts": {
+      "zapier_pro": "$20-50/month",
+      "x_api_v2_pro": "$100/month",
+      "circleboom": "$80/month",
+      "recommended": "Zapier Pro or X API (depends on use cases)"
+    },
+    "100_accounts": {
+      "zapier_scaling": "Not feasible (zap limits)",
+      "x_api_v2_pro": "$100/month",
+      "circleboom_business": "$120/month",
+      "recommended": "X API v2 Pro (scale and flexibility)"
+    }
+  },
+  
+  "monitoring_strategy": {
+    "phase_1_immediate": {
+      "duration": "Next 30 days",
+      "approach": "Zapier extension for UserOwned.ai accounts",
+      "focus": "Infrastructure and protocol monitoring",
+      "success_metrics": [
+        "75% content volume increase",
+        "Maintain 85%+ relevance score",
+        "<15 minute response times",
+        "System stability with increased load"
+      ]
+    },
+    "phase_2_assessment": {
+      "duration": "Month 2-3",
+      "approach": "Performance evaluation and scaling planning",
+      "decision_points": [
+        "System capacity handling increased volume",
+        "Content quality maintaining standards",
+        "Additional use case requirements emerging",
+        "Team workflow optimization needs"
+      ]
+    },
+    "phase_3_scaling": {
+      "duration": "Month 4-6",
+      "approach": "API migration if triggers met",
+      "implementation": "X API v2 Pro for advanced capabilities",
+      "benefits": [
+        "Programmatic control",
+        "Custom use case development",
+        "Advanced analytics",
+        "Unlimited scaling potential"
+      ]
+    }
+  },
+  
+  "risk_mitigation": {
+    "zapier_limitations": {
+      "zap_count_limits": "Monitor usage against plan limits",
+      "rate_limiting": "Stagger zap triggers to avoid conflicts",
+      "following_verification": "Monthly manual verification process",
+      "backup_planning": "API migration plan ready if needed"
+    },
+    "api_migration_risks": {
+      "development_complexity": "Start with simple implementation",
+      "cost_management": "Monitor usage against $100/month budget",
+      "rate_limit_compliance": "Implement proper rate limiting in code",
+      "data_continuity": "Maintain webhook compatibility during migration"
+    }
+  },
+  
+  "success_measurement": {
+    "quantitative_metrics": {
+      "content_volume": "Target: 45-80 relevant tweets/day",
+      "relevance_score": "Maintain: 85%+ average",
+      "response_time": "Critical: <5min, High: <15min, Medium: <60min",
+      "system_uptime": "Target: 99%+ availability"
+    },
+    "qualitative_metrics": {
+      "content_quality": "Infrastructure-focused, actionable intelligence",
+      "market_positioning": "First to monitor AI x ownership convergence",
+      "team_efficiency": "Reduced manual work, increased strategic focus",
+      "ecosystem_coverage": "Comprehensive monitoring of building companies"
+    }
+  }
+}
