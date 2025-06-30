@@ -1,0 +1,87 @@
+{
+  "name": "nearweek-automated-news-sourcing",
+  "version": "1.0.0",
+  "description": "NEARWEEK Automated News Sourcing System - X API Integration with Buffer/Zapier for Real-time AI x Crypto News Processing",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "setup": "node scripts/setup-automation.js",
+    "test:pipeline": "node tests/test-pipeline.js",
+    "dashboard": "node src/dashboard/server.js",
+    "metrics": "node scripts/show-metrics.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint src/",
+    "test": "jest",
+    "deploy": "bash scripts/deploy-production.sh",
+    "start-production": "bash scripts/start-production.sh",
+    "claude-setup": "bash scripts/claude-code-setup.sh"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "winston": "^3.10.0",
+    "cron": "^2.4.0",
+    "joi": "^17.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "eslint": "^8.45.0",
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kisgus/nearweek-automated-news-sourcing.git"
+  },
+  "keywords": [
+    "nearweek",
+    "automation",
+    "news",
+    "x-api",
+    "buffer",
+    "zapier",
+    "ai",
+    "crypto",
+    "claude",
+    "content-generation"
+  ],
+  "author": "NEARWEEK Team",
+  "license": "MIT",
+  "claude-code": {
+    "workflows": {
+      "news-processing": {
+        "trigger": "webhook",
+        "steps": [
+          "validate-input",
+          "analyze-relevance",
+          "generate-content",
+          "publish-or-queue"
+        ]
+      },
+      "breaking-news": {
+        "trigger": "high-priority-detection",
+        "steps": [
+          "immediate-analysis",
+          "video-generation",
+          "emergency-publishing",
+          "team-notification"
+        ]
+      },
+      "quality-control": {
+        "trigger": "content-review",
+        "steps": [
+          "fact-verification",
+          "brand-compliance",
+          "engagement-optimization",
+          "publish-approval"
+        ]
+      }
+    }
+  }
+}
