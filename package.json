@@ -52,36 +52,5 @@
     "content-generation"
   ],
   "author": "NEARWEEK Team",
-  "license": "MIT",
-  "claude-code": {
-    "workflows": {
-      "news-processing": {
-        "trigger": "webhook",
-        "steps": [
-          "validate-input",
-          "analyze-relevance",
-          "generate-content",
-          "publish-or-queue"
-        ]
-      },
-      "breaking-news": {
-        "trigger": "high-priority-detection",
-        "steps": [
-          "immediate-analysis",
-          "video-generation",
-          "emergency-publishing",
-          "team-notification"
-        ]
-      },
-      "quality-control": {
-        "trigger": "content-review",
-        "steps": [
-          "fact-verification",
-          "brand-compliance",
-          "engagement-optimization",
-          "publish-approval"
-        ]
-      }
-    }
-  }
+  "license": "MIT"
 }
