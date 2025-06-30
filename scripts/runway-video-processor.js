@@ -40,20 +40,7 @@ class RunwayVideoProcessor {
     console.log(`   Format: ${videoSpecs.format}`);
     console.log(`   Size: ${videoSpecs.estimatedSize}`);
     
-    const telegramCaption = `🎬 NEARWEEK Video Analytics
-
-📊 Live NEAR Intents Data:
-💰 Volume: ${this.nearStats.totalVolume}
-🔄 Swaps: ${this.nearStats.totalSwaps}
-👥 Users: ${this.nearStats.uniqueUsers}
-📈 Range: ${this.nearStats.weeklyRange}
-
-🎬 Animation: ${videoSpecs.duration}s | ${videoSpecs.resolution} | ${videoSpecs.format.toUpperCase()}
-
-✨ UserOwned.AI Analytics
-🚀 NEARWEEK Weekly Update
-
-#NEARWEEK #VideoAnalytics #NEARStats`;
+    const telegramCaption = `🎬 NEARWEEK Video Analytics\n\n📊 Live NEAR Intents Data:\n💰 Volume: ${this.nearStats.totalVolume}\n🔄 Swaps: ${this.nearStats.totalSwaps}\n👥 Users: ${this.nearStats.uniqueUsers}\n📈 Range: ${this.nearStats.weeklyRange}\n\n🎬 Animation: ${videoSpecs.duration}s | ${videoSpecs.resolution} | ${videoSpecs.format.toUpperCase()}\n\n✨ UserOwned.AI Analytics\n🚀 NEARWEEK Weekly Update\n\n#NEARWEEK #VideoAnalytics #NEARStats`;
 
     console.log('\n📱 Telegram message preview:');
     console.log(telegramCaption);
