@@ -1,0 +1,168 @@
+{
+  "zapier_monitoring_configuration": {
+    "total_accounts": 9,
+    "last_updated": "2025-06-30",
+    "integration_source": "Original NEARWEEK targets + UserOwned.ai following inspiration",
+    "webhook_endpoint": "http://localhost:3000/webhook/x-api"
+  },
+  "account_groups": {
+    "critical_priority": {
+      "description": "Immediate alerts, <10 minute response time",
+      "accounts": [
+        {
+          "zap_id": 1,
+          "username": "VitalikButerin",
+          "category": "Crypto Leadership",
+          "keywords": ["AI", "crypto", "ethereum", "blockchain", "scaling"],
+          "engagement_threshold": "10+ likes OR 5+ retweets",
+          "priority": "CRITICAL",
+          "source": "Original NEARWEEK target"
+        },
+        {
+          "zap_id": 2,
+          "username": "ilblackdragon",
+          "category": "NEAR Ecosystem",
+          "keywords": ["NEAR", "AI", "crypto", "web3", "infrastructure"],
+          "engagement_threshold": "5+ likes OR 3+ retweets", 
+          "priority": "CRITICAL",
+          "source": "Original NEARWEEK target"
+        },
+        {
+          "zap_id": 5,
+          "username": "NEARProtocol",
+          "category": "NEAR Ecosystem",
+          "keywords": ["all tweets"],
+          "engagement_threshold": "no filter (official account)",
+          "priority": "CRITICAL",
+          "source": "Original NEARWEEK target"
+        }
+      ]
+    },
+    "high_priority": {
+      "description": "Standard alerts, <30 minute response time",
+      "accounts": [
+        {
+          "zap_id": 3,
+          "username": "balajis",
+          "category": "AI x Crypto Convergence",
+          "keywords": ["AI", "crypto", "tech", "startup", "network state"],
+          "engagement_threshold": "20+ likes (high volume account)",
+          "priority": "HIGH",
+          "source": "Original NEARWEEK target + UserOwned.ai alignment"
+        },
+        {
+          "zap_id": 4,
+          "username": "sama",
+          "category": "AI Leadership",
+          "keywords": ["AI", "artificial intelligence", "OpenAI", "AGI"],
+          "engagement_threshold": "15+ likes OR 5+ retweets",
+          "priority": "HIGH",
+          "source": "Original NEARWEEK target + UserOwned.ai alignment"
+        },
+        {
+          "zap_id": 6,
+          "username": "naval",
+          "category": "Tech Philosophy",
+          "keywords": ["tech", "startup", "investment", "philosophy", "ownership"],
+          "engagement_threshold": "15+ likes OR 8+ retweets",
+          "priority": "HIGH",
+          "source": "UserOwned.ai following inspiration"
+        },
+        {
+          "zap_id": 7,
+          "username": "elonmusk",
+          "category": "AI Leadership",
+          "keywords": ["AI", "xAI", "Grok", "tech", "innovation"],
+          "engagement_threshold": "50+ likes (very high volume)",
+          "priority": "HIGH",
+          "source": "UserOwned.ai following inspiration"
+        }
+      ]
+    },
+    "medium_priority": {
+      "description": "Quality review, <2 hour response time",
+      "accounts": [
+        {
+          "zap_id": 8,
+          "username": "karpathy",
+          "category": "AI Research",
+          "keywords": ["AI", "machine learning", "research", "neural networks"],
+          "engagement_threshold": "10+ likes OR 5+ retweets",
+          "priority": "MEDIUM",
+          "source": "UserOwned.ai following inspiration"
+        },
+        {
+          "zap_id": 9,
+          "username": "AndrewYNg",
+          "category": "AI Education", 
+          "keywords": ["AI", "education", "democratization", "learning"],
+          "engagement_threshold": "10+ likes OR 5+ retweets",
+          "priority": "MEDIUM",
+          "source": "UserOwned.ai following inspiration"
+        }
+      ]
+    }
+  },
+  "content_relevance_scoring": {
+    "ai_keywords": {
+      "high_value": ["AI", "artificial intelligence", "AGI", "machine learning", "neural networks"],
+      "score_multiplier": 25
+    },
+    "crypto_keywords": {
+      "high_value": ["crypto", "blockchain", "ethereum", "NEAR", "web3", "DeFi"],
+      "score_multiplier": 20
+    },
+    "ownership_keywords": {
+      "high_value": ["ownership", "democratization", "decentralized", "user-owned"],
+      "score_multiplier": 20
+    },
+    "tech_leadership_keywords": {
+      "high_value": ["innovation", "startup", "investment", "philosophy", "future"],
+      "score_multiplier": 15
+    }
+  },
+  "expected_content_volume": {
+    "daily_tweets_estimate": {
+      "critical_accounts": "15-25 relevant tweets/day",
+      "high_priority_accounts": "20-35 relevant tweets/day", 
+      "medium_priority_accounts": "10-20 relevant tweets/day",
+      "total_estimate": "45-80 high-quality tweets/day"
+    },
+    "content_increase": "50-75% more relevant content vs original 5 accounts",
+    "quality_expectation": "85%+ relevance score maintained"
+  },
+  "implementation_checklist": {
+    "zapier_setup": [
+      "Configure Zap 6: @naval monitoring",
+      "Configure Zap 7: @elonmusk monitoring", 
+      "Configure Zap 8: @karpathy monitoring",
+      "Configure Zap 9: @AndrewYNg monitoring"
+    ],
+    "system_updates": [
+      "Update relevance scoring for ownership keywords",
+      "Add new content categories to processing",
+      "Configure priority routing for new account types",
+      "Update team notification templates"
+    ],
+    "validation": [
+      "Test all 9 webhook endpoints",
+      "Verify relevance scoring accuracy",
+      "Monitor initial content quality",
+      "Adjust filters based on performance"
+    ]
+  },
+  "monitoring_strategy": {
+    "real_time_alerts": {
+      "breaking_news_threshold": 90,
+      "high_priority_threshold": 80,
+      "standard_threshold": 60
+    },
+    "content_categories": {
+      "ai_x_crypto_convergence": "Stories connecting AI and blockchain/crypto",
+      "user_ownership_models": "Content about democratizing technology ownership",
+      "ai_infrastructure": "Technical developments in AI systems",
+      "crypto_innovation": "Blockchain and decentralization advances",
+      "tech_philosophy": "Thought leadership on future of technology"
+    }
+  }
+}

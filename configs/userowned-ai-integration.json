@@ -1,0 +1,188 @@
+{
+  "userowned_ai_integration": {
+    "description": "Integration with UserOwned.ai following accounts for news sourcing",
+    "source_account": "@userownedai",
+    "source_url": "https://x.com/userownedai",
+    "following_count": 7,
+    "last_updated": "2025-06-30",
+    "update_frequency": "monthly",
+    "integration_method": "manual_verification + assumption_based"
+  },
+  "primary_accounts": {
+    "description": "High-priority accounts for AI x ownership focus",
+    "accounts": [
+      {
+        "username": "sama",
+        "name": "Sam Altman",
+        "description": "OpenAI CEO",
+        "category": "AI Leadership",
+        "priority": "CRITICAL",
+        "followers": "2M+",
+        "relevance": "AI development and policy",
+        "keywords": ["AI", "artificial intelligence", "OpenAI", "AGI"]
+      },
+      {
+        "username": "VitalikButerin",
+        "name": "Vitalik Buterin",
+        "description": "Ethereum founder",
+        "category": "Crypto/Blockchain",
+        "priority": "CRITICAL",
+        "followers": "5M+",
+        "relevance": "Blockchain infrastructure and decentralization",
+        "keywords": ["ethereum", "blockchain", "crypto", "decentralized"]
+      },
+      {
+        "username": "balajis",
+        "name": "Balaji Srinivasan",
+        "description": "Tech/crypto thought leader",
+        "category": "AI x Crypto",
+        "priority": "HIGH",
+        "followers": "1M+",
+        "relevance": "AI + crypto convergence insights",
+        "keywords": ["AI", "crypto", "tech", "startup", "network state"]
+      },
+      {
+        "username": "naval",
+        "name": "Naval Ravikant",
+        "description": "Tech entrepreneur and investor",
+        "category": "Tech Philosophy",
+        "priority": "HIGH",
+        "followers": "2M+",
+        "relevance": "Tech philosophy and ownership models",
+        "keywords": ["tech", "startup", "investment", "philosophy"]
+      },
+      {
+        "username": "elonmusk",
+        "name": "Elon Musk",
+        "description": "Tesla/SpaceX/xAI CEO",
+        "category": "AI Leadership",
+        "priority": "HIGH",
+        "followers": "150M+",
+        "relevance": "AI development and tech innovation",
+        "keywords": ["AI", "tech", "innovation", "xAI", "Grok"]
+      }
+    ]
+  },
+  "secondary_accounts": {
+    "description": "Additional high-value accounts for comprehensive coverage",
+    "accounts": [
+      {
+        "username": "sundarpichai",
+        "name": "Sundar Pichai",
+        "description": "Google/Alphabet CEO",
+        "category": "AI Leadership",
+        "priority": "MEDIUM",
+        "relevance": "Google AI and tech strategy"
+      },
+      {
+        "username": "satyanadella",
+        "name": "Satya Nadella",
+        "description": "Microsoft CEO",
+        "category": "AI Leadership",
+        "priority": "MEDIUM",
+        "relevance": "Microsoft AI and enterprise tech"
+      },
+      {
+        "username": "karpathy",
+        "name": "Andrej Karpathy",
+        "description": "AI researcher",
+        "category": "AI Research",
+        "priority": "MEDIUM",
+        "relevance": "AI research and development insights"
+      },
+      {
+        "username": "AndrewYNg",
+        "name": "Andrew Ng",
+        "description": "AI educator and researcher",
+        "category": "AI Education",
+        "priority": "MEDIUM",
+        "relevance": "AI education and democratization"
+      }
+    ]
+  },
+  "near_ecosystem_accounts": {
+    "description": "NEAR Protocol ecosystem accounts (existing)",
+    "accounts": [
+      {
+        "username": "NEARProtocol",
+        "name": "NEAR Protocol",
+        "description": "Official NEAR account",
+        "category": "NEAR Ecosystem",
+        "priority": "CRITICAL",
+        "relevance": "Official NEAR announcements and updates"
+      },
+      {
+        "username": "ilblackdragon",
+        "name": "Illia Polosukhin",
+        "description": "NEAR co-founder",
+        "category": "NEAR Ecosystem",
+        "priority": "CRITICAL",
+        "relevance": "NEAR technical updates and AI integration"
+      }
+    ]
+  },
+  "zapier_configuration": {
+    "total_zaps_needed": 9,
+    "primary_zaps": 5,
+    "userowned_expansion": 4,
+    "configuration_notes": [
+      "Add 4 new Zapier zaps for UserOwned.ai inspired accounts",
+      "Maintain existing 5 zaps for original target accounts",
+      "Total monitoring: 9 high-value accounts",
+      "Enhanced coverage of AI x ownership convergence"
+    ]
+  },
+  "content_strategy": {
+    "focus_areas": [
+      "AI x crypto convergence",
+      "Decentralized AI infrastructure", 
+      "User ownership models",
+      "AI democratization",
+      "Blockchain + AI integration",
+      "Tech philosophy and future of work"
+    ],
+    "content_categories": {
+      "AI Leadership": "Strategic announcements from AI company leaders",
+      "Crypto Innovation": "Blockchain and decentralization developments",
+      "AI x Crypto": "Convergence stories and integration news",
+      "Tech Philosophy": "Thought leadership on ownership and democratization",
+      "NEAR Ecosystem": "NEAR Protocol specific updates and integrations"
+    }
+  },
+  "monitoring_strategy": {
+    "real_time_monitoring": {
+      "critical_accounts": ["@sama", "@VitalikButerin", "@NEARProtocol", "@ilblackdragon"],
+      "response_time_target": "<10 minutes",
+      "alert_channels": ["Telegram", "Slack", "Email"]
+    },
+    "high_priority_monitoring": {
+      "accounts": ["@balajis", "@naval", "@elonmusk"],
+      "response_time_target": "<30 minutes",
+      "processing": "Standard workflow with enhanced analysis"
+    },
+    "medium_priority_monitoring": {
+      "accounts": ["@sundarpichai", "@satyanadella", "@karpathy", "@AndrewYNg"],
+      "response_time_target": "<2 hours",
+      "processing": "Standard workflow with quality review"
+    }
+  },
+  "verification_process": {
+    "manual_verification": {
+      "frequency": "Monthly",
+      "action": "Visit https://x.com/userownedai/following",
+      "purpose": "Verify current following list and add new accounts",
+      "responsible": "Content Lead"
+    },
+    "account_discovery": {
+      "method": "Monitor UserOwned.ai follows/unfollows",
+      "integration": "Add new follows to monitoring list",
+      "evaluation_criteria": ["Relevance to AI x ownership", "Account credibility", "Content quality"]
+    }
+  },
+  "implementation_timeline": {
+    "immediate": "Add 4 new Zapier zaps for primary UserOwned.ai accounts",
+    "week_1": "Manual verification of actual following list",
+    "week_2": "Performance analysis and optimization",
+    "monthly": "Ongoing verification and account updates"
+  }
+}
