@@ -9,7 +9,13 @@
     "deploy": "bash scripts/quick-deploy.sh",
     "test": "node scripts/test-mcp-integrations.js",
     "health": "curl http://localhost:3000/health",
-    "metrics": "curl http://localhost:3000/api/metrics"
+    "metrics": "curl http://localhost:3000/api/metrics",
+    "test-webhook": "curl -X POST http://localhost:3000/webhook/x-api -H 'Content-Type: application/json' -d '{\"id\":\"test123\",\"text\":\"Test webhook with AI and crypto keywords\",\"author\":{\"username\":\"test\"},\"public_metrics\":{\"like_count\":50}}'",
+    "test-analysis": "curl -X POST http://localhost:3000/api/analyze -H 'Content-Type: application/json' -d '{\"text\":\"NEAR Protocol launches AI infrastructure\",\"source\":\"verified_account\",\"engagement\":500}'",
+    "pause": "curl -X POST http://localhost:3000/api/admin/pause",
+    "resume": "curl -X POST http://localhost:3000/api/admin/resume",
+    "logs": "tail -f logs/automation.log",
+    "errors": "tail -f logs/error.log"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -19,7 +25,8 @@
     "dotenv": "^16.3.1",
     "axios": "^1.6.2",
     "node-cron": "^3.0.3",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "express-rate-limit": "^7.1.5"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
