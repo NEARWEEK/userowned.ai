@@ -1,0 +1,187 @@
+{
+  "verification_date": "2025-06-30",
+  "source": "Manual verification of https://x.com/userownedai/following",
+  "total_following": 7,
+  "verification_method": "Direct screenshot analysis",
+  "last_updated_by": "System verification",
+  
+  "verified_following_accounts": [
+    {
+      "username": "AethirCloud",
+      "display_name": "Aethir ⚡",
+      "description": "Powering the Future of AI. Building Decentralised Cloud Compute Infrastructure.",
+      "category": "AI Infrastructure",
+      "focus": "Decentralized AI compute",
+      "priority": "HIGH",
+      "relevance_score": 95,
+      "keywords": ["AI", "decentralized", "cloud", "compute", "infrastructure"],
+      "zapier_config": {
+        "engagement_threshold": "10+ likes OR 5+ retweets",
+        "keyword_filters": ["AI", "compute", "cloud", "infrastructure", "decentralized"]
+      }
+    },
+    {
+      "username": "KaitoAI",
+      "display_name": "Kaito AI 🌊 ⚡",
+      "description": "The distribution powerhouse of crypto - for attention, data & capital. Powered by AI.",
+      "category": "AI x Crypto",
+      "focus": "AI-powered crypto data/attention",
+      "priority": "HIGH",
+      "relevance_score": 90,
+      "keywords": ["AI", "crypto", "data", "attention", "capital"],
+      "zapier_config": {
+        "engagement_threshold": "15+ likes OR 8+ retweets",
+        "keyword_filters": ["AI", "crypto", "data", "capital", "attention"]
+      }
+    },
+    {
+      "username": "rendernetwork",
+      "display_name": "The Render Network ⚡",
+      "description": "Distributed GPU rendering network",
+      "category": "Compute Infrastructure",
+      "focus": "Decentralized GPU/rendering",
+      "priority": "HIGH",
+      "relevance_score": 85,
+      "keywords": ["GPU", "rendering", "network", "distributed", "compute"],
+      "zapier_config": {
+        "engagement_threshold": "12+ likes OR 6+ retweets",
+        "keyword_filters": ["GPU", "rendering", "network", "distributed", "compute"]
+      }
+    },
+    {
+      "username": "bittensor_",
+      "display_name": "Bittensor ✓",
+      "description": "At the core of the Bittensor ecosystem is the production, marketing and selling of digital commodities.",
+      "category": "AI Network",
+      "focus": "Decentralized AI network",
+      "priority": "CRITICAL",
+      "relevance_score": 98,
+      "keywords": ["AI", "bittensor", "network", "decentralized", "digital commodities"],
+      "zapier_config": {
+        "engagement_threshold": "5+ likes OR 3+ retweets",
+        "keyword_filters": ["AI", "bittensor", "network", "decentralized", "TAO"]
+      }
+    },
+    {
+      "username": "NEARProtocol",
+      "display_name": "NEAR Protocol ⚡",
+      "description": "The blockchain for AI.",
+      "category": "NEAR Ecosystem",
+      "focus": "AI blockchain platform",
+      "priority": "CRITICAL",
+      "relevance_score": 100,
+      "keywords": ["NEAR", "AI", "blockchain", "protocol"],
+      "zapier_config": {
+        "engagement_threshold": "no filter (official account)",
+        "keyword_filters": ["all tweets"]
+      }
+    },
+    {
+      "username": "base",
+      "display_name": "Base ⚡",
+      "description": "Bringing the world onchain to create a global economy. Built on Ethereum, built on the Superchain.",
+      "category": "Blockchain Infrastructure",
+      "focus": "L2 blockchain platform",
+      "priority": "MEDIUM",
+      "relevance_score": 75,
+      "keywords": ["onchain", "ethereum", "superchain", "L2", "base"],
+      "zapier_config": {
+        "engagement_threshold": "20+ likes OR 10+ retweets",
+        "keyword_filters": ["AI", "onchain", "ethereum", "superchain", "L2"]
+      }
+    },
+    {
+      "username": "virtuals_io",
+      "display_name": "Virtuals Protocol ⚡",
+      "description": "Society of AI Agents.",
+      "category": "AI Agents",
+      "focus": "AI agent protocols",
+      "priority": "HIGH",
+      "relevance_score": 92,
+      "keywords": ["AI", "agents", "virtuals", "protocol"],
+      "zapier_config": {
+        "engagement_threshold": "10+ likes OR 5+ retweets",
+        "keyword_filters": ["AI", "agents", "virtuals", "protocol", "autonomous"]
+      }
+    }
+  ],
+  
+  "strategic_analysis": {
+    "total_accounts": 7,
+    "average_relevance_score": 90.7,
+    "category_distribution": {
+      "AI Infrastructure": 1,
+      "AI x Crypto": 1,
+      "Compute Infrastructure": 1,
+      "AI Network": 1,
+      "NEAR Ecosystem": 1,
+      "Blockchain Infrastructure": 1,
+      "AI Agents": 1
+    },
+    "priority_distribution": {
+      "CRITICAL": 2,
+      "HIGH": 4,
+      "MEDIUM": 1
+    },
+    "focus_themes": [
+      "Decentralized AI infrastructure",
+      "AI-powered crypto platforms",
+      "Distributed computing networks",
+      "AI agent protocols",
+      "Blockchain AI integration"
+    ]
+  },
+  
+  "monitoring_strategy": {
+    "immediate_alerts": {
+      "accounts": ["bittensor_", "NEARProtocol"],
+      "response_time": "<5 minutes",
+      "priority": "CRITICAL"
+    },
+    "high_priority_monitoring": {
+      "accounts": ["AethirCloud", "KaitoAI", "rendernetwork", "virtuals_io"],
+      "response_time": "<15 minutes",
+      "priority": "HIGH"
+    },
+    "standard_monitoring": {
+      "accounts": ["base"],
+      "response_time": "<60 minutes",
+      "priority": "MEDIUM"
+    }
+  },
+  
+  "content_enhancement": {
+    "new_keywords": [
+      "decentralized AI",
+      "AI compute",
+      "GPU networks", 
+      "AI agents",
+      "Bittensor",
+      "TAO",
+      "Render Network",
+      "Aethir",
+      "Virtuals Protocol",
+      "AI infrastructure"
+    ],
+    "content_categories": {
+      "Decentralized AI Infrastructure": "Computing and infrastructure for distributed AI",
+      "AI Network Protocols": "Blockchain protocols specifically for AI",
+      "AI x Crypto Convergence": "Integration of AI and cryptocurrency/blockchain",
+      "Distributed Computing": "GPU networks and distributed computing platforms",
+      "AI Agent Economy": "Autonomous AI agents and their economic models"
+    },
+    "expected_content_volume": {
+      "daily_relevant_tweets": "30-50 high-quality tweets",
+      "focus_accuracy": "90%+ relevance to AI x ownership themes",
+      "breaking_news_coverage": "Sub-10 minute response for critical updates"
+    }
+  },
+  
+  "comparison_with_assumptions": {
+    "our_assumptions": ["sama", "VitalikButerin", "balajis", "naval", "elonmusk", "karpathy", "AndrewYNg"],
+    "actual_following": ["AethirCloud", "KaitoAI", "rendernetwork", "bittensor_", "NEARProtocol", "base", "virtuals_io"],
+    "accuracy_rate": "0% match",
+    "insight": "UserOwned.ai focuses on infrastructure and protocols rather than individual thought leaders",
+    "strategic_value": "Higher - targets actual building companies vs. personality accounts"
+  }
+}

@@ -1,0 +1,175 @@
+#!/bin/bash
+
+# PRECISION MONITORING SETUP FOR USEROWNED.AI VERIFIED ACCOUNTS
+# Based on verified following list from 2025-06-30
+
+echo "🎯 PRECISION MONITORING SETUP - USEROWNED.AI VERIFIED ACCOUNTS"
+echo "============================================================="
+echo ""
+
+# Configuration summary
+echo "📊 VERIFIED ACCOUNT MONITORING CONFIGURATION:"
+echo ""
+echo "Total Accounts: 7 (100% verified from UserOwned.ai following)"
+echo "Average Relevance Score: 90.7/100"
+echo "Focus: AI infrastructure + protocols (not personalities)"
+echo ""
+
+# CRITICAL Priority Accounts (2)
+echo "🔴 CRITICAL PRIORITY ACCOUNTS (Immediate alerts):"
+echo "1. @bittensor_ - Decentralized AI network (98/100 relevance)"
+echo "2. @NEARProtocol - AI blockchain platform (100/100 relevance)"
+echo ""
+
+# HIGH Priority Accounts (4) 
+echo "🟠 HIGH PRIORITY ACCOUNTS (15-minute response):"
+echo "3. @AethirCloud - Decentralized AI compute (95/100 relevance)"
+echo "4. @KaitoAI - AI-powered crypto data (90/100 relevance)"
+echo "5. @rendernetwork - Distributed GPU rendering (85/100 relevance)"
+echo "6. @virtuals_io - AI agent protocols (92/100 relevance)"
+echo ""
+
+# MEDIUM Priority Accounts (1)
+echo "🟡 MEDIUM PRIORITY ACCOUNTS (60-minute response):"
+echo "7. @base - L2 blockchain platform (75/100 relevance)"
+echo ""
+
+echo "🔧 ZAPIER CONFIGURATION - PRECISION SETUP:"
+echo "==========================================="
+echo ""
+
+# Zap 1: Bittensor (CRITICAL)
+echo "ZAP 1: @bittensor_ (CRITICAL - Decentralized AI Network)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: bittensor_"
+echo "  Filter: 5+ likes OR 3+ retweets (all content - high relevance)"
+echo "  Keywords: AI, bittensor, network, decentralized, TAO"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: CRITICAL (immediate processing)"
+echo ""
+
+# Zap 2: NEAR Protocol (CRITICAL) 
+echo "ZAP 2: @NEARProtocol (CRITICAL - AI Blockchain Platform)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: NEARProtocol"
+echo "  Filter: No filter (official account - all tweets)"
+echo "  Keywords: NEAR, AI, blockchain, protocol"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: CRITICAL (immediate processing)"
+echo ""
+
+# Zap 3: Aethir (HIGH)
+echo "ZAP 3: @AethirCloud (HIGH - Decentralized AI Compute)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: AethirCloud"
+echo "  Filter: 10+ likes OR 5+ retweets"
+echo "  Keywords: AI, decentralized, cloud, compute, infrastructure"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: HIGH (15-minute response)"
+echo ""
+
+# Zap 4: Kaito AI (HIGH)
+echo "ZAP 4: @KaitoAI (HIGH - AI x Crypto Data)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: KaitoAI"
+echo "  Filter: 15+ likes OR 8+ retweets"
+echo "  Keywords: AI, crypto, data, capital, attention"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: HIGH (15-minute response)"
+echo ""
+
+# Zap 5: Render Network (HIGH)
+echo "ZAP 5: @rendernetwork (HIGH - Distributed GPU Rendering)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: rendernetwork"
+echo "  Filter: 12+ likes OR 6+ retweets"
+echo "  Keywords: GPU, rendering, network, distributed, compute"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: HIGH (15-minute response)"
+echo ""
+
+# Zap 6: Virtuals Protocol (HIGH)
+echo "ZAP 6: @virtuals_io (HIGH - AI Agent Protocols)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: virtuals_io"
+echo "  Filter: 10+ likes OR 5+ retweets"
+echo "  Keywords: AI, agents, virtuals, protocol, autonomous"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: HIGH (15-minute response)"
+echo ""
+
+# Zap 7: Base (MEDIUM)
+echo "ZAP 7: @base (MEDIUM - L2 Blockchain Platform)"
+echo "  Trigger: Twitter > New Tweet by User"
+echo "  Account: base"
+echo "  Filter: 20+ likes OR 10+ retweets (AI-related only)"
+echo "  Keywords: AI, onchain, ethereum, superchain, L2"
+echo "  Action: POST → http://localhost:3000/webhook/x-api"
+echo "  Priority: MEDIUM (60-minute response)"
+echo ""
+
+echo "⏱️ ESTIMATED SETUP TIME: 45-60 minutes (7 zaps)"
+echo "📈 EXPECTED CONTENT QUALITY: 90%+ relevance (infrastructure focus)"
+echo "🎯 FOCUS ENHANCEMENT: Real AI x ownership building companies"
+echo ""
+
+echo "🔍 ENHANCED KEYWORD SCORING:"
+echo "============================="
+echo ""
+echo "Infrastructure Keywords (30 points):"
+echo "  decentralized AI, AI compute, GPU networks, AI infrastructure"
+echo ""
+echo "Protocol Keywords (25 points):"
+echo "  Bittensor, TAO, Render Network, Virtuals Protocol, NEAR AI"
+echo ""
+echo "Technology Keywords (20 points):"
+echo "  AI agents, distributed computing, blockchain AI, autonomous agents"
+echo ""
+echo "Company Keywords (15 points):"
+echo "  Aethir, KaitoAI, specific product announcements"
+echo ""
+
+echo "📊 PRECISION MONITORING FEATURES:"
+echo "=================================="
+echo ""
+echo "✅ 100% verified following list (not assumptions)"
+echo "✅ Infrastructure-focused accounts (90.7/100 avg relevance)"
+echo "✅ Real-time monitoring of building companies"
+echo "✅ Enhanced keyword scoring for AI x ownership"
+echo "✅ Tiered priority system (Critical/High/Medium)"
+echo "✅ Monthly verification process for following changes"
+echo ""
+
+echo "📅 MONITORING SCHEDULE:"
+echo "======================="
+echo ""
+echo "Daily: Automated content processing and analysis"
+echo "Weekly: Performance review and keyword optimization"
+echo "Monthly: UserOwned.ai following verification"
+echo "Quarterly: Strategic analysis and account evaluation"
+echo ""
+
+echo "🎯 STRATEGIC ADVANTAGES:"
+echo "========================"
+echo ""
+echo "1. Infrastructure Focus: Real companies building AI x ownership"
+echo "2. High Relevance: 90.7/100 average relevance score"
+echo "3. Protocol Coverage: Major AI blockchain protocols included"
+echo "4. Compute Networks: GPU and distributed compute coverage"
+echo "5. AI Agents: Emerging autonomous agent protocols"
+echo "6. Market Leadership: First to monitor these specific convergence accounts"
+echo ""
+
+echo "🚀 DEPLOYMENT STATUS:"
+echo "====================="
+echo ""
+echo "✅ Account verification: Complete (7/7 accounts verified)"
+echo "✅ Priority classification: Complete (2 Critical, 4 High, 1 Medium)"
+echo "✅ Zapier configuration: Ready for deployment"
+echo "✅ Keyword enhancement: Infrastructure-focused scoring"
+echo "✅ Monitoring strategy: Defined with response times"
+echo ""
+echo "Next Action: Configure 7 Zapier zaps using the templates above"
+echo "Expected Impact: 90%+ relevance, focus on real AI x ownership builders"
+echo ""
+echo "Status: READY FOR IMMEDIATE PRECISION DEPLOYMENT"

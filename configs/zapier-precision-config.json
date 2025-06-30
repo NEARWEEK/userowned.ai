@@ -1,0 +1,212 @@
+{
+  "precision_monitoring_config": {
+    "verification_date": "2025-06-30",
+    "source": "UserOwned.ai verified following list",
+    "total_accounts": 7,
+    "approach": "precision_over_volume",
+    "focus": "AI infrastructure and protocols",
+    "webhook_endpoint": "http://localhost:3000/webhook/x-api"
+  },
+  
+  "account_tiers": {
+    "critical_priority": {
+      "description": "Immediate alerts, <5 minute response time",
+      "accounts": [
+        {
+          "zap_id": 1,
+          "username": "bittensor_",
+          "category": "AI Network",
+          "keywords": ["AI", "bittensor", "network", "decentralized", "TAO"],
+          "engagement_threshold": "5+ likes OR 3+ retweets",
+          "priority": "CRITICAL",
+          "relevance_score": 98,
+          "monitoring_reason": "Leading decentralized AI network protocol"
+        },
+        {
+          "zap_id": 2,
+          "username": "NEARProtocol",
+          "category": "NEAR Ecosystem",
+          "keywords": ["NEAR", "AI", "blockchain", "protocol"],
+          "engagement_threshold": "no filter (official account)",
+          "priority": "CRITICAL",
+          "relevance_score": 100,
+          "monitoring_reason": "Official NEAR AI blockchain platform"
+        }
+      ]
+    },
+    
+    "high_priority": {
+      "description": "Priority alerts, <15 minute response time",
+      "accounts": [
+        {
+          "zap_id": 3,
+          "username": "AethirCloud",
+          "category": "AI Infrastructure",
+          "keywords": ["AI", "decentralized", "cloud", "compute", "infrastructure"],
+          "engagement_threshold": "10+ likes OR 5+ retweets",
+          "priority": "HIGH",
+          "relevance_score": 95,
+          "monitoring_reason": "Decentralized AI compute infrastructure"
+        },
+        {
+          "zap_id": 4,
+          "username": "KaitoAI",
+          "category": "AI x Crypto",
+          "keywords": ["AI", "crypto", "data", "capital", "attention"],
+          "engagement_threshold": "15+ likes OR 8+ retweets",
+          "priority": "HIGH",
+          "relevance_score": 90,
+          "monitoring_reason": "AI-powered crypto data and attention platform"
+        },
+        {
+          "zap_id": 5,
+          "username": "rendernetwork",
+          "category": "Compute Infrastructure",
+          "keywords": ["GPU", "rendering", "network", "distributed", "compute"],
+          "engagement_threshold": "12+ likes OR 6+ retweets",
+          "priority": "HIGH",
+          "relevance_score": 85,
+          "monitoring_reason": "Distributed GPU rendering and compute network"
+        },
+        {
+          "zap_id": 6,
+          "username": "virtuals_io",
+          "category": "AI Agents",
+          "keywords": ["AI", "agents", "virtuals", "protocol", "autonomous"],
+          "engagement_threshold": "10+ likes OR 5+ retweets",
+          "priority": "HIGH",
+          "relevance_score": 92,
+          "monitoring_reason": "AI agent protocols and autonomous systems"
+        }
+      ]
+    },
+    
+    "medium_priority": {
+      "description": "Standard processing, <60 minute response time",
+      "accounts": [
+        {
+          "zap_id": 7,
+          "username": "base",
+          "category": "Blockchain Infrastructure",
+          "keywords": ["AI", "onchain", "ethereum", "superchain", "L2"],
+          "engagement_threshold": "20+ likes OR 10+ retweets (AI content only)",
+          "priority": "MEDIUM",
+          "relevance_score": 75,
+          "monitoring_reason": "L2 blockchain platform with AI integration potential"
+        }
+      ]
+    }
+  },
+  
+  "enhanced_relevance_scoring": {
+    "infrastructure_keywords": {
+      "terms": ["decentralized AI", "AI compute", "GPU networks", "AI infrastructure", "cloud compute"],
+      "score_multiplier": 30
+    },
+    "protocol_keywords": {
+      "terms": ["Bittensor", "TAO", "Render Network", "Virtuals Protocol", "NEAR AI", "protocol"],
+      "score_multiplier": 25
+    },
+    "technology_keywords": {
+      "terms": ["AI agents", "distributed computing", "blockchain AI", "autonomous agents", "neural networks"],
+      "score_multiplier": 20
+    },
+    "company_keywords": {
+      "terms": ["Aethir", "KaitoAI", "announcements", "partnerships", "integrations"],
+      "score_multiplier": 15
+    },
+    "ownership_keywords": {
+      "terms": ["user-owned", "decentralized", "distributed", "community-owned", "democratized"],
+      "score_multiplier": 20
+    }
+  },
+  
+  "content_categories": {
+    "decentralized_ai_infrastructure": {
+      "description": "Computing and infrastructure for distributed AI",
+      "target_accounts": ["AethirCloud", "bittensor_", "rendernetwork"],
+      "priority": "HIGH"
+    },
+    "ai_network_protocols": {
+      "description": "Blockchain protocols specifically designed for AI",
+      "target_accounts": ["bittensor_", "NEARProtocol", "virtuals_io"],
+      "priority": "CRITICAL"
+    },
+    "ai_crypto_convergence": {
+      "description": "Integration of AI and cryptocurrency/blockchain systems",
+      "target_accounts": ["KaitoAI", "NEARProtocol", "base"],
+      "priority": "HIGH"
+    },
+    "distributed_computing": {
+      "description": "GPU networks and distributed computing platforms",
+      "target_accounts": ["rendernetwork", "AethirCloud"],
+      "priority": "HIGH"
+    },
+    "ai_agent_economy": {
+      "description": "Autonomous AI agents and their economic models",
+      "target_accounts": ["virtuals_io", "bittensor_"],
+      "priority": "HIGH"
+    }
+  },
+  
+  "monitoring_metrics": {
+    "response_times": {
+      "critical_accounts": "<5 minutes",
+      "high_priority_accounts": "<15 minutes",
+      "medium_priority_accounts": "<60 minutes"
+    },
+    "quality_targets": {
+      "relevance_score_minimum": 75,
+      "average_relevance_target": 85,
+      "infrastructure_focus_percentage": 80
+    },
+    "volume_expectations": {
+      "daily_relevant_tweets": "25-40 tweets",
+      "weekly_breaking_news": "3-5 major updates",
+      "monthly_protocol_announcements": "8-12 significant developments"
+    }
+  },
+  
+  "verification_process": {
+    "monthly_following_check": {
+      "schedule": "First Monday of each month",
+      "action": "Visit https://x.com/userownedai/following",
+      "comparison": "Compare with current 7-account monitoring list",
+      "update_criteria": "Add accounts with 80+ relevance score to AI x ownership themes"
+    },
+    "quarterly_performance_review": {
+      "metrics": ["Content relevance scores", "Response times", "Breaking news coverage"],
+      "optimization": "Adjust keyword filters and engagement thresholds",
+      "strategic_assessment": "Evaluate new AI x ownership trends and account additions"
+    }
+  },
+  
+  "strategic_advantages": {
+    "market_positioning": "First to monitor infrastructure-focused AI x ownership accounts",
+    "content_quality": "90%+ relevance through verified following list",
+    "breaking_news_speed": "Sub-10 minute response for critical infrastructure updates",
+    "comprehensive_coverage": "All major AI infrastructure and protocol accounts included",
+    "competitive_edge": "Focus on builders vs personalities - higher signal-to-noise ratio"
+  },
+  
+  "implementation_checklist": {
+    "immediate_setup": [
+      "Configure 7 Zapier zaps using exact specifications above",
+      "Test webhook endpoints for all accounts",
+      "Verify relevance scoring with enhanced keywords",
+      "Set up priority-based content routing"
+    ],
+    "week_1_validation": [
+      "Monitor content quality and relevance scores",
+      "Adjust engagement thresholds if needed",
+      "Validate response times for each priority tier",
+      "Document initial performance metrics"
+    ],
+    "ongoing_maintenance": [
+      "Monthly UserOwned.ai following verification",
+      "Quarterly performance review and optimization",
+      "Continuous keyword and filter refinement",
+      "Strategic assessment of new AI x ownership trends"
+    ]
+  }
+}
