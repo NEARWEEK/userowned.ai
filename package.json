@@ -1,79 +1,44 @@
 {
   "name": "nearweek-automated-news-sourcing",
   "version": "1.0.0",
-  "description": "NEARWEEK Automated News Sourcing System - X API Integration with Buffer/Zapier for Real-time AI x Crypto News Processing",
+  "description": "NEARWEEK Automated News Sourcing System with MCP Integration",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "start-mcp": "node src/mcp-server.js",
-    "setup": "node scripts/setup-automation.js",
-    "mcp-setup": "node scripts/mcp-production-setup.js",
-    "test:pipeline": "node tests/test-pipeline.js",
-    "test:mcp": "curl -X POST http://localhost:3000/api/test-mcp",
-    "dashboard": "node src/dashboard/server.js",
-    "metrics": "node scripts/show-metrics.js",
-    "dev": "nodemon src/server.js",
-    "dev-mcp": "nodemon src/mcp-server.js",
-    "lint": "eslint src/",
-    "test": "jest",
-    "deploy": "bash scripts/deploy-production.sh",
-    "start-production": "bash scripts/start-production.sh",
-    "claude-setup": "bash scripts/claude-code-setup.sh",
-    "validate": "node scripts/validate-setup.js",
-    "quick-test": "node scripts/quick-test.js"
+    "start-production": "NODE_ENV=production node src/server.js",
+    "deploy": "bash scripts/quick-deploy.sh",
+    "test": "node scripts/test-mcp-integrations.js",
+    "health": "curl http://localhost:3000/health",
+    "metrics": "curl http://localhost:3000/api/metrics"
   },
   "dependencies": {
     "express": "^4.18.2",
-    "node-fetch": "^3.3.2",
-    "dotenv": "^16.3.1",
     "cors": "^2.8.5",
-    "helmet": "^7.0.0",
-    "winston": "^3.10.0",
-    "cron": "^2.4.0",
-    "joi": "^17.9.2"
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "node-cron": "^3.0.3",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "eslint": "^8.45.0",
-    "jest": "^29.6.1",
-    "supertest": "^6.3.3"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kisgus/nearweek-automated-news-sourcing.git"
+    "nodemon": "^3.0.2"
   },
   "keywords": [
     "nearweek",
     "automation",
     "news",
-    "x-api",
-    "buffer",
-    "zapier",
     "ai",
     "crypto",
-    "claude",
-    "content-generation",
     "mcp",
-    "integration"
+    "buffer",
+    "telegram",
+    "zapier"
   ],
-  "author": "NEARWEEK Team",
+  "author": "NEARWEEK",
   "license": "MIT",
-  "mcp": {
-    "integrations": {
-      "zapier": {
-        "buffer": "authenticated",
-        "telegram": "authenticated",
-        "webhooks": "authenticated"
-      },
-      "github": "authenticated"
-    },
-    "deployment": {
-      "authentication": "handled_by_mcp",
-      "secrets": "github_environment",
-      "status": "production_ready"
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kisgus/nearweek-automated-news-sourcing.git"
   }
 }
