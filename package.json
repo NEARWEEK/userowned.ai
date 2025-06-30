@@ -5,16 +5,22 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
+    "start-mcp": "node src/mcp-server.js",
     "setup": "node scripts/setup-automation.js",
+    "mcp-setup": "node scripts/mcp-production-setup.js",
     "test:pipeline": "node tests/test-pipeline.js",
+    "test:mcp": "curl -X POST http://localhost:3000/api/test-mcp",
     "dashboard": "node src/dashboard/server.js",
     "metrics": "node scripts/show-metrics.js",
     "dev": "nodemon src/server.js",
+    "dev-mcp": "nodemon src/mcp-server.js",
     "lint": "eslint src/",
     "test": "jest",
     "deploy": "bash scripts/deploy-production.sh",
     "start-production": "bash scripts/start-production.sh",
-    "claude-setup": "bash scripts/claude-code-setup.sh"
+    "claude-setup": "bash scripts/claude-code-setup.sh",
+    "validate": "node scripts/validate-setup.js",
+    "quick-test": "node scripts/quick-test.js"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -49,8 +55,25 @@
     "ai",
     "crypto",
     "claude",
-    "content-generation"
+    "content-generation",
+    "mcp",
+    "integration"
   ],
   "author": "NEARWEEK Team",
-  "license": "MIT"
+  "license": "MIT",
+  "mcp": {
+    "integrations": {
+      "zapier": {
+        "buffer": "authenticated",
+        "telegram": "authenticated",
+        "webhooks": "authenticated"
+      },
+      "github": "authenticated"
+    },
+    "deployment": {
+      "authentication": "handled_by_mcp",
+      "secrets": "github_environment",
+      "status": "production_ready"
+    }
+  }
 }
