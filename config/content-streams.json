@@ -1,0 +1,282 @@
+{
+  "version": "1.0.0",
+  "figmaTemplate": {
+    "fileId": "d1e4u2WXy1MhoLoOUXF3SG",
+    "nodeId": "7-186",
+    "lastUpdated": "2025-06-30"
+  },
+  "streams": {
+    "nearweek": {
+      "name": "NEARWEEK Analytics",
+      "description": "NEAR Protocol ecosystem analytics and insights",
+      "dataSource": {
+        "name": "Dune Analytics",
+        "apiEndpoint": "https://api.dune.com/api/v1/query",
+        "queryId": "nearweek-analytics",
+        "refreshInterval": "1h"
+      },
+      "schedule": {
+        "cron": "0 8,20 * * *",
+        "timezone": "Europe/Copenhagen",
+        "description": "Twice daily at 8 AM and 8 PM"
+      },
+      "formatting": {
+        "brand": "USER OWNED AI",
+        "accentColor": "#00FF87",
+        "backgroundColor": "#1a1a1a",
+        "primaryFont": "Inter"
+      },
+      "metrics": {
+        "metric1": {
+          "field": "volume",
+          "label": "VOLUME",
+          "format": "currency",
+          "source": "dune.near_volume"
+        },
+        "metric2": {
+          "field": "swaps",
+          "label": "SWAPS",
+          "format": "number",
+          "source": "dune.near_swaps"
+        },
+        "metric3": {
+          "field": "users",
+          "label": "USERS",
+          "format": "number",
+          "source": "dune.near_users"
+        },
+        "metric4": {
+          "field": "range",
+          "label": "RANGE",
+          "format": "range",
+          "source": "dune.near_range"
+        }
+      },
+      "output": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "format": "png"
+        },
+        "video": {
+          "width": 1280,
+          "height": 720,
+          "duration": 15,
+          "format": "mp4"
+        }
+      },
+      "distribution": {
+        "telegram": {
+          "enabled": true,
+          "chatId": "${TELEGRAM_CHAT_ID}",
+          "caption": "📊 NEARWEEK Analytics Report\n\n🔥 Live NEAR Intents Data:\n{metrics}\n\n📅 Updated: {timestamp}\n🔗 Source: Dune Analytics\n\n#NEARWEEK #Analytics #NEAR"
+        },
+        "twitter": {
+          "enabled": false,
+          "account": "@nearweek"
+        }
+      }
+    },
+    "defi": {
+      "name": "DeFi Pulse",
+      "description": "DeFi ecosystem metrics and trends",
+      "dataSource": {
+        "name": "DeFi Pulse API",
+        "apiEndpoint": "https://api.defipulse.com",
+        "refreshInterval": "4h"
+      },
+      "schedule": {
+        "cron": "0 */4 * * *",
+        "timezone": "Europe/Copenhagen",
+        "description": "Every 4 hours"
+      },
+      "formatting": {
+        "brand": "USER OWNED AI",
+        "accentColor": "#FF6B35",
+        "backgroundColor": "#0a0a0a",
+        "primaryFont": "Inter"
+      },
+      "metrics": {
+        "metric1": {
+          "field": "tvl",
+          "label": "TVL",
+          "format": "currency",
+          "source": "defipulse.total_value_locked"
+        },
+        "metric2": {
+          "field": "yield",
+          "label": "YIELD",
+          "format": "percentage",
+          "source": "defipulse.average_apy"
+        },
+        "metric3": {
+          "field": "protocols",
+          "label": "PROTOCOLS",
+          "format": "number",
+          "source": "defipulse.protocol_count"
+        },
+        "metric4": {
+          "field": "volume24h",
+          "label": "24H VOLUME",
+          "format": "currency",
+          "source": "defipulse.volume_24h"
+        }
+      }
+    },
+    "nft": {
+      "name": "NFT Tracker",
+      "description": "NFT market analytics and trends",
+      "dataSource": {
+        "name": "OpenSea API",
+        "apiEndpoint": "https://api.opensea.io/api/v1",
+        "refreshInterval": "4h"
+      },
+      "schedule": {
+        "cron": "0 6,12,18 * * *",
+        "timezone": "Europe/Copenhagen",
+        "description": "Three times daily"
+      },
+      "formatting": {
+        "brand": "USER OWNED AI",
+        "accentColor": "#8B5CF6",
+        "backgroundColor": "#1a1a2e",
+        "primaryFont": "Inter"
+      },
+      "metrics": {
+        "metric1": {
+          "field": "floor",
+          "label": "FLOOR",
+          "format": "eth",
+          "source": "opensea.floor_price"
+        },
+        "metric2": {
+          "field": "volume",
+          "label": "VOLUME",
+          "format": "eth",
+          "source": "opensea.volume_24h"
+        },
+        "metric3": {
+          "field": "sales",
+          "label": "SALES",
+          "format": "number",
+          "source": "opensea.sales_24h"
+        },
+        "metric4": {
+          "field": "holders",
+          "label": "HOLDERS",
+          "format": "number",
+          "source": "opensea.unique_holders"
+        }
+      },
+      "output": {
+        "image": {
+          "width": 1200,
+          "height": 1200,
+          "format": "png"
+        },
+        "video": {
+          "width": 1080,
+          "height": 1080,
+          "duration": 12,
+          "format": "mp4"
+        }
+      }
+    },
+    "gaming": {
+      "name": "Gaming Analytics",
+      "description": "Web3 gaming ecosystem metrics",
+      "dataSource": {
+        "name": "Gaming APIs",
+        "apiEndpoint": "https://api.gaming-analytics.com",
+        "refreshInterval": "1d"
+      },
+      "schedule": {
+        "cron": "0 9 * * 1",
+        "timezone": "Europe/Copenhagen",
+        "description": "Weekly on Monday at 9 AM"
+      },
+      "formatting": {
+        "brand": "USER OWNED AI",
+        "accentColor": "#00D2FF",
+        "backgroundColor": "#0f0f23",
+        "primaryFont": "Inter"
+      },
+      "metrics": {
+        "metric1": {
+          "field": "players",
+          "label": "PLAYERS",
+          "format": "number",
+          "source": "gaming.active_players"
+        },
+        "metric2": {
+          "field": "revenue",
+          "label": "REVENUE",
+          "format": "currency",
+          "source": "gaming.total_revenue"
+        },
+        "metric3": {
+          "field": "games",
+          "label": "GAMES",
+          "format": "number",
+          "source": "gaming.game_count"
+        },
+        "metric4": {
+          "field": "growth",
+          "label": "GROWTH",
+          "format": "percentage",
+          "source": "gaming.growth_rate"
+        }
+      },
+      "output": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "format": "png"
+        },
+        "video": {
+          "width": 1920,
+          "height": 1080,
+          "duration": 20,
+          "format": "mp4"
+        }
+      }
+    }
+  },
+  "templates": {
+    "7-186": {
+      "name": "Multi-Metric Dashboard",
+      "description": "4-metric grid layout with brand header",
+      "positions": {
+        "brand": { "x": 240, "y": 120 },
+        "metric1": {
+          "label": { "x": 240, "y": 380 },
+          "value": { "x": 240, "y": 440 },
+          "change": { "x": 240, "y": 480 }
+        },
+        "metric2": {
+          "label": { "x": 720, "y": 380 },
+          "value": { "x": 720, "y": 440 },
+          "change": { "x": 720, "y": 480 }
+        },
+        "metric3": {
+          "label": { "x": 1200, "y": 380 },
+          "value": { "x": 1200, "y": 440 },
+          "change": { "x": 1200, "y": 480 }
+        },
+        "metric4": {
+          "label": { "x": 1680, "y": 380 },
+          "value": { "x": 1680, "y": 440 },
+          "change": { "x": 1680, "y": 480 }
+        },
+        "timestamp": { "x": 1750, "y": 1000 }
+      },
+      "fonts": {
+        "brand": { "size": 48, "weight": "bold" },
+        "label": { "size": 24, "weight": "normal" },
+        "value": { "size": 56, "weight": "bold" },
+        "change": { "size": 18, "weight": "normal" },
+        "timestamp": { "size": 16, "weight": "normal" }
+      }
+    }
+  }
+}
