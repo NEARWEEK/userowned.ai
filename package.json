@@ -1,7 +1,7 @@
 {
   "name": "nearweek-automated-news-sourcing",
-  "version": "1.0.0",
-  "description": "NEARWEEK Automated News Sourcing System with MCP Integration",
+  "version": "2.0.0",
+  "description": "NEARWEEK Multi-Stream Content Generation System with Figma Integration",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -10,12 +10,23 @@
     "test": "node scripts/test-mcp-integrations.js",
     "health": "curl http://localhost:3000/health",
     "metrics": "curl http://localhost:3000/api/metrics",
-    "test-webhook": "curl -X POST http://localhost:3000/webhook/x-api -H 'Content-Type: application/json' -d '{\"id\":\"test123\",\"text\":\"Test webhook with AI and crypto keywords\",\"author\":{\"username\":\"test\"},\"public_metrics\":{\"like_count\":50}}')",
-    "test-analysis": "curl -X POST http://localhost:3000/api/analyze -H 'Content-Type: application/json' -d '{\"text\":\"NEAR Protocol launches AI infrastructure\",\"source\":\"verified_account\",\"engagement\":500}')",
+    "test-webhook": "curl -X POST http://localhost:3000/webhook/x-api -H 'Content-Type: application/json' -d '{\"id\":\"test123\",\"text\":\"Test webhook with AI and crypto keywords\",\"author\":{\"username\":\"test\"},\"public_metrics\":{\"like_count\":50}}'",
+    "test-analysis": "curl -X POST http://localhost:3000/api/analyze -H 'Content-Type: application/json' -d '{\"text\":\"NEAR Protocol launches AI infrastructure\",\"source\":\"verified_account\",\"engagement\":500}'",
     "pause": "curl -X POST http://localhost:3000/api/admin/pause",
     "resume": "curl -X POST http://localhost:3000/api/admin/resume",
     "logs": "tail -f logs/automation.log",
-    "errors": "tail -f logs/error.log"
+    "errors": "tail -f logs/error.log",
+    "content:nearweek": "node scripts/multi-stream-content-generator.js nearweek",
+    "content:defi": "node scripts/multi-stream-content-generator.js defi", 
+    "content:nft": "node scripts/multi-stream-content-generator.js nft",
+    "content:gaming": "node scripts/multi-stream-content-generator.js gaming",
+    "content:all": "node scripts/multi-stream-content-generator.js all",
+    "scheduler:start": "node scripts/stream-scheduler.js start",
+    "scheduler:stop": "node scripts/stream-scheduler.js stop",
+    "scheduler:status": "node scripts/stream-scheduler.js status",
+    "scheduler:test": "node scripts/stream-scheduler.js test nearweek",
+    "runway:video": "node scripts/runway-video-processor.js",
+    "runway:test": "node scripts/runway-nearweek-test.js"
   },
   "dependencies": {
     "express": "^4.18.2",
@@ -26,7 +37,9 @@
     "axios": "^1.6.2",
     "node-cron": "^3.0.3",
     "winston": "^3.11.0",
-    "express-rate-limit": "^7.1.5"
+    "express-rate-limit": "^7.1.5",
+    "canvas": "^2.11.2",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
@@ -40,7 +53,9 @@
     "mcp",
     "buffer",
     "telegram",
-    "zapier"
+    "figma",
+    "content-generation",
+    "multi-stream"
   ],
   "author": "NEARWEEK",
   "license": "MIT",
