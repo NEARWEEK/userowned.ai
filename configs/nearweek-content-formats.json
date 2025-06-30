@@ -1,0 +1,133 @@
+{
+  "nearweek_content_profile": {
+    "brand_voice": {
+      "tone": "Professional yet accessible",
+      "style": "Data-driven insights with clear explanations",
+      "audience": "NEAR ecosystem builders, developers, and investors",
+      "focus": "Actionable intelligence and ecosystem growth metrics"
+    },
+    "content_categories": {
+      "analytics_reports": {
+        "format": "Dashboard-style with key metrics",
+        "data_sources": ["Dune Analytics", "NEAR blockchain data", "DeFi protocols"],
+        "visual_style": "Clean, professional charts with NEAR branding",
+        "key_elements": ["Performance metrics", "Growth indicators", "Market position"]
+      },
+      "ecosystem_updates": {
+        "format": "Project spotlights with quantitative data",
+        "structure": "Brief description + key metrics + strategic insights",
+        "focus_areas": ["DeFi", "AI", "Infrastructure", "Developer tools"]
+      },
+      "daily_summaries": {
+        "format": "Concise bullet points with impact assessment",
+        "length": "2-3 key developments maximum",
+        "emphasis": "Business implications and ecosystem impact"
+      }
+    }
+  },
+  
+  "content_formats": {
+    "telegram_analytics_dashboard": {
+      "description": "Live analytics dashboard with embedded metrics in Figma-generated images",
+      "requirements": {
+        "data_integration": "Fetch Dune Analytics data before Figma generation",
+        "visual_format": "Stats overlaid directly on dashboard image",
+        "update_frequency": "Real-time or near real-time",
+        "metrics_display": "Embedded in visual, not as separate text"
+      },
+      "key_metrics": [
+        "Total Volume ($X.XM)",
+        "Total Swaps (X.XK)", 
+        "Unique Users (X.XK)",
+        "Weekly Range ($XXXK - $X.XM)"
+      ],
+      "performance_indicators": [
+        "Volume Trend: [Status] [Direction]",
+        "User Growth: [Status] [Trend]",
+        "Activity Level: [Status] [Intensity]",
+        "Market Position: [Status] [Ranking]"
+      ],
+      "system_status": [
+        "System Status: [Health]",
+        "Top Chains: [List with percentages]",
+        "Weekly Activity: [Range] transactions"
+      ]
+    },
+    
+    "newsletter_format": {
+      "description": "Weekly ecosystem digest with detailed project analysis",
+      "structure": {
+        "header": "🚀 NEARWEEK Ecosystem Update",
+        "sections": [
+          "📊 Key Metrics This Week",
+          "🏗️ Builder Spotlight", 
+          "💰 DeFi Developments",
+          "🤖 AI Integration Updates",
+          "📈 Market Analysis"
+        ],
+        "footer": "Links to featured projects and resources"
+      },
+      "project_spotlight_format": {
+        "emoji_indicator": "Category-specific (🤖 AI, 💰 DeFi, 🏗️ Infrastructure)",
+        "title": "**Project Name**",
+        "description": "Brief value proposition and key developments",
+        "metrics": "Quantitative data where available",
+        "links": "🔗 Follow: @handle | 🌐 Website: domain.com",
+        "category_tag": "📂 Category: [AI/DeFi/Infrastructure]"
+      }
+    },
+    
+    "social_media_format": {
+      "description": "Concise updates optimized for Twitter/X engagement",
+      "templates": {
+        "project_spotlight": {
+          "format": "🚀 Spotlight: [Project Name]\n\n[Brief description]\n\nFollow @[handle] for updates\n🌐 [website]\n\n#[Category] #NEAR #NEAREcosystem",
+          "length_limit": "280 characters",
+          "hashtag_strategy": "Category + NEAR + NEAREcosystem"
+        },
+        "analytics_update": {
+          "format": "📊 NEAR Ecosystem Update\n\n• Volume: $[X.X]M ([trend])\n• Users: [X.X]K ([growth])\n• Activity: [status]\n\nDetails: [link]\n\n#NEAR #DeFi #Analytics",
+          "focus": "Key metrics with trend indicators"
+        }
+      }
+    },
+    
+    "directory_format": {
+      "description": "Structured database format for ecosystem mapping",
+      "table_structure": {
+        "columns": ["Name", "Type", "Handle", "Website", "Category", "Focus", "Status"],
+        "sorting": "By category, then by relevance score",
+        "filtering": "Category, type, development status"
+      },
+      "export_formats": ["CSV", "JSON", "Markdown table"],
+      "use_cases": ["Research", "Partnership identification", "Ecosystem analysis"]
+    }
+  },
+  
+  "data_integration_requirements": {
+    "dune_analytics": {
+      "priority": "HIGH",
+      "update_frequency": "Real-time for dashboards, daily for summaries",
+      "key_queries": [
+        "NEAR Intents volume and transaction data",
+        "Cross-chain activity metrics",
+        "User growth and retention metrics",
+        "DeFi protocol performance"
+      ]
+    },
+    "figma_integration": {
+      "requirement": "Data must be fetched and processed before image generation",
+      "workflow": "Dune API → Data processing → Figma template population → Image generation",
+      "templates": "UserOwned.AI branded dashboard templates",
+      "output": "High-quality images with embedded live data"
+    }
+  },
+  
+  "quality_standards": {
+    "accuracy": "All quantitative data verified against multiple sources",
+    "timeliness": "Updates within 15 minutes of significant developments",
+    "relevance": "85%+ relevance score for all featured content",
+    "visual_consistency": "NEAR/UserOwned.AI brand guidelines compliance",
+    "engagement_optimization": "Format-specific optimization for each platform"
+  }
+}
