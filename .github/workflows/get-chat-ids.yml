@@ -1,0 +1,103 @@
+name: Get Telegram Chat IDs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/get-chat-ids.yml'
+
+jobs:
+  get-chat-ids:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - run: npm install axios
+    
+    - name: Get All Chat IDs
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      run: |
+        node -e "
+        const axios = require('axios');
+        
+        async function getChatIds() {
+          const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+          const BASE_URL = \`https://api.telegram.org/bot\${BOT_TOKEN}\`;
+          
+          if (!BOT_TOKEN) {
+            console.log('❌ TELEGRAM_BOT_TOKEN not found');
+            return;
+          }
+          
+          try {
+            console.log('🔍 Getting recent updates...');
+            const response = await axios.get(\`\${BASE_URL}/getUpdates?limit=100\`);
+            const updates = response.data.result;
+            
+            console.log(\`Found \${updates.length} recent updates\`);
+            
+            // Extract all chat information
+            const chats = new Map();
+            
+            updates.forEach(update => {
+              if (update.message?.chat) {
+                const chat = update.message.chat;
+                chats.set(chat.id, {
+                  id: chat.id,
+                  type: chat.type,
+                  title: chat.title || chat.username || chat.first_name,
+                  username: chat.username,
+                  lastMessage: update.message.text?.substring(0, 50) || 'No text'
+                });
+              }
+            });
+            
+            console.log('\\n📋 FOUND CHAT IDs:');
+            console.log('═'.repeat(60));
+            
+            for (const [id, info] of chats) {
+              console.log(\`ID: \${id}\`);
+              console.log(\`Type: \${info.type}\`);
+              console.log(\`Title: \${info.title || 'N/A'}\`);
+              console.log(\`Username: \${info.username || 'N/A'}\`);
+              console.log(\`Last message: \${info.lastMessage}\`);
+              console.log('-'.repeat(40));
+            }
+            
+            console.log('\\n🎯 TO SET UP NEWSLETTER ANALYTICS:');
+            console.log('1. Copy the chat ID for your pool group');
+            console.log('2. Go to Repository → Settings → Secrets → Actions');
+            console.log('3. Add new secret: TELEGRAM_CHAT_ID');
+            console.log('4. Paste the chat ID as the value');
+            console.log('5. Run Newsletter Analytics workflow');
+            
+            // Now send a test message to each chat to verify which is the pool group
+            console.log('\\n🧪 Sending test identification messages...');
+            
+            for (const [chatId, info] of chats) {
+              try {
+                const testMessage = \`🔍 *Chat ID Detection*\\n\\nThis is chat ID: \\\`\${chatId}\\\`\\nType: \${info.type}\\nTitle: \${info.title}\\n\\nIf this is your pool group, use this ID for TELEGRAM_CHAT_ID secret.\`;
+                
+                await axios.post(\`\${BASE_URL}/sendMessage\`, {
+                  chat_id: chatId,
+                  text: testMessage,
+                  parse_mode: 'Markdown'
+                });
+                
+                console.log(\`✅ Test message sent to \${chatId} (\${info.title})\`);
+                
+              } catch (error) {
+                console.log(\`❌ Failed to send to \${chatId}: \${error.response?.data?.description || error.message}\`);
+              }
+            }
+            
+          } catch (error) {
+            console.error('❌ Error:', error.response?.data || error.message);
+          }
+        }
+        
+        getChatIds().catch(console.error);
+        "

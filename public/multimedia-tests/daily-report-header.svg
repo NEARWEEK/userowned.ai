@@ -1,0 +1,50 @@
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4299e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#grad)" />
+  
+  <!-- Main Title -->
+  <text x="50%" y="40%" 
+        text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="48" 
+        font-weight="bold" 
+        fill="white">
+    UserOwned.AI Daily Report
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="50%" y="60%" 
+        text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="24" 
+        fill="rgba(255,255,255,0.9)">
+    AI x Crypto Ecosystem Intelligence
+  </text>
+  
+  <!-- Date placeholder -->
+  <text x="50%" y="80%" 
+        text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="16" 
+        fill="rgba(255,255,255,0.7)">
+    Sunday, June 29, 2025
+  </text>
+  
+  <!-- Brand mark -->
+  <circle cx="100" cy="100" r="20" fill="rgba(255,255,255,0.3)" />
+  <text x="100" y="108" 
+        text-anchor="middle" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="white">
+    UO
+  </text>
+</svg>

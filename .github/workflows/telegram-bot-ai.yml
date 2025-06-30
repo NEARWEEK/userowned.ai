@@ -1,0 +1,11 @@
+# DISABLED - This workflow was spamming every minute
+# name: NEARWEEK AI Telegram Bot
+
+# on:
+#   schedule:
+#     - cron: '*/1 * * * *'  # Every minute for faster responses
+#   workflow_dispatch:
+
+# WORKFLOW DISABLED DUE TO SPAM ISSUE
+# The bot was running every minute and sending error messages
+# This needs to be properly configured before re-enabling

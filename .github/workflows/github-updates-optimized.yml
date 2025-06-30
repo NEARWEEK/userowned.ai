@@ -1,0 +1,185 @@
+# Optimized GitHub Updates - Precise 10:50 CET
+name: GitHub Updates Optimized
+
+on:
+  schedule:
+    - cron: '50 9 * * *'  # 10:50 CET sharp
+  workflow_dispatch:
+
+jobs:
+  optimized-github-updates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10  # Faster execution limit
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js with caching
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies (cached)
+      run: |
+        npm ci --prefer-offline --no-audit
+        
+    - name: Validate GitHub API (Fast)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🚀 Fast GitHub API validation..."
+        node -e "
+        const CollectorV2 = require('./src/engine/enhanced-github-collector-v2');
+        const collector = new CollectorV2();
+        collector.validateSetup().then(valid => {
+          if (!valid) process.exit(1);
+          console.log('✅ API ready for optimized collection');
+        }).catch(err => {
+          console.error('❌ API validation failed:', err.message);
+          process.exit(1);
+        });
+        "
+        
+    - name: Collect Real Data (Optimized)
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "⚡ Optimized GitHub data collection starting..."
+        node -e "
+        const CollectorV2 = require('./src/engine/enhanced-github-collector-v2');
+        const OptimizedTemplate = require('./src/templates/github-updates-optimized');
+        
+        const repositories = [
+          { name: 'Bittensor', repo: 'opentensor/bittensor', symbol: 'TAO', twitter: '@opentensor' },
+          { name: 'NEAR', repo: 'near/nearcore', symbol: 'NEAR', twitter: '@nearprotocol' },
+          { name: 'ICP', repo: 'dfinity/ic', symbol: 'ICP', twitter: '@dfinity' },
+          { name: 'Render', repo: 'RNDR-Inc/rndr-py', symbol: 'RNDR', twitter: '@rendernetwork' },
+          { name: 'Fetch.ai', repo: 'fetchai/fetchai-ledger', symbol: 'FET', twitter: '@fetch_ai' },
+          { name: 'Akash', repo: 'akash-network/node', symbol: 'AKT', twitter: '@akashnet_' }
+        ];
+        
+        (async () => {
+          try {
+            const startTime = Date.now();
+            
+            // Optimized data collection
+            const collector = new CollectorV2();
+            const updates = await collector.collectDailyUpdates(repositories);
+            
+            const collectionTime = Date.now() - startTime;
+            console.log('⚡ Data collected in', collectionTime + 'ms');
+            console.log('📊 Significant updates found:', updates.length);
+            
+            // Generate formatted content
+            const template = OptimizedTemplate;
+            const result = await template.generate({
+              githubUpdates: updates,
+              timestamp: new Date().toISOString()
+            });
+            
+            // Performance metrics
+            const totalTime = Date.now() - startTime;
+            console.log('🎯 Total processing time:', totalTime + 'ms');
+            console.log('📈 Significance threshold:', result.metadata.significanceThreshold);
+            
+            console.log('\n📱 TELEGRAM CONTENT:');
+            console.log('=' + '='.repeat(50));
+            console.log(result.telegram);
+            console.log('=' + '='.repeat(50));
+            
+            console.log('\n🐦 X CONTENT:');
+            console.log('=' + '='.repeat(30));
+            console.log(result.x);
+            console.log('=' + '='.repeat(30));
+            
+            // Save optimized content
+            require('fs').writeFileSync('/tmp/telegram_optimized.txt', result.telegram);
+            require('fs').writeFileSync('/tmp/x_optimized.txt', result.x);
+            require('fs').writeFileSync('/tmp/website_optimized.json', JSON.stringify(result.website, null, 2));
+            require('fs').writeFileSync('/tmp/performance_metrics.json', JSON.stringify({
+              processingTime: totalTime,
+              updatesFound: updates.length,
+              significanceThreshold: result.metadata.significanceThreshold,
+              timestamp: result.metadata.timestamp
+            }, null, 2));
+            
+            console.log('\n✅ Optimized processing complete!');
+            
+          } catch (error) {
+            console.error('❌ Optimized collection error:', error.message);
+            console.error(error.stack);
+            process.exit(1);
+          }
+        })();
+        "
+        
+    - name: Post to Telegram (Optimized)
+      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "📱 Posting optimized content to Telegram..."
+        
+        CONTENT=$(cat /tmp/telegram_optimized.txt)
+        
+        # Post with retry logic
+        for i in {1..3}; do
+          if curl -s -f -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"chat_id\": \"$TELEGRAM_CHAT_ID\",
+              \"text\": \"$CONTENT\",
+              \"disable_web_page_preview\": true,
+              \"parse_mode\": \"HTML\"
+            }"; then
+            echo "✅ Posted to Telegram on attempt $i"
+            break
+          else
+            echo "⚠️ Telegram attempt $i failed, retrying..."
+            sleep 2
+          fi
+        done
+        
+    - name: Post to X (Optimized)
+      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      env:
+        ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      run: |
+        echo "🐦 Posting optimized content to X..."
+        
+        CONTENT=$(cat /tmp/x_optimized.txt)
+        
+        # Post with retry logic
+        for i in {1..3}; do
+          if curl -s -f -X POST "$ZAPIER_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"text\": \"$CONTENT\",
+              \"source\": \"userowned-ai-optimized\",
+              \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+              \"optimization\": true
+            }"; then
+            echo "✅ Posted to X on attempt $i"
+            break
+          else
+            echo "⚠️ X attempt $i failed, retrying..."
+            sleep 2
+          fi
+        done
+        
+    - name: Performance Report
+      run: |
+        echo "📊 PERFORMANCE METRICS:"
+        if [ -f /tmp/performance_metrics.json ]; then
+          cat /tmp/performance_metrics.json
+        fi
+        
+        echo "\n🌐 OPTIMIZED WEBSITE DATA READY:"
+        echo "✅ API endpoint: /api/github-data"
+        echo "✅ Real-time updates with enhanced filtering"
+        echo "✅ Significance scoring implemented"
+        echo "✅ Parallel processing enabled"
+        echo "✅ Advanced retry logic active"

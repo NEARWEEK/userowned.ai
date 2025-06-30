@@ -1,21 +1,36 @@
 {
-  "name": "nearweek-automated-news-sourcing",
-  "version": "2.0.0",
-  "description": "NEARWEEK Multi-Stream Content Generation System with Figma Integration",
-  "main": "src/server.js",
+  "name": "userowned-ai-intelligence",
+  "version": "2.1.0",
+  "description": "UserOwned.AI Intelligence Network: NEARWEEK automation + newsletter system for AI x crypto ecosystem monitoring",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/index.js",
+    "start-server": "node src/server.js",
     "start-production": "NODE_ENV=production node src/server.js",
     "deploy": "bash scripts/quick-deploy.sh",
-    "test": "node scripts/test-mcp-integrations.js",
+    "test": "node src/test.js",
+    "validate": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); new c().validateSetup()\"",
+    "collect": "node -e \"const c = require('./src/engine/enhanced-github-collector-v2'); const t = require('./src/templates/github-updates-optimized'); console.log('Collecting...')\"",
     "health": "curl http://localhost:3000/health",
+    "health-check": "node src/scripts/health-check.js",
     "metrics": "curl http://localhost:3000/api/metrics",
+    "lint": "eslint .",
     "test-webhook": "curl -X POST http://localhost:3000/webhook/x-api -H 'Content-Type: application/json' -d '{\"id\":\"test123\",\"text\":\"Test webhook with AI and crypto keywords\",\"author\":{\"username\":\"test\"},\"public_metrics\":{\"like_count\":50}}'",
     "test-analysis": "curl -X POST http://localhost:3000/api/analyze -H 'Content-Type: application/json' -d '{\"text\":\"NEAR Protocol launches AI infrastructure\",\"source\":\"verified_account\",\"engagement\":500}'",
     "pause": "curl -X POST http://localhost:3000/api/admin/pause",
     "resume": "curl -X POST http://localhost:3000/api/admin/resume",
     "logs": "tail -f logs/automation.log",
     "errors": "tail -f logs/error.log",
+    "template:daily": "node src/scripts/run-template.js daily-ecosystem",
+    "template:weekly": "node src/scripts/run-template.js weekly-market",
+    "template:spotlight": "node src/scripts/run-template.js project-spotlight",
+    "template:vc": "node src/scripts/run-template.js vc-intelligence",
+    "post:daily": "node src/scripts/run-template.js daily-ecosystem --post",
+    "post:weekly": "node src/scripts/run-template.js weekly-market --post",
+    "newsletter:test": "node scripts/x-following-newsletter.js --dry-run",
+    "newsletter:daily": "node scripts/x-following-newsletter.js --daily",
+    "newsletter:weekly": "node scripts/x-following-newsletter.js --weekly",
+    "newsletter:send": "node scripts/quick-telegram-send.js",
     "content:nearweek": "node scripts/multi-stream-content-generator.js nearweek",
     "content:defi": "node scripts/multi-stream-content-generator.js defi",
     "content:nft": "node scripts/multi-stream-content-generator.js nft",
@@ -42,6 +57,8 @@
     "express": "^4.18.2",
     "express-rate-limit": "^7.1.5",
     "helmet": "^7.1.0",
+    "https": "^1.0.0",
+    "joi": "^17.11.0",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.3",
     "sharp": "^0.33.2",
@@ -49,25 +66,28 @@
     "winston": "^3.11.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0"
   },
   "keywords": [
-    "nearweek",
-    "automation",
-    "news",
     "ai",
     "crypto",
-    "mcp",
-    "buffer",
-    "telegram",
-    "figma",
-    "content-generation",
-    "multi-stream"
+    "newsletter",
+    "automation",
+    "nearweek",
+    "userowned",
+    "intelligence",
+    "real-time",
+    "x-api",
+    "telegram"
   ],
-  "author": "NEARWEEK",
+  "author": "UserOwned.AI by NEARWEEK",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kisgus/nearweek-automated-news-sourcing.git"
+    "url": "https://github.com/NEARWEEK/userowned.ai.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

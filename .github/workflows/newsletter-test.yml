@@ -1,0 +1,119 @@
+name: Newsletter Analytics Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/newsletter-test.yml'
+
+jobs:
+  test-newsletter-analytics:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - run: npm install axios
+    
+    - name: Send Newsletter Test Report
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      run: |
+        node -e "
+        const axios = require('axios');
+        
+        async function main() {
+          const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+          const BASE_URL = \`https://api.telegram.org/bot\${BOT_TOKEN}\`;
+          
+          if (!BOT_TOKEN) {
+            console.log('❌ TELEGRAM_BOT_TOKEN not found');
+            return;
+          }
+          
+          try {
+            // First get recent updates to find chat IDs
+            console.log('🔍 Getting recent updates to find chat IDs...');
+            const updatesResponse = await axios.get(\`\${BASE_URL}/getUpdates?limit=100\`);
+            const updates = updatesResponse.data.result;
+            
+            console.log(\`Found \${updates.length} recent updates\`);
+            
+            // Extract unique chat IDs
+            const chatIds = [...new Set(updates.map(update => update.message?.chat?.id).filter(Boolean))];
+            console.log('Found chat IDs:', chatIds);
+            
+            if (chatIds.length === 0) {
+              console.log('❌ No chat IDs found. Send a message to the bot first.');
+              return;
+            }
+            
+            // Newsletter performance message
+            const message = \`🧪 **TEST RUN** 📊 *NEARWEEK NEWSLETTER ANALYTICS*
+🟢 Status: *EXCEPTIONAL PERFORMANCE*
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📧 *Latest:* 🚀NEARWEEK #38 🚀
+📅 *Sent:* 03/01/2022 | 2,401 subscribers
+
+📈 *PERFORMANCE METRICS:*
+• *Open Rate:* 62.9% 🔥🔥🔥 📈 +84.3%
+• *Click Rate:* 2.4% ⚠️ 📉 -20.4%
+• *Click-to-Open:* 3.9%
+• *Unsubscribes:* 4
+
+🏆 *MAJOR WINS:*
+🎯 EXCEPTIONAL 62.9% open rate - 3x industry average!
+🚀 Best performing campaign in series history
+📈 Year-end recap format drives massive engagement
+
+⚠️ *AREAS FOR IMPROVEMENT:*
+📉 Click rate below recent historical average
+🎯 High opens not converting to clicks as expected
+
+🎯 *IMMEDIATE ACTIONS:*
+🔗 Add prominent CTAs in high-open campaigns
+📊 A/B test content layout optimization
+💎 Include NEAR Protocol price/milestone callouts
+
+🧪 *THIS WEEK'S EXPERIMENTS:*
+📊 Segment high-openers for premium content
+🤖 Test AI-generated market predictions
+
+📊 *VS INDUSTRY BENCHMARKS:*
+Open: ✅ 285% ABOVE crypto avg (22%)
+Click: ❌ 31% BELOW tech avg (3.5%)
+
+💡 *STRATEGIC INSIGHT:*
+Your audience is HIGHLY engaged with NEARWEEK content but needs stronger calls-to-action to drive clicks.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🤖 *UserOwned.AI Newsletter Analytics* | \${new Date().toLocaleDateString()}
+📈 Next analysis: Weekly automated (Mondays 9 AM UTC)\`;
+            
+            // Send to all found chats
+            for (const chatId of chatIds) {
+              try {
+                await axios.post(\`\${BASE_URL}/sendMessage\`, {
+                  chat_id: chatId,
+                  text: message,
+                  parse_mode: 'Markdown',
+                  disable_web_page_preview: true
+                });
+                
+                console.log(\`✅ Newsletter report sent to chat \${chatId}\`);
+              } catch (error) {
+                console.error(\`❌ Failed to send to chat \${chatId}:\`, error.response?.data || error.message);
+              }
+            }
+            
+            console.log('🎯 Newsletter analytics test complete!');
+            
+          } catch (error) {
+            console.error('❌ Error:', error.response?.data || error.message);
+          }
+        }
+        
+        main().catch(console.error);
+        "

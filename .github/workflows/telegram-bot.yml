@@ -1,0 +1,171 @@
+name: NEARWEEK AI Telegram Bot
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Every 5 minutes (minimum allowed by GitHub)
+  workflow_dispatch:
+
+jobs:
+  telegram-ai-bot:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    - run: npm install axios
+    - name: Run AI Bot
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      run: |
+        node -e "
+        const axios = require('axios');
+        const fs = require('fs');
+        const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+        const ZAPIER_URL = process.env.ZAPIER_WEBHOOK_URL;
+        const BASE_URL = \`https://api.telegram.org/bot\${BOT_TOKEN}\`;
+        let lastUpdateId = 0;
+        let subscribers = [];
+        try { if (fs.existsSync('last_update.txt')) lastUpdateId = parseInt(fs.readFileSync('last_update.txt', 'utf8')); } catch (e) {}
+        try { if (fs.existsSync('subscribers.json')) subscribers = JSON.parse(fs.readFileSync('subscribers.json', 'utf8')); } catch (e) {}
+        async function getUpdates() {
+          try {
+            const response = await axios.get(\`\${BASE_URL}/getUpdates\`, { params: { offset: lastUpdateId + 1, timeout: 30 } });
+            return response.data.result;
+          } catch (error) { console.error('Error:', error.message); return []; }
+        }
+        async function sendMessage(chatId, text) {
+          try {
+            await axios.post(\`\${BASE_URL}/sendMessage\`, { chat_id: chatId, text: text, parse_mode: 'Markdown' });
+          } catch (error) { console.error('Error:', error.message); }
+        }
+        async function callGeminiAI(prompt, type = 'general') {
+          try {
+            const response = await axios.post(ZAPIER_URL, {
+              prompt: prompt,
+              type: type,
+              instructions: 'NEARWEEK AI assistant. Concise crypto/NEAR responses under 300 chars.'
+            });
+            return response.data.response || response.data.text || response.data.content || 'AI response';
+          } catch (error) {
+            console.error('AI Error:', error.message);
+            return '🤖 AI temporarily unavailable';
+          }
+        }
+        async function getNearPrice() {
+          try {
+            const response = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=near&vs_currencies=usd,btc&include_24hr_change=true&include_market_cap=true');
+            const data = response.data.near;
+            const priceChange = data.usd_24h_change > 0 ? '📈' : '📉';
+            return \`💰 *NEAR*\\n\\nPrice: $\${data.usd} \${priceChange}\\n24h: \${data.usd_24h_change?.toFixed(2)}%\\nBTC: ₿\${data.btc?.toFixed(8)}\\nMCap: $\${(data.usd_market_cap / 1e9).toFixed(2)}B\`;
+          } catch (error) { return '❌ Price unavailable'; }
+        }
+        async function getCryptoNews() {
+          try {
+            const response = await axios.get('https://www.reddit.com/r/CryptoCurrency/.json?limit=5');
+            let news = '📰 *Crypto News*\\n\\n';
+            response.data.data.children.slice(0, 3).forEach((post, index) => {
+              const title = post.data.title.substring(0, 75) + (post.data.title.length > 75 ? '...' : '');
+              news += \`\${index + 1}. [\${title}](https://reddit.com\${post.data.permalink}) 👍\${post.data.score}\\n\\n\`;
+            });
+            return news;
+          } catch (error) { return '❌ News unavailable'; }
+        }
+        async function processCommand(message) {
+          const chatId = message.chat.id;
+          const text = message.text || '';
+          const userId = message.from.id;
+          const username = message.from.username || message.from.first_name || 'User';
+          if (text.toLowerCase().startsWith('/ai ')) {
+            const query = text.slice(4);
+            const aiResponse = await callGeminiAI(query, 'crypto_question');
+            await sendMessage(chatId, \`🤖 *AI*\\n\\n\${aiResponse}\`);
+            return;
+          }
+          if (text.toLowerCase().startsWith('/analyze')) {
+            const analysis = await callGeminiAI('Analyze NEAR Protocol market. 3 insights.', 'market_analysis');
+            await sendMessage(chatId, \`📊 *Analysis*\\n\\n\${analysis}\`);
+            return;
+          }
+          if (text.toLowerCase().startsWith('/explain ')) {
+            const topic = text.slice(9);
+            const explanation = await callGeminiAI(\`Explain \\\"\${topic}\\\" simply\`, 'explanation');
+            await sendMessage(chatId, \`💡 *\${topic}*\\n\\n\${explanation}\`);
+            return;
+          }
+          if (text.toLowerCase().startsWith('/predict')) {
+            const prediction = await callGeminiAI('NEAR price factors outlook', 'price_analysis');
+            await sendMessage(chatId, \`🔮 *Outlook*\\n\\n\${prediction}\`);
+            return;
+          }
+          if (text.toLowerCase().startsWith('/summary')) {
+            const summary = await callGeminiAI('Weekly NEAR ecosystem summary', 'ecosystem_summary');
+            await sendMessage(chatId, \`📋 *Summary*\\n\\n\${summary}\`);
+            return;
+          }
+          switch (text.toLowerCase()) {
+            case '/start':
+              await sendMessage(chatId, \`🤖 *NEARWEEK AI Bot*\\n\\nHello \${username}! NEAR + AI.\\n\\n/help for commands\`);
+              break;
+            case '/help':
+              await sendMessage(chatId, '🔧 *Commands:*\\n\\n**Basic:**\\n/start /price /news /subscribe /stats\\n\\n**🤖 AI:**\\n/ai [question]\\n/analyze\\n/explain [topic]\\n/predict\\n/summary');
+              break;
+            case '/subscribe':
+              if (!subscribers.find(sub => sub.userId === userId)) {
+                subscribers.push({ userId, chatId, username, subscribedAt: new Date().toISOString(), source: 'ai_bot' });
+                fs.writeFileSync('subscribers.json', JSON.stringify(subscribers, null, 2));
+                await sendMessage(chatId, \`✅ Welcome \${username}!\`);
+              } else {
+                await sendMessage(chatId, \`✅ Already subscribed!\`);
+              }
+              break;
+            case '/unsubscribe':
+              const index = subscribers.findIndex(sub => sub.userId === userId);
+              if (index !== -1) {
+                subscribers.splice(index, 1);
+                fs.writeFileSync('subscribers.json', JSON.stringify(subscribers, null, 2));
+                await sendMessage(chatId, '✅ Unsubscribed');
+              } else {
+                await sendMessage(chatId, '❌ Not subscribed');
+              }
+              break;
+            case '/price':
+              const priceInfo = await getNearPrice();
+              await sendMessage(chatId, priceInfo);
+              break;
+            case '/news':
+              const newsInfo = await getCryptoNews();
+              await sendMessage(chatId, newsInfo);
+              break;
+            case '/stats':
+              await sendMessage(chatId, \`📊 *Stats*\\n\\nSubs: \${subscribers.length}\\nAI: ✅ Gemini\\nSpeed: ~5min\`);
+              break;
+            default:
+              if (text.startsWith('/')) {
+                await sendMessage(chatId, '❓ Try /help for AI features!');
+              }
+          }
+        }
+        async function main() {
+          console.log('🤖 AI Bot polling...');
+          const updates = await getUpdates();
+          for (const update of updates) {
+            if (update.message && update.message.text) {
+              await processCommand(update.message);
+            }
+            lastUpdateId = Math.max(lastUpdateId, update.update_id);
+          }
+          fs.writeFileSync('last_update.txt', lastUpdateId.toString());
+          if (updates.length > 0) {
+            console.log(\`✅ \${updates.length} updates\`);
+          }
+        }
+        main().catch(console.error);
+        "
+    - run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "AI Bot"
+        git add -A
+        git diff --staged --quiet || git commit -m "🚑 Fix invalid cron + restore bot code"
+        git push || echo "No changes"

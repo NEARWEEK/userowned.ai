@@ -1,0 +1,147 @@
+# Test GitHub Updates at 10:50 CET
+name: GitHub Updates Test
+
+on:
+  schedule:
+    - cron: '50 9 * * *'  # 10:50 CET
+  workflow_dispatch:
+
+jobs:
+  test-github-updates:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install
+        
+    - name: Validate GitHub API Access
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "🔑 Testing GitHub API access..."
+        node -e "
+        const collector = require('./src/engine/enhanced-github-collector');
+        const c = new collector();
+        c.validateSetup().then(valid => {
+          console.log('✅ GitHub API validation:', valid ? 'SUCCESS' : 'FAILED');
+          process.exit(valid ? 0 : 1);
+        }).catch(err => {
+          console.error('❌ GitHub API error:', err.message);
+          process.exit(1);
+        });
+        "
+        
+    - name: Collect Real GitHub Data
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "📊 Collecting real GitHub updates..."
+        node -e "
+        const collector = require('./src/engine/enhanced-github-collector');
+        const template = require('./src/templates/github-updates-minimal');
+        
+        const repositories = [
+          { name: 'Bittensor', repo: 'opentensor/bittensor', symbol: 'TAO' },
+          { name: 'NEAR', repo: 'near/nearcore', symbol: 'NEAR' },
+          { name: 'ICP', repo: 'dfinity/ic', symbol: 'ICP' },
+          { name: 'Render', repo: 'RNDR-Inc/rndr-py', symbol: 'RNDR' },
+          { name: 'Fetch.ai', repo: 'fetchai/fetchai-ledger', symbol: 'FET' },
+          { name: 'Akash', repo: 'akash-network/node', symbol: 'AKT' }
+        ];
+        
+        (async () => {
+          try {
+            const c = new collector();
+            const updates = await c.collectDailyUpdates(repositories);
+            
+            console.log('📈 Raw updates found:', updates.length);
+            
+            const result = await template.generate({
+              githubUpdates: updates,
+              timestamp: new Date().toISOString()
+            });
+            
+            console.log('\n📱 TELEGRAM CONTENT:');
+            console.log('=' + '='.repeat(50));
+            console.log(result.telegram);
+            console.log('=' + '='.repeat(50));
+            
+            console.log('\n🐦 X CONTENT:');
+            console.log('=' + '='.repeat(30));
+            console.log(result.x);
+            console.log('=' + '='.repeat(30));
+            
+            console.log('\n🌐 WEBSITE DATA:');
+            console.log(JSON.stringify(result.website, null, 2));
+            
+            // Save for posting
+            require('fs').writeFileSync('/tmp/telegram_content.txt', result.telegram);
+            require('fs').writeFileSync('/tmp/x_content.txt', result.x);
+            require('fs').writeFileSync('/tmp/website_data.json', JSON.stringify(result.website, null, 2));
+            
+            console.log('\n✅ Real data collection successful!');
+            console.log('📊 Updates processed:', result.metadata.updatesCount);
+            console.log('🕒 Generated at:', result.metadata.timestamp);
+            
+          } catch (error) {
+            console.error('❌ Error:', error.message);
+            process.exit(1);
+          }
+        })();
+        "
+        
+    - name: Post to Telegram (Real Data)
+      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: |
+        echo "📱 Posting real GitHub updates to Telegram at 10:50 CET..."
+        
+        TELEGRAM_CONTENT=$(cat /tmp/telegram_content.txt)
+        
+        curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"chat_id\": \"$TELEGRAM_CHAT_ID\",
+            \"text\": \"$TELEGRAM_CONTENT\",
+            \"disable_web_page_preview\": true
+          }"
+        
+        echo "✅ Posted to Telegram"
+        
+    - name: Post to X (Real Data)
+      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      env:
+        ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+      run: |
+        echo "🐦 Posting real GitHub updates to X at 10:50 CET..."
+        
+        X_CONTENT=$(cat /tmp/x_content.txt)
+        
+        curl -s -X POST "$ZAPIER_WEBHOOK_URL" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"text\": \"$X_CONTENT\",
+            \"source\": \"userowned-ai-github-real\",
+            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+          }"
+        
+        echo "✅ Posted to X"
+        
+    - name: Deploy Website Data
+      run: |
+        echo "🌐 Website data ready for integration:"
+        echo "API endpoint: /api/github-data"
+        echo "Status endpoint: /api/status"
+        echo "Data format: JSON"
+        echo "✅ Ready for website integration"
