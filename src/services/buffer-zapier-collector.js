@@ -34,7 +34,6 @@ class BufferZapierCollector {
         followerData.totalFollowers += accountData.followerCount || 0;
       }
 
-      // Calculate engagement rate
       followerData.engagementRate = this.calculateEngagementRate(followerData.accounts);
 
       logger.info('Successfully fetched follower data', { 
@@ -50,14 +49,8 @@ class BufferZapierCollector {
     }
   }
 
-  /**
-   * Get metrics for a specific account via Buffer API
-   * @param {string} account - Account handle
-   * @returns {Object} Account metrics
-   */
   async getAccountMetrics(account) {
     try {
-      // Prepare data for Buffer Zapier webhook
       const webhookPayload = {
         action: 'fetch_account_metrics',
         account: account,
@@ -66,7 +59,6 @@ class BufferZapierCollector {
         timestamp: new Date().toISOString()
       };
 
-      // Send request via MCP webhook integration
       const response = await this.mcpIntegrations.sendWebhook(
         this.zapierWebhookUrl,
         webhookPayload,
@@ -78,7 +70,6 @@ class BufferZapierCollector {
         }
       );
 
-      // Parse response (would come from Zapier webhook response)
       return this.parseAccountMetrics(response, account);
 
     } catch (error) {
@@ -95,12 +86,6 @@ class BufferZapierCollector {
     }
   }
 
-  /**
-   * Parse account metrics from Buffer API response
-   * @param {Object} response - API response
-   * @param {string} account - Account handle
-   * @returns {Object} Parsed metrics
-   */
   parseAccountMetrics(response, account) {
     return {
       account,
@@ -116,12 +101,6 @@ class BufferZapierCollector {
     };
   }
 
-  /**
-   * Fetch post URLs and metadata via Buffer
-   * @param {Array} accounts - Accounts to fetch posts from
-   * @param {number} limit - Number of recent posts per account
-   * @returns {Array} Array of post data with URLs
-   */
   async fetchPostData(accounts = [], limit = 10) {
     try {
       logger.info('Fetching post data via Buffer Zapier', { accounts, limit });
@@ -133,7 +112,6 @@ class BufferZapierCollector {
         allPosts.push(...posts);
       }
 
-      // Sort by engagement and recency
       allPosts.sort((a, b) => {
         const engagementA = (a.likes || 0) + (a.retweets || 0) + (a.replies || 0);
         const engagementB = (b.likes || 0) + (b.retweets || 0) + (b.replies || 0);
@@ -149,12 +127,6 @@ class BufferZapierCollector {
     }
   }
 
-  /**
-   * Get recent posts for a specific account
-   * @param {string} account - Account handle
-   * @param {number} limit - Number of posts to fetch
-   * @returns {Array} Array of post objects
-   */
   async getAccountPosts(account, limit = 10) {
     try {
       const webhookPayload = {
@@ -185,12 +157,6 @@ class BufferZapierCollector {
     }
   }
 
-  /**
-   * Parse post data from Buffer API response
-   * @param {Object} response - API response
-   * @param {string} account - Account handle
-   * @returns {Array} Parsed post data
-   */
   parsePostData(response, account) {
     const posts = response.data?.posts || [];
     
@@ -212,11 +178,6 @@ class BufferZapierCollector {
     }));
   }
 
-  /**
-   * Calculate overall engagement rate from account data
-   * @param {Object} accounts - Account data object
-   * @returns {number} Average engagement rate
-   */
   calculateEngagementRate(accounts) {
     const rates = Object.values(accounts)
       .map(account => account.engagementRate || 0)
@@ -225,10 +186,6 @@ class BufferZapierCollector {
     return rates.length > 0 ? rates.reduce((sum, rate) => sum + rate, 0) / rates.length : 0;
   }
 
-  /**
-   * Get monitored accounts from UserOwned.ai following list
-   * @returns {Array} Array of account handles
-   */
   getMonitoredAccounts() {
     return [
       'userownedai',
@@ -247,10 +204,6 @@ class BufferZapierCollector {
     ];
   }
 
-  /**
-   * Run full data collection cycle
-   * @returns {Object} Complete dataset
-   */
   async collectAllData() {
     try {
       logger.info('Starting full Buffer Zapier data collection cycle');
