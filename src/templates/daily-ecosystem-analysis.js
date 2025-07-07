@@ -6,7 +6,7 @@
 const template = {
   name: 'Daily Ecosystem Analysis',
   type: 'daily-ecosystem',
-  schedule: '40 13 * * *', // 14:40 CET daily
+  schedule: '0 9 * * *', // 10:00 CET daily (9:00 UTC)
   channels: ['telegram', 'x', 'github-issue'],
   
   /**
@@ -110,7 +110,7 @@ ${topThree.map((eco, i) =>
     report += `- **Adoption (35%)**: DApp usage, on-chain activity\n`;
     report += `- **Financial (25%)**: TVL, market metrics\n\n`;
     
-    report += `---\n*UserOwned.ai by NEARWEEK - Next report: Tomorrow 14:40 CET*`;
+    report += `---\n*UserOwned.ai by NEARWEEK - Next report: Tomorrow 10:00 CET*`;
     
     return report;
   },
