@@ -2,7 +2,7 @@
 name: UserOwned.ai Daily Intelligence
 on:
   schedule:
-    - cron: '40 13 * * *'  # Daily at 14:40 CET
+    - cron: '0 9 * * *'  # Daily at 10:00 CET (9:00 UTC)
   workflow_dispatch:
 
 jobs:
@@ -130,11 +130,14 @@ jobs:
         ICP_TVL_DISPLAY=$(( $ICP_TVL / 1000000 ))
         TOTAL_TVL_DISPLAY=$(( $TOTAL_TVL / 1000000000 ))
         
+        # Get current date in CET
+        REPORT_DATE=$(TZ='Europe/Berlin' date '+%Y-%m-%d %H:%M CET')
+        
         # Generate report
         cat > /tmp/intelligence_report.txt << 'EOF'
 🤖 User-Owned AI
 NEARWEEK ULTIMATE VC INTELLIGENCE
-AI Ecosystem: Development + DeFi + On-Chain + DApp Analytics | $(date +"%Y-%m-%d %H:%M UTC")
+AI Ecosystem: Development + DeFi + On-Chain + DApp Analytics | ${REPORT_DATE}
 
 EXECUTIVE SUMMARY
 Comprehensive analysis of AI crypto ecosystems combining GitHub activity,
@@ -178,6 +181,7 @@ EOF
         sed -i "s/\$NEAR_TVL_DISPLAY/$NEAR_TVL_DISPLAY/g" /tmp/intelligence_report.txt
         sed -i "s/\$ICP_TVL_DISPLAY/$ICP_TVL_DISPLAY/g" /tmp/intelligence_report.txt
         sed -i "s/\$TOTAL_TVL_DISPLAY/$TOTAL_TVL_DISPLAY/g" /tmp/intelligence_report.txt
+        sed -i "s/\${REPORT_DATE}/$REPORT_DATE/g" /tmp/intelligence_report.txt
         
         echo "INTELLIGENCE_REPORT<<EOF" >> $GITHUB_ENV
         cat /tmp/intelligence_report.txt >> $GITHUB_ENV
@@ -224,25 +228,26 @@ EOF
         
         echo "✅ Posted to Telegram POOOL"
 
-    - name: Post to Buffer/X
+    - name: Post to Buffer/X via Zapier
+      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
       run: |
-        echo "🐦 Preparing content for Buffer → X posting..."
+        echo "🐦 Posting to X via Buffer & Zapier..."
         
-        # Create X-optimized content
+        # Create X-optimized content (under 280 characters)
         cat > /tmp/x_content.txt << 'EOF'
 🤖 UserOwned.ai Daily Intelligence
 
-🏆 AI x Crypto Ecosystem Rankings:
-1. NEAR Protocol: $NEAR_SCORE/100 ⭐
-2. Internet Computer: $ICP_SCORE/100 🔬
-3. Bittensor: $TAO_SCORE/100 🧠
+🏆 AI x Crypto Rankings:
+1. NEAR: $NEAR_SCORE/100 ⭐
+2. ICP: $ICP_SCORE/100 🔬
+3. TAO: $TAO_SCORE/100 🧠
 
-📊 Total Dev Activity: $COMBINED_STARS GitHub stars
-💰 DeFi Market: $${TOTAL_TVL_DISPLAY}B TVL
+📊 $COMBINED_STARS GitHub stars
+💰 $${TOTAL_TVL_DISPLAY}B DeFi market
 
-🧵 Full VC-grade analysis: userowned.ai
+📈 userowned.ai
 
-#UserOwnedAI #NEAR #ICP #Bittensor #DeFi #AI #Crypto
+#UserOwnedAI #NEAR #ICP #Bittensor #AI #DeFi
 EOF
         
         # Replace variables
@@ -253,26 +258,36 @@ EOF
         sed -i "s/\$COMBINED_STARS/$COMBINED_STARS/g" /tmp/x_content.txt
         sed -i "s/\$TOTAL_TVL_DISPLAY/$TOTAL_TVL_DISPLAY/g" /tmp/x_content.txt
         
-        echo "X_CONTENT<<EOF" >> $GITHUB_ENV
-        cat /tmp/x_content.txt >> $GITHUB_ENV
-        echo "EOF" >> $GITHUB_ENV
+        X_CONTENT=$(cat /tmp/x_content.txt)
         
-        echo "✅ X content prepared for Buffer integration"
-
-    - name: Send to Buffer via Zapier
-      if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
-      run: |
-        echo "🔗 Triggering Buffer posting via Zapier webhook..."
-        
+        # Send to Zapier webhook for Buffer posting
         curl -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
           -H "Content-Type: application/json" \
           -d "{
             \"text\": \"$X_CONTENT\",
             \"source\": \"userowned-ai-daily\",
-            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+            \"scheduled_time\": \"$(TZ='Europe/Berlin' date '+%H:%M CET')\"
           }"
         
-        echo "✅ Sent to Buffer via Zapier for X posting"
+        echo "✅ Posted to X via Buffer & Zapier"
+        echo "Content: $X_CONTENT"
+
+    - name: Create GitHub Issue Report
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const today = new Date().toISOString().split('T')[0];
+          const title = `🤖 UserOwned.ai Daily Intelligence ${today}`;
+          const body = process.env.INTELLIGENCE_REPORT;
+          
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: title,
+            body: body,
+            labels: ['daily-intelligence', 'ai-ecosystem', 'automated']
+          });
 
     - name: Display Results
       run: |
@@ -290,5 +305,6 @@ EOF
         echo ""
         echo "✅ UserOwned.ai by NEARWEEK operational!"
         echo "📱 Telegram: Posted to POOOL"
-        echo "🐦 X: Queued via Buffer"
-        echo "🚀 Daily automation: 14:40 CET"
+        echo "🐦 X: Posted via Buffer & Zapier"
+        echo "📝 GitHub: Issue created"
+        echo "🚀 Next run: Tomorrow 10:00 CET"
