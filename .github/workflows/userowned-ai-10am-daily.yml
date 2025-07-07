@@ -61,41 +61,12 @@ jobs:
         
         echo "✅ Posted to @userownedai via Buffer & Zapier"
 
-    - name: Post to Telegram
-      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
-      run: |
-        echo "📱 Posting to Telegram..."
-        
-        # Create Telegram version
-        TELEGRAM_CONTENT="🤖 User-Owned AI Daily Update
-
-🏆 AI Ecosystem Scores:
-1. NEAR: 85/100 ⭐
-2. ICP: 72/100 🔬 
-3. TAO: 68/100 🧠
-
-💰 Market: \$157B DeFi Total
-📈 Full analysis: userowned.ai
-🔗 @userownedai | @NEARWEEK"
-        
-        # Send to Telegram
-        curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\",
-            \"text\": \"$TELEGRAM_CONTENT\",
-            \"parse_mode\": \"HTML\"
-          }"
-        
-        echo "✅ Posted to Telegram"
-
     - name: Display Results
       run: |
         echo "🎯 UserOwned.ai Daily Posting Complete!"
         echo ""
         echo "⏰ Posted at: $(TZ='Europe/Berlin' date '+%H:%M CET')"
         echo "🐦 X Account: @userownedai"
-        echo "📱 Telegram: Posted"
         echo "🚀 Next run: Tomorrow 10:00 CET"
         echo ""
         echo "Content posted:"
