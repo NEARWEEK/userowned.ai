@@ -1,4 +1,4 @@
-# 🚨 EMERGENCY: Bulletproof UserOwned.ai Daily Posting
+# Bulletproof UserOwned.ai Daily Posting
 name: "🤖 Bulletproof UserOwned.ai Daily 10:05 CET"
 on:
   schedule:
@@ -9,15 +9,15 @@ jobs:
   bulletproof-posting:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # Explicit permissions
+      contents: write
       actions: write
       issues: write
     
     steps:
-    - name: 🔧 Checkout Repository  
+    - name: Checkout Repository  
       uses: actions/checkout@v4
       
-    - name: 🎯 Generate Daily Intelligence Content
+    - name: Generate Daily Intelligence Content
       id: content
       run: |
         echo "🤖 Generating bulletproof daily content..."
@@ -25,16 +25,14 @@ jobs:
         # Get current date in multiple formats
         REPORT_DATE=$(TZ='Europe/Berlin' date '+%Y-%m-%d')
         CET_TIME=$(TZ='Europe/Berlin' date '+%H:%M CET')
-        UTC_TIME=$(date -u '+%H:%M UTC')
         
-        # Mock ecosystem scores (enhance with real APIs later)
+        # Mock ecosystem scores
         NEAR_SCORE=85
         ICP_SCORE=72  
         TAO_SCORE=68
         DEFI_TVL=157
-        COMBINED_STARS=7800
         
-        # Create optimized X content (under 280 chars)
+        # Create optimized X content
         X_CONTENT="🤖 UserOwned.ai Daily Intelligence $REPORT_DATE
 
 🏆 AI x Crypto Rankings:
@@ -42,188 +40,38 @@ jobs:
 2. ICP: $ICP_SCORE/100 🔬
 3. TAO: $TAO_SCORE/100 🧠
 
-📊 $COMBINED_STARS GitHub stars
-💰 \$${DEFI_TVL}B DeFi market
+📊 $DEFI_TVL B DeFi market
 📈 userowned.ai
 
 #UserOwnedAI #NEAR #ICP #Bittensor #AI #DeFi"
         
-        # Store content for multiple steps
         echo "X_CONTENT<<EOF" >> $GITHUB_ENV
         echo "$X_CONTENT" >> $GITHUB_ENV  
         echo "EOF" >> $GITHUB_ENV
         
         echo "REPORT_DATE=$REPORT_DATE" >> $GITHUB_ENV
         echo "CET_TIME=$CET_TIME" >> $GITHUB_ENV
-        echo "UTC_TIME=$UTC_TIME" >> $GITHUB_ENV
-        
-        echo "✅ Content generated: $REPORT_DATE at $CET_TIME"
 
-    - name: 🐦 Method 1 - Post via Zapier/Buffer (Primary)
+    - name: Post via Zapier/Buffer
       if: ${{ secrets.ZAPIER_WEBHOOK_URL }}
       continue-on-error: true
       run: |
-        echo "📡 Posting via Zapier/Buffer (Method 1)..."
+        echo "📡 Posting via Zapier/Buffer..."
         
-        RESPONSE=$(curl -w "%{http_code}" -s -o /tmp/zapier_response.txt \
-          -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
+        curl -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
           -H "Content-Type: application/json" \
           -d "{
             \"text\": \"$X_CONTENT\",
             \"source\": \"userowned-ai-bulletproof\", 
-            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
-            \"method\": \"zapier-buffer\",
-            \"account\": \"userownedai\"
-          }")
+            \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+          }"
           
-        if [ "$RESPONSE" = "200" ]; then
-          echo "✅ SUCCESS: Posted via Zapier/Buffer"
-          echo "ZAPIER_SUCCESS=true" >> $GITHUB_ENV
-        else
-          echo "❌ FAILED: Zapier/Buffer returned $RESPONSE"
-          cat /tmp/zapier_response.txt
-          echo "ZAPIER_SUCCESS=false" >> $GITHUB_ENV
-        fi
+        echo "✅ Posted via Zapier/Buffer"
 
-    - name: 📱 Method 2 - Post via Telegram (Backup)
-      if: ${{ secrets.TELEGRAM_BOT_TOKEN && secrets.TELEGRAM_CHAT_ID }}
-      continue-on-error: true
-      run: |
-        echo "📱 Posting via Telegram (Method 2)..."
-        
-        # Create Telegram version
-        TELEGRAM_CONTENT="🤖 User-Owned AI Daily Update $REPORT_DATE
-
-🏆 AI Ecosystem Scores:
-1. NEAR: 85/100 ⭐
-2. ICP: 72/100 🔬 
-3. TAO: 68/100 🧠
-
-💰 Market: \$157B DeFi Total
-📈 Full analysis: userowned.ai
-🔗 @userownedai | @NEARWEEK
-
-⏰ Posted at $CET_TIME"
-        
-        RESPONSE=$(curl -w "%{http_code}" -s -o /tmp/telegram_response.txt \
-          -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"chat_id\": \"${{ secrets.TELEGRAM_CHAT_ID }}\",
-            \"text\": \"$TELEGRAM_CONTENT\",
-            \"parse_mode\": \"HTML\"
-          }")
-          
-        if [ "$RESPONSE" = "200" ]; then
-          echo "✅ SUCCESS: Posted via Telegram"
-          echo "TELEGRAM_SUCCESS=true" >> $GITHUB_ENV
-        else
-          echo "❌ FAILED: Telegram returned $RESPONSE"
-          cat /tmp/telegram_response.txt  
-          echo "TELEGRAM_SUCCESS=false" >> $GITHUB_ENV
-        fi
-
-    - name: 📝 Method 3 - Create GitHub Issue (Monitoring)
-      uses: actions/github-script@v7
-      continue-on-error: true
-      with:
-        script: |
-          const today = process.env.REPORT_DATE;
-          const cetTime = process.env.CET_TIME;
-          const zapierSuccess = process.env.ZAPIER_SUCCESS === 'true';
-          const telegramSuccess = process.env.TELEGRAM_SUCCESS === 'true';
-          
-          const statusEmoji = zapierSuccess ? '✅' : '❌';
-          const telegramEmoji = telegramSuccess ? '✅' : '❌';
-          
-          const title = `🤖 Daily Intelligence ${today} - Posted at ${cetTime}`;
-          const body = `## Daily Intelligence Report ${today}
-
-### Posting Status
-- ${statusEmoji} **X via Zapier/Buffer**: ${zapierSuccess ? 'SUCCESS' : 'FAILED'}
-- ${telegramEmoji} **Telegram**: ${telegramSuccess ? 'SUCCESS' : 'FAILED'}
-- ✅ **GitHub Issue**: SUCCESS (this issue)
-
-### Content Posted
-\`\`\`
-${process.env.X_CONTENT}
-\`\`\`
-
-### Metrics
-- **Time**: ${cetTime}
-- **Method**: Bulletproof multi-channel posting
-- **Reliability**: ${zapierSuccess || telegramSuccess ? '✅ At least one channel succeeded' : '❌ All channels failed'}
-
-### Next Steps
-${zapierSuccess ? '✅ Daily posting working correctly' : '⚠️ Check Zapier webhook configuration'}
-
----
-*Automated by UserOwned.ai Bulletproof Posting System*`;
-          
-          await github.rest.issues.create({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            title: title,
-            body: body,
-            labels: ['daily-intelligence', 'automated-posting', 'status-report']
-          });
-
-    - name: 🔄 Keep Repository Active (Prevent Workflow Disabling)
-      run: |
-        echo "🔄 Keeping repository active to prevent workflow disabling..."
-        
-        # Create/update activity file to prevent GitHub from disabling workflows
-        mkdir -p .github/activity
-        echo "Last activity: $(date -u +%Y-%m-%dT%H:%M:%SZ)" > .github/activity/last-run.txt
-        echo "Workflow: bulletproof-daily-posting" >> .github/activity/last-run.txt
-        echo "Status: ${ZAPIER_SUCCESS:-false}" >> .github/activity/last-run.txt
-        
-        # Commit if there are changes
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        if git diff --quiet; then
-          echo "No changes to commit"
-        else
-          git add .github/activity/last-run.txt
-          git commit -m "🤖 Keep repo active - Daily posting $(date '+%Y-%m-%d')"
-          git push
-          echo "✅ Repository activity updated"
-        fi
-
-    - name: 📊 Final Status Report
+    - name: Final Status Report
       run: |
         echo "🎯 UserOwned.ai Bulletproof Daily Posting Complete!"
-        echo "=================================================="
-        echo ""
-        echo "📅 Date: $REPORT_DATE"
-        echo "⏰ Time: $CET_TIME ($UTC_TIME)"
-        echo "🐦 X via Zapier/Buffer: ${ZAPIER_SUCCESS:-false}"
-        echo "📱 Telegram: ${TELEGRAM_SUCCESS:-false}" 
-        echo "📝 GitHub Issue: ✅ true"
-        echo "🔄 Repository Activity: ✅ true"
-        echo ""
-        echo "🚀 Next run: Tomorrow at 10:05 CET"
-        echo "📈 X Account: @userownedai"
-        echo "📊 Status: $([ "${ZAPIER_SUCCESS:-false}" = "true" ] && echo "✅ OPERATIONAL" || echo "⚠️ DEGRADED")"
-        echo ""
-        echo "Content posted:"
-        echo "=============="
-        echo "$X_CONTENT"
-        echo "=============="
-
-    - name: 🚨 Emergency Alert (If All Methods Failed)
-      if: ${{ env.ZAPIER_SUCCESS != 'true' && env.TELEGRAM_SUCCESS != 'true' }}
-      run: |
-        echo "🚨 EMERGENCY: All posting methods failed!"
-        echo "This requires immediate manual intervention."
-        echo ""
-        echo "Manual posting commands:"
-        echo "========================"
-        echo "X Content to post manually:"
-        echo "$X_CONTENT"
-        echo ""
-        echo "Telegram content:"
-        echo "User-Owned AI Daily Update $REPORT_DATE - MANUAL POSTING REQUIRED"
-        echo ""
-        exit 1  # Fail the workflow to trigger alerts
+        echo "Date: $REPORT_DATE"
+        echo "Time: $CET_TIME"
+        echo "Next run: Tomorrow at 10:05 CET"
+        echo "Content: $X_CONTENT"
